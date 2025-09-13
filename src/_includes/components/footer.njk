@@ -1,6 +1,6 @@
 <footer class="site-footer">
   <div class="footer__brand">
-    <a class="logo" href="/DarleneKay/"><img src="/assets/images/logo-footer.png" alt="Darlene Kay Painting"></a>
+    <a class="logo" href="/"><img src="/assets/images/logo-footer.png" alt="Darlene Kay Painting"></a>
     <p>Darlene Kay provides residential and commercial painting solutions tailored to your project and budget.</p>
     <div class="footer__badges">
       <img src="/assets/images/williams.png" alt="Sherwin-Williams" width="90">
@@ -8,12 +8,11 @@
       <img src="/assets/images/bbb-a-plus.png" alt="BBB A+ Rating" width="250">
     </div>
     <ul class="footer__links">
-      <li><a href="/DarleneKay/interior-services-overview/">Interior Services</a></li>
-      <li><a href="/DarleneKay/exterior-services-overview/">Exterior Services</a></li>
-      <li><a href="/DarleneKay/commercial-services/">Commercial Services</a></li>
-      <li><a href="/DarleneKay/residential-services/">Residential Services</a></li>
-      <li><a href="/DarleneKay/contact/">Contact Us</a></li>
-      <li><a href="/DarleneKay/careers/">Careers</a></li>
+      {% for item in site.footer %}
+        <li>
+          <a href="{{ item.href | url }}">{{ item.text }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </div>
   <div class="footer__legal">

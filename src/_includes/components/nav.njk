@@ -9,7 +9,7 @@
   {% for item in site.nav %}
     {% set isActive = (page.url == item.href) or (page.url == '/' and item.href == '/') %}
     <li>
-      <a href="{{ item.href }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ item.text }}</a>
+      <a href="{{ item.href | url }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ item.text }}</a>
     </li>
   {% endfor %}
   </ul>
