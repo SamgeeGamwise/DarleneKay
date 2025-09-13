@@ -1,11 +1,11 @@
 <footer class="site-footer">
   <div class="footer__brand">
-    <a class="logo" href="/"><img src="/assets/images/logo-footer.png" alt="Darlene Kay Painting"></a>
+    <a class="logo" href="/"><img src="{{ '/assets/images/logo-footer.png' | url }}" alt="Darlene Kay Painting"></a>
     <p>Darlene Kay provides residential and commercial painting solutions tailored to your project and budget.</p>
     <div class="footer__badges">
-      <img src="/assets/images/williams.png" alt="Sherwin-Williams" width="90">
-      <img src="/assets/images/homeadvisor.png" alt="HomeAdvisor" width="90">
-      <img src="/assets/images/bbb-a-plus.png" alt="BBB A+ Rating" width="250">
+      <img src="{{ '/assets/images/williams.png' | url }}" alt="Sherwin-Williams" width="90">
+      <img src="{{ '/assets/images/homeadvisor.png' | url }}" alt="HomeAdvisor" width="90">
+      <img src="{{ '/assets/images/bbb-a-plus.png' | url }}" alt="BBB A+ Rating" width="250">
     </div>
     <ul class="footer__links">
       {% for item in site.footer %}
