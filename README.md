@@ -1,4 +1,4 @@
-# Eleventy + Nunjucks Skeleton (No CSS/JS)
+# Eleventy + Nunjucks Skeleton + SCSS
 
 ## Run
 npm install
