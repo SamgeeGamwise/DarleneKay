@@ -1,0 +1,21 @@
+---
+title: Contact
+layout: layouts/base.njk
+permalink: /contact/
+---
+<section aria-labelledby="contact-form">
+  <h2 id="contact-form">Send a Message</h2>
+  <!-- Replace action with your Formspree/HubSpot endpoint -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <p><label>Your Name<br><input name="name" required></label></p>
+    <p><label>Email<br><input type="email" name="email" required></label></p>
+    <p><label>Phone (optional)<br><input name="phone"></label></p>
+    <p><label>How can we help?<br><textarea name="message" rows="6"></textarea></label></p>
+    <p><button type="submit">Send</button></p>
+  </form>
+</section>
+
+<section aria-labelledby="visit">
+  <h2 id="visit">Business Info</h2>
+  <p>Darlene Kay Painting — Aurora, Colorado. Serving the greater Denver metro area.</p>
+</section>

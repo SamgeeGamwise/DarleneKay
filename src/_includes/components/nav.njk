@@ -1,0 +1,16 @@
+<nav aria-label="Primary">
+  <div id="brand">
+    <img src="/assets/logo.webp" />
+    <h1>
+      <a href="/">{{ site.site_name }}</a>
+    </h1>
+  </div>
+  <ul>
+  {% for item in site.nav %}
+    {% set isActive = (page.url == item.href) or (page.url == '/' and item.href == '/') %}
+    <li>
+      <a href="{{ item.href }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ item.text }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</nav>
