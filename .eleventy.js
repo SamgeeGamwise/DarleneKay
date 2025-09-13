@@ -1,8 +1,7 @@
 module.exports = function (eleventyConfig) {
-  // Rebuild when SCSS changes
   eleventyConfig.addWatchTarget("src/styles");
 
-  // Copy compiled assets to output
+  // Copy static assets only (images, fonts, etc.)
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   return {
