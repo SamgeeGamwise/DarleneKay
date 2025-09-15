@@ -1,3 +1,5 @@
+@use "../base" as base;
+
 .hero {
     padding: 10% 5% 0 5%;
     color: white;
@@ -6,6 +8,6 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px;
+    height: calc(95vh - base.$blocker-height);
     width: 100%;
 }

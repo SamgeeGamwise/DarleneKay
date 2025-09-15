@@ -1,9 +1,7 @@
 @use "../base" as base;
 
-$logo-size: 85px;
-
 .blocker {
-    height: calc($logo-size + 1rem * 2);
+    height: base.$blocker-height;
     width: 100%;
     z-index: -10;
 }
@@ -28,10 +26,10 @@ $logo-size: 85px;
             padding-left: 1rem;
 
             img {
-                width: $logo-size;
-                height: $logo-size;
-                max-width: $logo-size;
-                min-height: $logo-size;;
+                width: base.$logo-size;
+                height: base.$logo-size;
+                max-width: base.$logo-size;
+                min-height: base.$logo-size;;
             }
         }
 
@@ -48,7 +46,6 @@ $logo-size: 85px;
     
                 li {
                     padding: 0 2rem;
-                    list-style-type: none;
                 }
             }
             
@@ -67,7 +64,7 @@ $logo-size: 85px;
                 position: fixed;
                 align-items: end;
                 background-color: white;
-                top: $logo-size;
+                top: base.$logo-size;
                 right: 0;
                 left: 0;
                 margin-top: 1rem;
@@ -97,7 +94,7 @@ $logo-size: 85px;
         }
     }
 
-        @include base.respond-max(md) {
+    @include base.respond-max(md) {
         nav {
             .site-name {
                 display: none;

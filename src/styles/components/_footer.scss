@@ -1,0 +1,90 @@
+@use "../base" as base;
+
+#site-footer {
+    padding: 2rem 20% 1rem 20%;
+    background-color: base.$black;
+    color: base.$white;
+
+    .footer__container {
+        max-width: 1300px;
+        
+        .footer__brand {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            padding-bottom: 2rem;
+
+            .logo-image {
+                width: 115px;
+            }
+        }
+        
+        .footer__details {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 50px;
+            align-items: start;
+            justify-content: space-between;
+        }
+        
+        .footer__badges {
+            gap: 50px;
+            padding: 2rem 0;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .footer__legal {
+            grid-column: 1/4;
+            grid-row: 4/5;
+            height: auto;
+        }
+        
+        
+        .footer__links {
+            li {
+                padding: .5rem 0;
+            }
+        }
+        
+        .footer__legal {
+            text-align: center;    
+        }
+    }
+        @include base.respond-max(lg) {
+            padding: 2rem 10% 1rem 10%;
+            
+            .footer__brand {
+                font-size: 1.5rem;
+
+                .logo-image {
+                    width: 85px;
+                }
+            }
+            
+            .footer__badges {
+                gap: 0px;
+
+                img {
+                    width: 60px;
+
+                    &:nth-child(3) {
+                        width: 100px;
+                    }
+                }
+            }   
+            
+            .footer__content,
+            .footer__info {
+                display: none;
+        }
+    }
+
+    @include base.respond-max(lg) {
+        padding: 2rem 5% 1rem 5%;
+    }
+}

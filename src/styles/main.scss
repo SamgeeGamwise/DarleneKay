@@ -2,6 +2,8 @@
 @use "components/nav";
 @use "components/hero";
 @use "components/intro";
+@use "components/footer";
+
 @use "./base" as base;
 
 @import "base/fonts";
@@ -14,7 +16,7 @@ main a {
     color: base.$background;
 }
 
-h1 {
+h1, .logo-text {
     font-family: "Dancing Script", cursive;
 }
 
@@ -26,9 +28,16 @@ body {
     font-family: "Merriweather", serif;
 }
 
-section,
-img {
+.fullsize {
     width: 100%;
+}
+
+.icon {
+    width: base.$logo-size * 1.5;
+}
+
+.mini-icon {
+    width: base.$logo-size;
 }
 
 .hidden {
@@ -41,4 +50,8 @@ button {
     border: none;
     border-radius: 5px;
     padding: .35rem .85rem;
+}
+
+li {
+    list-style-type: none;
 }
