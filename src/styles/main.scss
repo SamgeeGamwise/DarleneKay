@@ -1,11 +1,40 @@
+// @import 'tailwindcss/index.css';
 @use "base/normalize";
 @use "components/nav";
 @use "components/hero";
+@use "./base" as base;
+@import "base/fonts";
+
 
 a {
     text-decoration: none;
 }
 
 h1 {
-    font-family: "Dancing Script", "Segoe Script", "Lucida Handwriting", "Brush Script MT", cursive;
+    font-family: "Dancing Script", cursive;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    font-family: "Merriweather", serif;
+}
+
+section,
+img {
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: .35rem .85rem;
 }

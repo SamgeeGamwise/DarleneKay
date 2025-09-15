@@ -2,13 +2,24 @@
 
 $logo-size: 85px;
 
-header {   
+.blocker {
+    height: calc($logo-size + 1rem);
+    width: 100%;
+    z-index: -10;
+}
+
+#header {   
+    z-index: 100;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: .5rem;
+
     nav  {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        padding: .5rem;
 
         #brand {
             display: flex;
@@ -19,27 +30,78 @@ header {
             img {
                 width: $logo-size;
                 height: $logo-size;
+                max-width: $logo-size;
+                min-height: $logo-size;;
             }
         }
 
-        ul {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-evenly;
-            align-content: space-around;
+        .nav-mobile {
+            display: none;
+        }
 
-            li {
-                padding: 0 2rem;
-                list-style-type: none;
+        .nav-desktop {
+            ul {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+                align-content: space-around;
+    
+                li {
+                    padding: 0 2rem;
+                    list-style-type: none;
+                }
+            }
+            
+            .active-nav {
+                color: base.$background;
+            }
+        }
 
-                &:hover {
-                    color: base.$secondary;
+        .nav-mobile {
+            display: none;
+            #menu {
+                z-index: 110;
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                position: fixed;
+                align-items: end;
+                background-color: white;
+                top: $logo-size;
+                right: 0;
+                left: 0;
+                margin-top: 1rem;
+                    
+                li {
+                    list-style-type: none;
+                    padding: 1rem;
+                }
+                
+                .active-nav {
+                    color: base.$background;
                 }
             }
         }
-        
-        .active-nav {
-            color: base.$background;
+    }
+
+    @include base.respond-max(lg) {
+        nav {
+            .nav-desktop {
+                display: none;
+            }
+
+            .nav-mobile {
+                display: block;
+
+            }
+        }
+    }
+
+        @include base.respond-max(md) {
+        nav {
+            .site-name {
+                display: none;
+            }
         }
     }
 }
