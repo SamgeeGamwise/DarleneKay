@@ -3,7 +3,7 @@
 $logo-size: 85px;
 
 .blocker {
-    height: calc($logo-size + 1rem);
+    height: calc($logo-size + 1rem * 2);
     width: 100%;
     z-index: -10;
 }
@@ -13,7 +13,7 @@ $logo-size: 85px;
     position: fixed;
     background-color: white;
     width: 100%;
-    padding: .5rem;
+    padding: 1rem;
 
     nav  {
         display: flex;

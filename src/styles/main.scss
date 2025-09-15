@@ -1,13 +1,17 @@
-// @import 'tailwindcss/index.css';
 @use "base/normalize";
 @use "components/nav";
 @use "components/hero";
+@use "components/intro";
 @use "./base" as base;
-@import "base/fonts";
 
+@import "base/fonts";
 
 a {
     text-decoration: none;
+}
+
+main a {
+    color: base.$background;
 }
 
 h1 {
