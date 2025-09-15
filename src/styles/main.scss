@@ -8,12 +8,16 @@
 
 @import "base/fonts";
 
+html {
+    font-size: 18px;
+}
+
 a {
     text-decoration: none;
 }
 
 main a {
-    color: base.$background;
+    color: base.$primary;
 }
 
 h1, .logo-text {
@@ -22,6 +26,39 @@ h1, .logo-text {
 
 h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
+}
+
+
+h1, .h1 { font-size: 2.5rem; }  /* ~40px */
+h2, .h2 { font-size: 2rem; }    /* ~32px */
+h3, .h3 { font-size: 1.75rem; } /* ~28px */
+h4, .h4 { font-size: 1.5rem; }  /* ~24px */
+h5, .h5 { font-size: 1.25rem; } /* ~20px */
+h6, .h6 { font-size: 1rem; }    /* ~16px */
+
+.bold {
+    font-weight: bold;
+}
+
+a.btn {
+    padding: .5rem;
+    border: 1px;
+    border-radius: 5px;
+    color: white;
+    background-color: base.$primary;
+    text-decoration: none;
+
+    &.btn-alt {
+        background-color: base.$highlight;
+    }
+
+    &.btn-transparant {
+        background-color: rgba(base.$primary, 0.75);
+    }
+
+    &.btn-alt-transparant {
+        background-color: rgba(base.$highlight, 0.75);
+    }
 }
 
 body {
@@ -54,4 +91,12 @@ button {
 
 li {
     list-style-type: none;
+}
+
+
+
+@include base.respond-max(md) {
+    html {
+        font-size: 16px;
+    }
 }

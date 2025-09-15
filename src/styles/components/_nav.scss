@@ -9,7 +9,7 @@
 #header {   
     z-index: 100;
     position: fixed;
-    background-color: white;
+    background-color: rgba(base.$white, 0.75);
     width: 100%;
     padding: 1rem;
 
@@ -24,6 +24,7 @@
             flex-flow: row nowrap;
             align-items: center;
             padding-left: 1rem;
+            gap: 1rem;
 
             img {
                 width: base.$logo-size;
@@ -46,16 +47,28 @@
     
                 li {
                     padding: 0 2rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        a {
+                            color: base.$medium;
+                        }
+                    }
                 }
             }
             
-            .active-nav {
-                color: base.$background;
-            }
+            // .active-nav {
+            //     color: base.$primary;
+            // }
         }
 
         .nav-mobile {
             display: none;
+
+            #menu-button {
+                background-color: base.$primary;
+            }
+
             #menu {
                 z-index: 110;
                 width: 100%;
@@ -63,11 +76,11 @@
                 flex-flow: column nowrap;
                 position: fixed;
                 align-items: end;
-                background-color: white;
+                background-color: rgba(base.$white, 0.75);
                 top: base.$logo-size;
                 right: 0;
                 left: 0;
-                margin-top: 1rem;
+                margin-top: 2rem;
                     
                 li {
                     list-style-type: none;
@@ -75,7 +88,7 @@
                 }
                 
                 .active-nav {
-                    color: base.$background;
+                    color: base.$primary;
                 }
             }
         }
