@@ -39,9 +39,15 @@
         }
 
         .hero__hotline {
+            font-size: 90%;
             display: flex;
             flex-flow: row wrap;
             padding: 0 5%;
         }
+    }
+
+        
+    @include base.respond-max(lg) {
+        font-size: 85%;
     }
 }
