@@ -1,7 +1,8 @@
 @use "../base" as base;
 
 .services-tiles {
-    padding: 5rem 10% 5rem 10%;
+    padding: 5rem 10% 8rem 10%;
+    height: 100%;
 
 
     .tiles {
@@ -26,11 +27,11 @@
     }
 
     @include base.respond-max(lg) {
-        padding: 4rem 10% 2rem 10%;
+        padding: 4rem 10% 4rem 10%;
     }
 
 
     @include base.respond-max(lg) {
-        padding: 4rem 5% 2rem 5%;
+        padding: 4rem 5% 4rem 5%;
     }
 }
