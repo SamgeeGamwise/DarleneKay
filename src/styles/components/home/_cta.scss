@@ -1,4 +1,4 @@
-@use "../base" as base;
+@use "../../base" as base;
 
 .cta-banner {
     display: flex; 
@@ -11,21 +11,15 @@
     height: 20%;
     color: base.$white !important;
 
-    // a {
-    //     font-size: 150%;
-    //     color: base.$dark !important;
-    //     background-color: base.$light !important;
-    // }
-
     .cta-header {
         opacity: 0;
-        transform: translateX(-50px); /* start slightly left */
+        transform: translateX(-50px);
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
     .cta-header.in-view {
         opacity: 1;
-        transform: translateX(0); /* slide to natural position */
+        transform: translateX(0);
     }
 
     @include base.respond-max(lg) {

@@ -1,90 +1,14 @@
 @use "base/normalize";
-@use "components/nav";
-@use "components/hero";
-@use "components/intro";
-@use "components/features";
-@use "components/footer";
-@use "components/card";
-@use "components/cta";
-@use "components/artPromo";
-@use "components/services";
-@use "components/contactSplit";
-@use "components/googleReviews";
-@use "components/carousel";
-
+@use "components/home/" as *;
+@use "components/nav/nav";
+@use "components/footer/footer";
 
 @use "./base" as base;
 
 @import "base/fonts";
 
-html {
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-}
-
 main a {
     color: base.$primary;
-}
-
-h1, .logo-text {
-    font-family: "Dancing Script", cursive;
-}
-
-h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
-}
-
-
-h1, .h1 { font-size: 2.5rem; }  /* ~40px */
-h2, .h2 { font-size: 2rem; }    /* ~32px */
-h3, .h3 { font-size: 1.75rem; } /* ~28px */
-h4, .h4 { font-size: 1.5rem; }  /* ~24px */
-h5, .h5 { font-size: 1.25rem; } /* ~20px */
-h6, .h6 { font-size: 1rem; }    /* ~16px */
-
-.bold {
-    font-weight: bold;
-}
-
-.btn {
-    padding: .5rem .75rem;
-    border: 1px;
-    border-radius: 5px;
-    color: white;
-    background-color: base.$primary;
-    text-decoration: none;
-
-    &.btn-alt {
-        background-color: base.$secondary;
-    }
-
-    &.btn-transparant {
-        background-color: rgba(base.$primary, 0.75);
-    }
-
-    &.btn-alt-transparant {
-        background-color: rgba(base.$secondary, 0.75);
-    }
-
-    &.btn-white {
-        color: base.$black;
-        background-color: base.$white;
-        
-        &:hover {
-            filter: brightness(85%);
-        }
-    }
-
-    &:hover {
-        filter: brightness(115%);
-    }
-}
-
-body {
-    font-family: "Merriweather", serif;
 }
 
 .fullsize {
@@ -97,74 +21,4 @@ body {
 
 .mini-icon {
     width: base.$logo-size;
-}
-
-.hidden {
-    display: none !important;
-}
-
-button {
-    background-color: gray;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: .35rem .85rem;
-}
-
-li {
-    list-style-type: none;
-}
-
-.out-of-view-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.out-of-view-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.in-view {
-    opacity: 1 !important;
-    transform: translateX(0)!important;
-}
-
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    background-color: #fff;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-
-    &:focus {
-        outline: none;
-        border-color: #4a90e2; // primary color
-        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25); // subtle glow
-    }
-
-    &::placeholder {
-        color: #aaa;
-        font-style: italic;
-    }
-}
-
-textarea {
-    min-height: 120px;
-    resize: vertical; // allow resizing only up/down
-}
-
-@include base.respond-max(md) {
-    html {
-        font-size: 16px;
-    }
 }
