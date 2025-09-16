@@ -25,7 +25,7 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
-        run: node scripts/fetch-reviews.js
+        run: node scripts/reviews.js
       - run: npm run build -- --pathprefix=/${{ github.event.repository.name }}/
 
 
