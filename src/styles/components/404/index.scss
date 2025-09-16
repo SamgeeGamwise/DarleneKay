@@ -9,19 +9,19 @@
     font-size: 6rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #333; // soften to your palette
+    color: base.$black; // soften to your palette
   }
 
   &__subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #666;
+    color: base.$black;
   }
 
   &__text {
     max-width: 600px;
     margin: 0 auto 2rem;
-    color: #555;
+    color: base.$black;
   }
 
   .btn {
@@ -31,12 +31,12 @@
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    background: #4a90e2;
-    color: #fff;
+    background: base.$secondary;
+    color: base.$white;
     transition: background 0.3s ease;
 
     &:hover {
-      background: darken(#4a90e2, 10%);
+      background: darken(base.$secondary, 10%);
     }
   }
 }
