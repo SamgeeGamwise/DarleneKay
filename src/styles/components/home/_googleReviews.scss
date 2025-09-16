@@ -12,4 +12,8 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
+
+    @include base.respond-max(lg) {
+        padding: 5rem 5% 5rem 5%;    
+    }
 }
