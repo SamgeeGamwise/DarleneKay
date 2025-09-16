@@ -1,0 +1,36 @@
+@use "../base" as base;
+
+.services-tiles {
+    padding: 5rem 10% 5rem 10%;
+
+
+    .tiles {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 50px;
+        justify-content: center;
+        .tile { 
+            width: 350px;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 20px;
+            opacity: 0;
+            transform: translateX(-50px); /* start slightly left */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+            &.in-view {
+                opacity: 1;
+                transform: translateX(0); /* slide to natural position */
+            }
+        }
+    }
+
+    @include base.respond-max(lg) {
+        padding: 4rem 10% 2rem 10%;
+    }
+
+
+    @include base.respond-max(lg) {
+        padding: 4rem 5% 2rem 5%;
+    }
+}

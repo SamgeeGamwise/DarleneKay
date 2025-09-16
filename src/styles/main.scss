@@ -7,6 +7,7 @@
 @use "components/card";
 @use "components/cta";
 @use "components/artPromo";
+@use "components/services";
 
 @use "./base" as base;
 
@@ -53,16 +54,16 @@ a.btn {
     text-decoration: none;
 
     &.btn-alt {
-        background-color: base.$highlight;
+        background-color: base.$secondary;
     }
 
     &.btn-transparant {
         background-color: rgba(base.$primary, 0.75);
     }
 
-    &.btn-alt-transparant {
-        background-color: rgba(base.$highlight, 0.75);
-    }
+    // &.btn-alt-transparant {
+    //     background-color: rgba(base.$highlight, 0.75);
+    // }
 }
 
 body {

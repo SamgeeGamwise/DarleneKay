@@ -18,14 +18,14 @@
     }
 
     .cta-header {
-    opacity: 0;
-    transform: translateX(-50px); /* start slightly left */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        opacity: 0;
+        transform: translateX(-50px); /* start slightly left */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
     .cta-header.in-view {
-    opacity: 1;
-    transform: translateX(0); /* slide to natural position */
+        opacity: 1;
+        transform: translateX(0); /* slide to natural position */
     }
 
     @include base.respond-max(lg) {
