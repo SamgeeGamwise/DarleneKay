@@ -11,11 +11,11 @@
     height: 20%;
     color: base.$white !important;
 
-    a {
-        font-size: 150%;
-        color: base.$dark !important;
-        background-color: base.$light !important;
-    }
+    // a {
+    //     font-size: 150%;
+    //     color: base.$dark !important;
+    //     background-color: base.$light !important;
+    // }
 
     .cta-header {
         opacity: 0;
@@ -40,9 +40,5 @@
 
     @include base.respond-max(lg) {
         padding: 4rem 5% 2rem 5%;
-    }
-
-    .in-view {
-
     }
 }

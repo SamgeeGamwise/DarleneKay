@@ -11,6 +11,7 @@
             background-color: rgba(base.$white, 0.85);
             display: flex;
             flex-flow: column nowrap;
+            align-items: start;
             gap: 40px
         }
 
@@ -19,7 +20,7 @@
             background-color: transparent;
             
             &:hover {
-                color: base.$primary;
+                color: lighten(base.$black, $amount: 20);
             }
         }
 

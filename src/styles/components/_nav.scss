@@ -51,7 +51,7 @@
                     &:hover {
                         cursor: pointer;
                         a {
-                            color: base.$medium;
+                            color: lighten(base.$black, $amount: 45);
                         }
                     }
                 }

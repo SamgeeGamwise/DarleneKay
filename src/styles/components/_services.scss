@@ -15,14 +15,6 @@
             display: flex;
             flex-flow: column nowrap;
             gap: 20px;
-            opacity: 0;
-            transform: translateX(-50px); /* start slightly left */
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
-            &.in-view {
-                opacity: 1;
-                transform: translateX(0); /* slide to natural position */
-            }
         }
     }
 
