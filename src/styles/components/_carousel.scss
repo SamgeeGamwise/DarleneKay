@@ -6,6 +6,10 @@
   max-width: 1000px;
   margin: 2rem auto;
 
+  a {
+    color: base.$black !important;
+  }
+
   &__track {
     position: relative;
     min-height: 200px; // ensures space for text slides
@@ -63,6 +67,7 @@
   @include base.respond-max(md) {
     &__track {
       max-width: 350px;
+      min-height: 250px;
     }
   }
 }

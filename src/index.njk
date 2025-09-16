@@ -113,12 +113,27 @@ permalink: /
   <div class="contact-split__right">
     <h3>Send Us a Message</h3>
     <!-- Replace action with your form endpoint (Formspree/HubSpot/etc.) -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <p><label>First Name*<br><input name="firstName" required></label></p>
-      <p><label>Last Name*<br><input name="lastName" required></label></p>
-      <p><label>Email*<br><input type="email" name="email" required></label></p>
-      <p><label>Phone<br><input name="phone"></label></p>
-      <p><label>Comments<br><textarea name="comments" rows="5"></textarea></label></p>
+    <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="input-field">
+        <label>First Name<span> *</span></label>
+        <input type="text" name="firstName" required>
+      </div>
+      <div class="input-field">
+        <label>Last Name<span> *</span></label>
+        <input type="text" name="lastName" required>
+      </div>
+      <div class="input-field">
+        <label>Email<span> *</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="input-field">
+        <label>Phone</label>
+        <input type="text" name="phone">
+      </div>
+      <div class="input-field">
+        <label>Comments</label>
+        <textarea name="comments" rows="5" maxlength="500" ></textarea>
+      </div>
       <button class="btn" type="submit">Submit</button>
     </form>
   </div>

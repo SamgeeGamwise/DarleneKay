@@ -17,14 +17,22 @@
             overflow-wrap: break-word;
         }
     }
-    
 
-    
-    @include base.respond-max(lg) {
-        padding: 4rem 10% 2rem 10%;
+    .contact-split__right {
+        .input-field {
+            display: flex;
+            flex-flow: column nowrap;
+        }  
+        
+        button {
+            margin-top: .5rem;
+        }
     }
+    
 
+    
     @include base.respond-max(lg) {
-        padding: 4rem 5% 2rem 5%;
+        flex-flow: column nowrap;
+        padding: 4rem 10% 2rem 10%;
     }
 }

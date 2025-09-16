@@ -1,21 +1,25 @@
 <!-- Text carousel -->
+
 <div class="carousel" id="carousel-text">
   <button class="carousel__btn carousel__btn--prev">&#10094;</button>
   <div class="carousel__track">
-  {% for review in site.reviews %}
-    <div class="carousel__item">
-      <p class="review__name">{{ review.reviewer }}</p>
-      <span class="stars">
-        {% for i in range(0, review.stars) %}
-          <i class="fa-solid fa-star"></i>
-        {% endfor %}
-        {% for i in range(review.stars, 5) %}
-          <i class="fa-regular fa-star"></i>
-        {% endfor %}
-      </span>
-      <p class="review__text">{{ review.text }}</p>
-    </div>
-  {% endfor %}
+    {% for review in site.reviews %}
+      <a href="{{ review.link }}" target="_blank">
+        <div class="carousel__item">
+          <p class="review__name">{{ review.reviewer }}</p>
+          <span class="stars">
+            {% for i in range(0, review.stars) %}
+              <i class="fa-solid fa-star"></i>
+            {% endfor %}
+            {% for i in range(review.stars, 5) %}
+              <i class="fa-regular fa-star"></i>
+            {% endfor %}
+          </span>
+          <p class="review__text">"{{ review.text }}"</p>
+          <p class="review__text">- {{ review.source }}</p>
+        </div>
+      </a>
+    {% endfor %}
   </div>
   <button class="carousel__btn carousel__btn--next">&#10095;</button>
 </div>
