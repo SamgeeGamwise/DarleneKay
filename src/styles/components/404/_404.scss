@@ -3,7 +3,14 @@
 
 .not-found {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 12rem 1rem;
+
+  .container {
+    display: flex; 
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 25px;
+  }
 
   &__title {
     font-size: 6rem;
