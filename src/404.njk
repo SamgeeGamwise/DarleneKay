@@ -1,19 +1,18 @@
 ---
 permalink: 404.html
+title: "Page Not Found"
+description: "Oops! The page you were looking for doesn’t exist."
+layout: "base.njk"
 eleventyExcludeFromCollections: true
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Page Not Found</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-</head>
-<body>
-  <section class="not-found">
-    <h1>404</h1>
-    <p>Sorry, the page you’re looking for can’t be found.</p>
-    <a href="{{ '/' | url }}">Return to Home</a>
-  </section>
-</body>
-</html>
+
+<section class="not-found">
+  <div class="container">
+    <h1 class="not-found__title">404</h1>
+    <p class="not-found__subtitle">Oops! Page not found.</p>
+    <p class="not-found__text">
+      The page you’re looking for might have been removed, had its name changed, or is temporarily unavailable.
+    </p>
+    <a href="{{ '/' | url }}" class="btn btn-primary">Back to Home</a>
+  </div>
+</section>
