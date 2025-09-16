@@ -1,7 +1,7 @@
 @use "base/normalize";
 @use "components/home/" as *;
 @use "components/404/404" as *;
-@use "components/nav/nav";
+@use "components/navbar/navbar";
 @use "components/footer/footer";
 
 @use "./base" as base;
