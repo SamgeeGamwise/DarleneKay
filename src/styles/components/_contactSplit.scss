@@ -1,0 +1,30 @@
+@use "../base" as base;
+
+.contact-split {
+    padding: 5rem 20% 5rem 20%;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    > * {
+            flex: 1 1 0;
+            min-width: 0;
+            padding: 1rem;
+            box-sizing: border-box;
+
+        p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    }
+    
+
+    
+    @include base.respond-max(lg) {
+        padding: 4rem 10% 2rem 10%;
+    }
+
+    @include base.respond-max(lg) {
+        padding: 4rem 5% 2rem 5%;
+    }
+}

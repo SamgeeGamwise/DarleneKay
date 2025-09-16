@@ -9,7 +9,7 @@ permalink: /
   <div class="hero__inner">
     <h2 class="hero__header">Ready to refresh your space?</h2>
     <br>
-    <p class="hero__text">Whether it’s a single room or a full transformation, we bring lasting finishes and stress-free service <i>every</i> time.</p>    
+    <p class="hero__text">Whether it’s a single room or a full transformation, we bring lasting finishes and stress-free service <i>every</i>&nbsp;&nbsp;time.</p>    
     <br>
     <p class="hero__actions">
       <a class="btn btn-transparant" href="{{ '/contact' | url }}">Request an Estimate</a>
@@ -44,11 +44,6 @@ permalink: /
         We also offer popcorn ceiling removal to modernize rooms with a clean, updated look.
       </p>
     </div>
-    {# <div class="intro__badge">
-      <a href="https://www.bbb.org/denver/business-reviews/painting-contractors/darlene-kay-llc-in-aurora-co-90246504">
-        <img src="{{ '/assets/images/bbb-a-plus.png' | url }}" alt="BBB A+ Rating" width="200px">
-      </a>
-    </div> #}
   </div>
 </section>
 
@@ -60,7 +55,7 @@ permalink: /
       <h4 class="card-header">Color help when you want it</h4>
       <p class="card-text">Choosing shades can be tough. We offer simple guidance to help you land on colors that fit your space.</p>
   </div>
-  <div class="card out-of-view-right animate-on-scroll">
+  <div class="card out-of-view-left animate-on-scroll">
     <img class="card-image" src="{{ '/assets/images/Home3.webp' | url }}" alt="Exterior painting">
     <h4 class="card-header">Everything you need, inside and out</h4>
     <p class="card-text">From trim to whole homes, our workmanship and clean job sites make the process painless.</p>
@@ -72,17 +67,21 @@ permalink: /
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<section class="cta-banner">
-  <h3 class="cta-header animate-on-scroll">Professional painting for homes and businesses — inside and out</h3>
-  <a class="btn btn-white h5" href="{{ '/contact' | url }}">Call today!</a>
+<section class="google-reviews">
+  {% for review in site.reviews %}
+    <div>
+      <a href="{{ item.href | url }}">{{ item.text }}</a>
+    </div>
+  {% endfor %}
+
+
 </section>
 
 
 <!-- SERVICES TILES (3-up) -->
 <section class="services-tiles">
   <div class="tiles">
-    <div class="tile out-of-view-right animate-on-scroll">
+    <div class="tile out-of-view-left animate-on-scroll">
       <img src="{{ '/assets/images/graphic_person3.jpg' | url }}" alt="Interior palette" width="100px">
       <h4>Interior Painting</h4>
       <p>Need a refresh or full repaint? We handle walls, ceilings, trim, cabinets, and more.</p>
@@ -94,7 +93,7 @@ permalink: /
       <p>Protect and upgrade your exterior with prep that sticks and finishes that last.</p>
       <p><a class="btn btn-alt" href="{{ '/exterior-services-overview' | url }}">Learn More</a></p>
     </div>
-    <div class="tile out-of-view-right animate-on-scroll">
+    <div class="tile out-of-view-left animate-on-scroll">
       <img src="{{ '/assets/images/graphic_paint1.jpg' | url }}" alt="Paint bucket" width="100px">
       <h4>Premium Materials</h4>
       <p>Quality products paired with skilled application for a finish you’ll feel good about.</p>
@@ -104,7 +103,7 @@ permalink: /
 </section>
 
 <!-- CONTACT SPLIT -->
-{# <section class="contact-split">
+<section class="contact-split">
   <div class="contact-split__left">
     <h3>Get in touch</h3>
     <p>Use the form to reach us, or call/text and we’ll follow up quickly by your preferred method. We’re here to help with any painting questions.</p>
@@ -119,11 +118,11 @@ permalink: /
       <p><label>Email*<br><input type="email" name="email" required></label></p>
       <p><label>Phone<br><input name="phone"></label></p>
       <p><label>Comments<br><textarea name="comments" rows="5"></textarea></label></p>
-      <p><button type="submit">Submit</button></p>
+      <button class="btn" type="submit">Submit</button>
     </form>
   </div>
-</section> #}
-
+</section>
+ 
 <!-- ART / MURALS PROMO -->
 <section class="art-promo"  style="background-image:url('{{ '/assets/images/mural1.png' | url }}');">
   <div class="art-promo-text">
@@ -131,4 +130,11 @@ permalink: /
     <p>Darlene also creates interior and exterior murals, with work shown across Colorado and in private collections nationwide.</p>
     <a class="btn" target="_blank" href="https://darlenekthomas.wordpress.com/">See Darlene’s Art <i class="fa-solid fa-arrow-right-long"></i></a>
   </div>
+</section>
+
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h3 class="cta-header animate-on-scroll">Professional painting for homes and businesses — inside and out</h3>
+  <a class="btn btn-white h5" href="{{ '/contact' | url }}">Call today!</a>
 </section>
