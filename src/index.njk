@@ -68,13 +68,14 @@ permalink: /
 </section>
 
 <section class="google-reviews">
-  {% for review in site.reviews %}
-    <div>
-      <a href="{{ item.href | url }}">{{ item.text }}</a>
-    </div>
-  {% endfor %}
+    {% include "ui/carousel-text.njk" %}
+</section>
 
 
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h3 class="cta-header animate-on-scroll">Professional painting for homes and businesses — inside and out</h3>
+  <a class="btn btn-white h5" href="{{ '/contact' | url }}">Call today!</a>
 </section>
 
 
@@ -130,11 +131,4 @@ permalink: /
     <p>Darlene also creates interior and exterior murals, with work shown across Colorado and in private collections nationwide.</p>
     <a class="btn" target="_blank" href="https://darlenekthomas.wordpress.com/">See Darlene’s Art <i class="fa-solid fa-arrow-right-long"></i></a>
   </div>
-</section>
-
-
-<!-- CTA BANNER -->
-<section class="cta-banner">
-  <h3 class="cta-header animate-on-scroll">Professional painting for homes and businesses — inside and out</h3>
-  <a class="btn btn-white h5" href="{{ '/contact' | url }}">Call today!</a>
 </section>
