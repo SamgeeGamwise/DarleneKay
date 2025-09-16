@@ -2,7 +2,11 @@
 @use "components/nav";
 @use "components/hero";
 @use "components/intro";
+@use "components/features";
 @use "components/footer";
+@use "components/card";
+@use "components/cta";
+@use "components/artPromo";
 
 @use "./base" as base;
 

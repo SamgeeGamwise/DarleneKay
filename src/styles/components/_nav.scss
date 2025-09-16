@@ -56,17 +56,15 @@
                     }
                 }
             }
-            
-            // .active-nav {
-            //     color: base.$primary;
-            // }
         }
 
         .nav-mobile {
             display: none;
 
             #menu-button {
-                background-color: base.$primary;
+                color: base.$black;
+                background-color: base.$white;
+                font-size: 150%;
             }
 
             #menu {

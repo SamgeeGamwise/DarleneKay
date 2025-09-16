@@ -1,0 +1,48 @@
+@use "../base" as base;
+
+.cta-banner {
+    display: flex; 
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 50px;
+    background-color: base.$primary;
+    padding: 5rem 20% 5rem 20%;
+    text-align: center;
+    height: 20%;
+    color: base.$white !important;
+
+    a {
+        font-size: 150%;
+        color: base.$dark !important;
+        background-color: base.$light !important;
+    }
+
+    .cta-header {
+    opacity: 0;
+    transform: translateX(-50px); /* start slightly left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .cta-header.in-view {
+    opacity: 1;
+    transform: translateX(0); /* slide to natural position */
+    }
+
+    @include base.respond-max(lg) {
+        padding: 4rem 10% 2rem 10%;
+
+        .intro__text {
+            .intro__cols {
+                width: 100%;
+            }
+        }
+    }
+
+    @include base.respond-max(lg) {
+        padding: 4rem 5% 2rem 5%;
+    }
+
+    .in-view {
+
+    }
+}

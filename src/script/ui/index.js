@@ -17,3 +17,23 @@ document.addEventListener("click", (e) => {
     buttonIcon.classList.toggle("fa-bars");
   }
 });
+
+const animationElements = [];
+
+// scroll-animations.js
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    },
+    { threshold: 0.3 } // trigger when 20% visible
+  );
+
+  document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+    observer.observe(el);
+  });
+});

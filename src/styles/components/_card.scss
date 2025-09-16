@@ -1,0 +1,40 @@
+@use "../base" as base;
+
+.card {
+    width: 450px;
+    margin: 2rem;
+    // box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px 1px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    .card-image {
+        height: 100%;
+    }
+    
+    .card-header,
+    .card-text {
+        padding: .5rem 1rem;
+    }
+
+    .card-header {
+        text-align: center;
+    }
+
+    @include base.respond-max(lg) {
+        width: 350px;
+    }
+
+
+    opacity: 0;
+    transform: translateX(-50px); /* start slightly left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    
+    &.in-view {
+        opacity: 1;
+        transform: translateX(0); /* slide to natural position */
+    }
+
+    
+}

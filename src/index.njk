@@ -29,51 +29,54 @@ permalink: /
 <!-- INTRO / BBB -->
 <section class="intro">
   <div class="intro__text">
-    <h3>Great paint work, clear communication</h3>
+    <h3 class="intro__header" >Great paint work, clear communication</h3>
     <div class="intro__cols">
-      <p>Looking to refresh your exterior or brighten up your interior? We handle both with careful prep and attention to detail.</p>
-      <p>Based in Aurora and serving the Denver metro, we keep projects moving and budgets in check—so you love the result.</p>
+      <p>
+        At Darlene Kay Painting, we believe a fresh coat of paint can transform how your space looks and feels.
+        Serving homeowners and businesses throughout the Denver area, our crew focuses on careful prep,
+        clean job sites, and finishes that last—so the process stays simple and stress-free.
+      </p>
+      <br>
+      <p>
+        From detailed interior work to durable exterior coatings built for Colorado’s climate,
+        we bring friendly service, fair pricing, and efficient scheduling to every project.
+        We also offer popcorn ceiling removal to modernize rooms with a clean, updated look.
+      </p>
     </div>
-    <p class="intro__badge">
+    {# <div class="intro__badge">
       <a href="https://www.bbb.org/denver/business-reviews/painting-contractors/darlene-kay-llc-in-aurora-co-90246504">
-        <img src="{{ '/assets/images/bbb-a-plus.png' | url }}" alt="BBB A+ Rating">
+        <img src="{{ '/assets/images/bbb-a-plus.png' | url }}" alt="BBB A+ Rating" width="200px">
       </a>
-    </p>
+    </div> #}
   </div>
 </section>
 
+
 <!-- FEATURE CARDS (3-up) -->
 <section class="features">
-  <ul class="features__list">
-    <li class="features__item">
-      <img class="fullsize" src="{{ '/assets/images/Home1.webp' | url }}" alt="Color swatches">
-      <h4>Color help when you want it</h4>
-      <p>Choosing shades can be tough. We offer simple guidance to help you land on colors that fit your space.</p>
-    </li>
-    <li class="features__item">
-      <img class="fullsize" src="{{ '/assets/images/Home3.webp' | url }}" alt="Exterior painting">
-      <h4>Everything you need, inside and out</h4>
-      <p>From trim to whole homes, our workmanship and clean job sites make the process painless.</p>
-    </li>
-    <li class="features__item">
-      <img class="fullsize" src="{{ '/assets/images/Home2.webp' | url }}" alt="High‑quality paint">
-      <h4>Top coatings, lasting results</h4>
-      <p>We work with leading paint brands to pair great products with careful application.</p>
-    </li>
-  </ul>
+  <div class="card animate-on-scroll">
+      <img class="card-image" src="{{ '/assets/images/Home1.webp' | url }}" alt="Color swatches">
+      <h4 class="card-header">Color help when you want it</h4>
+      <p class="card-text">Choosing shades can be tough. We offer simple guidance to help you land on colors that fit your space.</p>
+  </div>
+  <div class="card animate-on-scroll">
+    <img class="card-image" src="{{ '/assets/images/Home3.webp' | url }}" alt="Exterior painting">
+    <h4 class="card-header">Everything you need, inside and out</h4>
+    <p class="card-text">From trim to whole homes, our workmanship and clean job sites make the process painless.</p>
+  </div>
+  <div class="card animate-on-scroll">
+    <img class="card-image" src="{{ '/assets/images/Home2.webp' | url }}" alt="High‑quality paint">
+    <h4 class="card-header">Top coatings, lasting results</h4>
+    <p class="card-text">We work with leading paint brands to pair great products with careful application.</p>
+  </div>
 </section>
 
-<!-- ART / MURALS PROMO -->
-{# <section class="art-promo">
-  <h4>Interested in custom art or murals?</h4>
-  <p>Darlene also creates interior and exterior murals, with work shown across Colorado and in private collections nationwide.</p>
-  <p><a class="btn" href="https://darlenekthomas.wordpress.com/">See Darlene’s Art</a></p>
-</section> #}
-
 <!-- CTA BANNER -->
-{# <section class="cta-banner">
-  <h3>Professional painting for homes and businesses — inside and out</h3>
-</section> #}
+<section class="cta-banner">
+  <h3 class="cta-header animate-on-scroll">Professional painting for homes and businesses — inside and out</h3>
+  <a class="btn">Call today!</a>
+</section>
+
 
 <!-- SERVICES TILES (3-up) -->
 {# <section class="services-tiles">
@@ -119,3 +122,12 @@ permalink: /
     </form>
   </div>
 </section> #}
+
+<!-- ART / MURALS PROMO -->
+<section class="art-promo">
+  <div class="art-promo-text">
+    <h4>Interested in custom art or murals?</h4>
+    <p>Darlene also creates interior and exterior murals, with work shown across Colorado and in private collections nationwide.</p>
+    <p><a class="btn" href="https://darlenekthomas.wordpress.com/">See Darlene’s Art <i class="fa-solid fa-arrow-right-long"></i></a></p>
+  </div>
+</section>
