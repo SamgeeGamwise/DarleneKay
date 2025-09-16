@@ -21,6 +21,11 @@ jobs:
           cache: 'npm'
 
       - run: npm install
+      - name: Fetch Google Reviews
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+        run: node scripts/reviews.js
       - run: npm run build -- --pathprefix=/${{ github.event.repository.name }}/
 
 
