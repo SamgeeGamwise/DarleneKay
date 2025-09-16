@@ -5,9 +5,9 @@ layout: layouts/base.njk
 permalink: /
 ---
 
-<div class="container">
-  <!-- HERO -->
-  <section class="hero" style="background-image:url('{{ '/assets/images/exterior1_dark.jpg' | url }}');">
+<!-- HERO -->
+<section class="hero" style="background-image:url('{{ '/assets/images/exterior1_dark.jpg' | url }}');">
+  <div class="container container-small">
     <div class="hero__inner">
       <h2 class="hero__header">Ready to refresh your space?</h2>
       <br>
@@ -27,10 +27,12 @@ permalink: /
         </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- INTRO / BBB -->
-  <section class="intro">
+<!-- INTRO / BBB -->
+<section class="intro">
+  <div class="container container-medium">
     <div class="intro__text">
       <h3 class="intro__header" >Great paint work, clear communication</h3>
       <div class="intro__cols">
@@ -47,42 +49,46 @@ permalink: /
         </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
-  <!-- FEATURE CARDS (3-up) -->
-  <section class="features">
-    <div class="card out-of-view-left animate-on-scroll">
-        <img class="card-image" src="{{ '/assets/images/Home1.webp' | url }}" alt="Color swatches">
-        <h4 class="card-header">Color help when you want it</h4>
-        <p class="card-text">Choosing shades can be tough. We offer simple guidance to help you land on colors that fit your space.</p>
-    </div>
-    <div class="card out-of-view-left animate-on-scroll">
-      <img class="card-image" src="{{ '/assets/images/Home3.webp' | url }}" alt="Exterior painting">
-      <h4 class="card-header">Everything you need, inside and out</h4>
-      <p class="card-text">From trim to whole homes, our workmanship and clean job sites make the process painless.</p>
-    </div>
-    <div class="card out-of-view-left animate-on-scroll">
-      <img class="card-image" src="{{ '/assets/images/Home2.webp' | url }}" alt="High‑quality paint">
-      <h4 class="card-header">Top coatings, lasting results</h4>
-      <p class="card-text">We work with leading paint brands to pair great products with careful application.</p>
-    </div>
-  </section>
+<!-- FEATURE CARDS (3-up) -->
+<section class="features container container-none">
+  <div class="card out-of-view-left animate-on-scroll">
+      <img class="card-image" src="{{ '/assets/images/Home1.webp' | url }}" alt="Color swatches">
+      <h4 class="card-header">Color help when you want it</h4>
+      <p class="card-text">Choosing shades can be tough. We offer simple guidance to help you land on colors that fit your space.</p>
+  </div>
+  <div class="card out-of-view-left animate-on-scroll">
+    <img class="card-image" src="{{ '/assets/images/Home3.webp' | url }}" alt="Exterior painting">
+    <h4 class="card-header">Everything you need, inside and out</h4>
+    <p class="card-text">From trim to whole homes, our workmanship and clean job sites make the process painless.</p>
+  </div>
+  <div class="card out-of-view-left animate-on-scroll">
+    <img class="card-image" src="{{ '/assets/images/Home2.webp' | url }}" alt="High‑quality paint">
+    <h4 class="card-header">Top coatings, lasting results</h4>
+    <p class="card-text">We work with leading paint brands to pair great products with careful application.</p>
+  </div>
+</section>
 
-  <section class="google-reviews">
+<section class="google-reviews">
+    <div class="container container-small">
       {% include "ui/carousel-text.njk" %}
-  </section>
+    </div>
+</section>
 
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
+<!-- CTA BANNER -->
+<section class="cta-banner container container-medium">
     <h3 class="cta-header animate-on-scroll">Professional painting for homes and businesses — inside and out</h3>
     <a class="btn btn-white h5" href="{{ '/contact' | url }}">Call today!</a>
-  </section>
+</section>
 
 
-  <!-- SERVICES TILES (3-up) -->
-  <section class="services-tiles">
+<!-- SERVICES TILES (3-up) -->
+<section class="services-tiles">
+  <div class="container container-medium">
     <div class="tiles">
       <div class="tile out-of-view-left animate-on-scroll">
         <img src="{{ '/assets/images/graphic_person3.jpg' | url }}" alt="Interior palette" width="100px">
@@ -103,50 +109,52 @@ permalink: /
         <p><a class="btn btn-alt" href="{{ '/about' | url }}">About Our Process</a></p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT SPLIT -->
-  <section class="contact-split">
-    <div class="contact-split__left">
-      <h3>Get in touch</h3>
-      <p>Use the form to reach us, or call/text and we’ll follow up quickly by your preferred method. We’re here to help with any painting questions.</p>
-      <p><a href="tel:7209331762">Call or text: (720) 933‑1762</a></p>
-    </div>
-    <div class="contact-split__right">
-      <h3>Send Us a Message</h3>
-      <!-- Replace action with your form endpoint (Formspree/HubSpot/etc.) -->
-      <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="input-field">
-          <label>First Name<span> *</span></label>
-          <input type="text" name="firstName" required>
-        </div>
-        <div class="input-field">
-          <label>Last Name<span> *</span></label>
-          <input type="text" name="lastName" required>
-        </div>
-        <div class="input-field">
-          <label>Email<span> *</span></label>
-          <input type="email" name="email" required>
-        </div>
-        <div class="input-field">
-          <label>Phone</label>
-          <input type="text" name="phone">
-        </div>
-        <div class="input-field">
-          <label>Comments</label>
-          <textarea name="comments" rows="3" maxlength="500" ></textarea>
-        </div>
-        <button class="btn" type="submit">Submit</button>
-      </form>
-    </div>
-  </section>
-  
-  <!-- ART / MURALS PROMO -->
-  <section class="art-promo"  style="background-image:url('{{ '/assets/images/mural1.png' | url }}');">
+<!-- CONTACT SPLIT -->
+<section class="contact-split container container-large">
+  <div class="contact-split__left">
+    <h3>Get in touch</h3>
+    <p>Use the form to reach us, or call/text and we’ll follow up quickly by your preferred method. We’re here to help with any painting questions.</p>
+    <p><a href="tel:7209331762">Call or text: (720) 933‑1762</a></p>
+  </div>
+  <div class="contact-split__right">
+    <h3>Send Us a Message</h3>
+    <!-- Replace action with your form endpoint (Formspree/HubSpot/etc.) -->
+    <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="input-field">
+        <label>First Name<span> *</span></label>
+        <input type="text" name="firstName" required>
+      </div>
+      <div class="input-field">
+        <label>Last Name<span> *</span></label>
+        <input type="text" name="lastName" required>
+      </div>
+      <div class="input-field">
+        <label>Email<span> *</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="input-field">
+        <label>Phone</label>
+        <input type="text" name="phone">
+      </div>
+      <div class="input-field">
+        <label>Comments</label>
+        <textarea name="comments" rows="3" maxlength="500" ></textarea>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- ART / MURALS PROMO -->
+<section class="art-promo"  style="background-image:url('{{ '/assets/images/mural1.png' | url }}');">
+  <div class="container container-xl">
     <div class="art-promo-text">
       <h4>Interested in custom art or murals?</h4>
       <p>Darlene also creates interior and exterior murals, with work shown across Colorado and in private collections nationwide.</p>
       <a class="btn" target="_blank" href="https://darlenekthomas.wordpress.com/">See Darlene’s Art <i class="fa-solid fa-arrow-right-long"></i></a>
     </div>
-  </section>
-</div>
+  </div>
+</section>

@@ -1,36 +1,25 @@
 @use "../../base" as base;
 
 .art-promo {
-        padding: 20rem 20% 20rem 20%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-        .art-promo-text {
-            padding: 4rem 2rem;
-            background-color: rgba(base.$white, 0.85);
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: start;
-            gap: 40px
-        }
-
-        a.btn {
-            color: base.$black;
-            background-color: transparent;
-            
-            &:hover {
-                color: lighten(base.$black, $amount: 20);
-            }
-        }
-
-
-    @include base.respond-max(lg) {
-        padding: 4rem 10% 2rem 10%;
+    .art-promo-text {
+        padding: 4rem 2rem;
+        background-color: rgba(base.$white, 0.85);
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: start;
+        gap: 40px
     }
 
-
-    @include base.respond-max(lg) {
-        padding: 4rem 5% 2rem 5%;
+    a.btn {
+        color: base.$black;
+        background-color: transparent;
+        
+        &:hover {
+            color: lighten(base.$black, $amount: 20);
+        }
     }
 }

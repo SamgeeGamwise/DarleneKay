@@ -132,7 +132,67 @@ textarea {
     resize: vertical; // allow resizing only up/down
 }
 
+.container {
+    padding-left: 20%;
+    padding-right: 20%;
+
+
+
+    &.container-xl {
+        padding-top: 20rem;
+        padding-bottom: 20rem;
+    }
+    
+    &.container-large {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    &.container-medium {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    &.container-small {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &.container-none {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+@include mixins.respond-max(lg) {
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+
+        &.container-xl {
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+
+        &.container-large {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    
+        &.container-medium {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+}
+
 @include mixins.respond-max(md) {
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
     html {
         font-size: 16px;
     }

@@ -1,8 +1,6 @@
 @use "../../base" as base;
 
 .intro {
-    padding: 5rem 20% 2rem 20%;
-
     .intro__text {
         max-width: 1300px;
         display: flex;
@@ -24,16 +22,10 @@
     }
 
     @include base.respond-max(lg) {
-        padding: 4rem 10% 2rem 10%;
-
         .intro__text {
             .intro__cols {
                 width: 100%;
             }
         }
-    }
-
-    @include base.respond-max(lg) {
-        padding: 4rem 5% 2rem 5%;
     }
 }

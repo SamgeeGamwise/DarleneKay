@@ -1,8 +1,6 @@
 @use "../../base" as base;
 
 .google-reviews {
-    padding: 5rem 20% 5rem 20%;
-
     .review__name {
         font-weight: bold;
     }
@@ -11,9 +9,5 @@
         font-size: 75%;
         word-wrap: break-word;
         overflow-wrap: break-word;
-    }
-
-    @include base.respond-max(lg) {
-        padding: 5rem 5% 5rem 5%;    
     }
 }

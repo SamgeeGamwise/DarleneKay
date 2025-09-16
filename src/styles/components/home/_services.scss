@@ -1,10 +1,8 @@
 @use "../../base" as base;
 
 .services-tiles {
-    padding: 5rem 10% 8rem 10%;
     height: 100%;
-
-
+    
     .tiles {
         display: flex;
         flex-flow: row wrap;
@@ -16,14 +14,5 @@
             flex-flow: column nowrap;
             gap: 20px;
         }
-    }
-
-    @include base.respond-max(lg) {
-        padding: 4rem 10% 4rem 10%;
-    }
-
-
-    @include base.respond-max(lg) {
-        padding: 4rem 5% 4rem 5%;
     }
 }

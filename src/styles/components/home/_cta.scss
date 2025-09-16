@@ -6,7 +6,6 @@
     align-items: center;
     gap: 50px;
     background-color: base.$primary;
-    padding: 5rem 20% 5rem 20%;
     text-align: center;
     height: 20%;
     color: base.$white !important;
@@ -23,16 +22,10 @@
     }
 
     @include base.respond-max(lg) {
-        padding: 4rem 10% 2rem 10%;
-
         .intro__text {
             .intro__cols {
                 width: 100%;
             }
         }
-    }
-
-    @include base.respond-max(lg) {
-        padding: 4rem 5% 2rem 5%;
     }
 }

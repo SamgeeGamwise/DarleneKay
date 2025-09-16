@@ -1,8 +1,6 @@
 @use "../../base" as base;
 
 .contact-split {
-    padding: 5rem 20% 5rem 20%;
-
     display: flex;
     flex-flow: row nowrap;
 
@@ -33,6 +31,5 @@
     
     @include base.respond-max(lg) {
         flex-flow: column nowrap;
-        padding: 4rem 10% 2rem 10%;
     }
 }
