@@ -1,0 +1,27 @@
+<nav aria-label="Primary">
+  <a id="brand" class="logo-text h3 bold" href="{{ '/' | url }}">
+    <img class="logo" src="{{ '/assets/images/logo2_small.png' | url }}" />
+    <span class="site-name">{{ site.site_name }}</span>
+  </a>
+  <div class="nav-desktop">
+    <ul>
+    {% for item in site.nav %}
+      {% set isActive = (page.url == item.href) or (page.url == '/' and item.href == '/') %}
+      <li>
+        <a href="{{ item.href | url }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ item.text }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="nav-mobile">
+    <button id="menu-button"><i id="menu-button-icon" class="fa-solid fa-bars"></i></button>
+    <ul id="menu" class="dropdown hidden">
+    {% for item in site.nav %}
+      {% set isActive = (page.url == item.href) or (page.url == '/' and item.href == '/') %}
+      <li>
+        <a href="{{ item.href | url }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ item.text }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</nav>
