@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../base" as base;
 
 .blocker {
@@ -51,7 +52,7 @@
                     &:hover {
                         cursor: pointer;
                         a {
-                            color: lighten(base.$black, $amount: 45);
+                            color: color.scale($color: base.$black, $lightness: 45%);
                         }
                     }
                 }

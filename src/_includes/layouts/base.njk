@@ -15,6 +15,7 @@
   </head>
   <body>
     <header id="header">
+      {% set navLogo = logo or "/assets/images/logo.webp" %}
       {% include "components/navbar.njk" %}
     </header>
     <div class="blocker"></div>
@@ -22,6 +23,7 @@
     <main id="content">
       {{ content | safe }}
     </main>
+
 
     {% include "components/footer.njk" %}
   </body>

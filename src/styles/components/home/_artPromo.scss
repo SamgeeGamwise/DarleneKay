@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../base" as base;
 
 .art-promo {
@@ -19,7 +20,7 @@
         background-color: transparent;
         
         &:hover {
-            color: lighten(base.$black, $amount: 20);
+            color: color.scale($color: base.$black, $lightness: 20%);
         }
     }
 }

@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../base" as base;
 
 
@@ -43,7 +44,7 @@
     transition: background 0.3s ease;
 
     &:hover {
-      background: darken(base.$secondary, 10%);
+      background: color.scale($color: base.$secondary, $lightness: -10%);
     }
   }
 }

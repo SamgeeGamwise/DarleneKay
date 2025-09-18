@@ -6,7 +6,7 @@
 
 @use "./base" as base;
 
-@import "base/fonts";
+@use "base/fonts";
 
 main a {
     color: base.$primary;
