@@ -1,10 +1,10 @@
-<!-- Text carousel -->
+<!-- Text carousel-text -->
 
-<div class="carousel" id="carousel-text">
-  <button class="carousel__btn carousel__btn--prev">&#10094;</button>
-  <div class="carousel__track">
+<div class="carousel-text" id="carousel-text">
+  <button class="carousel-text__btn carousel-text__btn--prev">&#10094;</button>
+  <div class="carousel-text__track">
     {% for review in site.reviews %}
-        <div class="carousel__item">
+        <div class="carousel-text__item">
           <a href="{{ review.link }}" target="_blank">
             <p class="review__name">{{ review.reviewer }}</p>
           </a>
@@ -21,5 +21,5 @@
         </div>
     {% endfor %}
   </div>
-  <button class="carousel__btn carousel__btn--next">&#10095;</button>
+  <button class="carousel-text__btn carousel-text__btn--next">&#10095;</button>
 </div>

@@ -1,10 +1,12 @@
-<!-- Image carousel -->
-<div class="carousel" id="carousel-images">
-  <button class="carousel__btn carousel__btn--prev">&#10094;</button>
-  <div class="carousel__track">
-    <div class="carousel__item"><img src="/assets/images/home1.webp" alt="Example 1"></div>
-    <div class="carousel__item"><img src="/assets/images/home2.webp" alt="Example 2"></div>
-    <div class="carousel__item"><img src="/assets/images/home3.webp" alt="Example 3"></div>
+<!-- Text carousel-images -->
+<div class="carousel-images" id="carousel-images">
+  <button class="carousel-images__btn carousel-images__btn--prev">&#10094;</button>
+  <div class="carousel-images__track">
+    {% for image in site.galleryImages %}
+      <div class="carousel-images__item">
+        <img src="{{ image.src | url }}" alt="{{ image.alt }}">
+      </div>
+    {% endfor %}
   </div>
-  <button class="carousel__btn carousel__btn--next">&#10095;</button>
+  <button class="carousel-images__btn carousel-images__btn--next">&#10095;</button>
 </div>

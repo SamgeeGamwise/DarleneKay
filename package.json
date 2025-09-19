@@ -1,17 +1,17 @@
 {
-    "name":  "darlene-kay",
-    "private":  true,
-    "scripts":  {
-                    "dev":  "concurrently \"npm:watch:sass\" \"npx @11ty/eleventy --serve\"",
-                    "build":  "npm run build:sass \u0026\u0026 npx @11ty/eleventy",
-                    "watch:sass":  "sass --load-path=src/assets/styles src/assets/styles/main.scss:_site/assets/css/main.css --style=expanded --embed-source-map --source-map-urls=relative --watch",
-                    "build:sass":  "sass --load-path=src/assets/styles src/assets/styles/main.scss:_site/assets/css/main.css --style=compressed --no-source-map"
-                },
-    "devDependencies":  {
-                            "@11ty/eleventy":  "^3.0.0",
-                            "autoprefixer":  "^10.4.21",
-                            "concurrently":  "^9.2.1",
-                            "postcss":  "^8.5.6",
-                            "sass":  "^1.92.1"
-                        }
+    "name": "darlene-kay",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"npm:watch:sass\" \"npx @11ty/eleventy --serve --port=3000\"",
+        "build": "npm run build:sass \u0026\u0026 npx @11ty/eleventy",
+        "watch:sass": "sass --load-path=src/assets/styles src/assets/styles/main.scss:_site/assets/css/main.css --style=expanded --embed-source-map --source-map-urls=relative --watch",
+        "build:sass": "sass --load-path=src/assets/styles src/assets/styles/main.scss:_site/assets/css/main.css --style=compressed --no-source-map"
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^3.0.0",
+        "autoprefixer": "^10.4.21",
+        "concurrently": "^9.2.1",
+        "postcss": "^8.5.6",
+        "sass": "^1.92.1"
+    }
 }

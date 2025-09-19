@@ -1,24 +1,11 @@
 ---
 title: Project Gallery
 layout: layouts/base.njk
-permalink: /gallery/
+permalink: /painting/gallery/
 brand: "painting"
 ---
-<header>
-  <h2>Project Gallery</h2>
-  <p>A look at recent interior and exterior work around the Denver area.</p>
-</header>
 
-<section>
-  <ul>
-    {% for item in gallery.items %}
-    <li>
-      <figure>
-        <img src="{{ item.src | url }}" alt="{{ item.alt }}">
-        <figcaption>{{ item.caption }}</figcaption>
-      </figure>
-    </li>
-    {% endfor %}
-  </ul>
-  <p><em>Drop image files into <code>src/images/gallery/</code> and update <code>src/_data/gallery.json</code>.</em></p>
+<section class="gallery container container-large">
+  <h1>Project Gallery</h1>
+  {% include "ui/carousel-image.njk" %}
 </section>

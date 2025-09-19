@@ -3,17 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.getElementById("menu-button");
   const menuIcon = document.getElementById("menu-button-icon");
   const mobileSubmenuToggles = document.querySelectorAll("[data-mobile-submenu-toggle]");
-  const carousel = document.getElementById("carousel-text");
-
-  let items;
-  let prevButton;
-  let nextButton;
-
-  if (carousel) {
-    items = Array.from(carousel.querySelectorAll(".carousel__item"));
-    prevButton = carousel.querySelector(".carousel__btn--prev");
-    nextButton = carousel.querySelector(".carousel__btn--next");
-  }
 
   /*
   **********************************************
@@ -136,58 +125,82 @@ document.addEventListener("DOMContentLoaded", () => {
   Carousel Logic
   **********************************************
   */
-  if (carousel) {
-    let currentIndex = 0;
-    let timer;
-    const interval = 4000; // autoplay interval in ms
 
-    function showItem(index) {
-      items.forEach((item, i) => {
-        item.classList.toggle("active", i === index);
-      });
-      currentIndex = index;
-    }
 
-    function next() {
-      const newIndex = (currentIndex + 1) % items.length;
-      showItem(newIndex);
-    }
+  function carousel_func(type, interval = 10000) {
+    const carousel = document.getElementById(type);
+    if (carousel) {
+      let items;
+      let prevButton;
+      let nextButton;
 
-    function prev() {
-      const newIndex = (currentIndex - 1 + items.length) % items.length;
-      showItem(newIndex);
-    }
+      if (type === "carousel-text") {
+        items = Array.from(carousel.querySelectorAll(".carousel-text__item"));
+        prevButton = carousel.querySelector(".carousel-text__btn--prev");
+        nextButton = carousel.querySelector(".carousel-text__btn--next");
+      }
 
-    function startAutoplay() {
-      timer = setInterval(next, interval);
-    }
+      if (type === "carousel-images") {
+        items = Array.from(carousel.querySelectorAll(".carousel-images__item"));
+        prevButton = carousel.querySelector(".carousel-images__btn--prev");
+        nextButton = carousel.querySelector(".carousel-images__btn--next");
+      }
 
-    function stopAutoplay() {
-      clearInterval(timer);
-    }
+      let currentIndex = 0;
+      let timer;
 
-    // Event listeners
-    if (nextButton) {
-      nextButton.addEventListener("click", () => {
-        next();
-        stopAutoplay();
-        startAutoplay();
-      });
-    }
+      function showItem(index) {
+        items.forEach((item, i) => {
+          item.classList.toggle("active", i === index);
+        });
+        currentIndex = index;
+      }
 
-    if (prevButton) {
-      prevButton.addEventListener("click", () => {
-        prev();
-        stopAutoplay();
-        startAutoplay();
-      });
-    }
+      function next() {
+        const newIndex = (currentIndex + 1) % items.length;
+        showItem(newIndex);
+      }
 
-    carousel.addEventListener("mouseenter", stopAutoplay);
-    carousel.addEventListener("mouseleave", startAutoplay);
+      function prev() {
+        const newIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(newIndex);
+      }
 
-    // Init
-    showItem(currentIndex);
-    startAutoplay();
+      function startAutoplay() {
+        timer = setInterval(next, interval);
+      }
+
+      function stopAutoplay() {
+        clearInterval(timer);
+      }
+
+      // Event listeners
+      if (nextButton) {
+        nextButton.addEventListener("click", () => {
+          next();
+          stopAutoplay();
+          startAutoplay();
+        });
+      }
+
+      if (prevButton) {
+        prevButton.addEventListener("click", () => {
+          prev();
+          stopAutoplay();
+          startAutoplay();
+        });
+      }
+
+      carousel.addEventListener("mouseenter", stopAutoplay);
+      carousel.addEventListener("mouseleave", startAutoplay);
+
+      // Init
+      showItem(currentIndex);
+      startAutoplay();
+    } 
   }
+
+  carousel_func("carousel-text");
+  carousel_func("carousel-images", 5000);
 });
+
