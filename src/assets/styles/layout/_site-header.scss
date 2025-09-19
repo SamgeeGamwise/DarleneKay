@@ -34,7 +34,7 @@
       }
 
       .site-name {
-        font-family: 'Lora';
+        font-family: "Lora";
 
         &.painting {
           font-family: "Dancing Script", cursive;
@@ -83,10 +83,10 @@
               display: block;
               padding: 0.5rem 1rem;
               text-decoration: none;
-              color: #333;
+              color: base.$black;
 
               &:hover {
-                background: #f3f3f3;
+                background: color.scale(base.$white, $lightness: -10%);
               }
             }
           }
@@ -101,32 +101,111 @@
     /* Mobile Nav */
     .nav-mobile {
       display: none;
+      width: 100%;
+      text-align: end;
 
-      #menu-button {
-        color: base.$black;
+      &__trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.85rem;
         background-color: base.$white;
-        font-size: 150%;
+        color: base.$black;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        line-height: 1;
       }
 
-      #menu {
+      &__trigger-label {
+        font-size: 0.95rem;
+      }
+
+      .mobile-menu {
         z-index: 110;
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: stretch;
         position: fixed;
         top: base.$logo-size;
         left: 0;
         right: 0;
         margin-top: 2rem;
-        background-color: rgba(base.$white, 0.9);
+        background-color: rgba(base.$white, 0.96);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        list-style: none;
+        padding: 0;
+        max-height: calc(100vh - base.$blocker-height);
+        overflow-y: auto;
+      }
 
-        li {
-          list-style: none;
-          padding: 1rem;
+      .mobile-menu__item {
+        border-bottom: 1px solid color.scale(base.$black, $lightness: 85%);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .mobile-menu__parent {
+        display: flex;
+        align-items: center;
+      }
+
+      .mobile-menu__link {
+        flex: 1;
+        display: block;
+        padding: 1rem 1.25rem;
+        color: base.$black;
+
+        &.active-nav {
+          color: base.$primary;
         }
 
-        .active-nav {
+        &.no-child {
+          padding-right: calc(1.25rem + 50px);
+        }
+      }
+
+      .mobile-menu__toggle {
+        width: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        border: none;
+        background: transparent;
+        color: base.$black;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &.is-open .mobile-menu__toggle-icon {
+          transform: rotate(180deg);
+        }
+      }
+
+      .mobile-menu__toggle-icon {
+        transition: transform 0.2s ease;
+        font-size: 0.9rem;
+      }
+
+      .mobile-menu__submenu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: color.scale(base.$white, $lightness: -4%);
+      }
+
+      .mobile-menu__submenu-item + .mobile-menu__submenu-item {
+        border-top: 1px solid color.scale(base.$black, $lightness: 90%);
+      }
+
+      .mobile-menu__submenu-link {
+        display: block;
+        padding: 0.75rem 1.5rem;
+        color: base.$black;
+
+        &.active-nav {
           color: base.$primary;
         }
       }
@@ -138,6 +217,7 @@
     .nav-desktop {
       display: none;
     }
+
     .nav-mobile {
       display: block !important;
     }
