@@ -6,80 +6,94 @@ permalink: /testimonials/
 brand: "main"
 ---
 
-<section class="page-hero container container-large">
-  <div class="page-hero__grid">
-    <div class="page-hero__content">
-      <p class="page-hero__eyebrow">Testimonials</p>
-      <h1 class="page-hero__heading">Five-star experiences from homeowners and property managers</h1>
-      <p class="page-hero__lede">We take pride in the trust clients place in our crew. Browse recent feedback, then schedule your project to see the difference yourself.</p>
-      <div class="page-hero__actions">
-        <a class="btn" href="{{ '/contact/' | url }}">Request a quote</a>
-        <a class="btn btn-alt" href="https://www.google.com/maps/place/Darlene+Kay+LLC" target="_blank" rel="noopener">Read Google reviews</a>
+<section class="hero" style="background-image:url('{{ '/assets/images/Home1.webp' | url }}');">
+  <div class="container container-small">
+    <div class="hero__inner">
+      <h1 class="hero__header">Clients notice the difference</h1>
+      <br>
+      <p class="hero__text">From Aurora homeowners to Denver property managers, our clients appreciate clear communication, tidy job sites, and long-lasting finishes.</p>
+      <br>
+      <p class="hero__actions">
+        <a class="btn btn-white" href="{{ '/contact/' | url }}">Request your quote</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container container-medium">
+    <div class="intro__text">
+      <div class="intro__header">
+        <h2>What we hear most often</h2>
+      </div>
+      <div class="intro__cols">
+        <p>
+          Clients love that we show up when we say we will, explain the process, and stay on schedule. Because the owners remain involved, questions get answered quickly and projects wrap with pride.
+        </p>
+        <p>
+          Scroll through a few recent reviews below. When you&#39;re ready, we&#39;ll schedule a walkthrough and deliver the same experience for your property.
+        </p>
       </div>
     </div>
-    <div class="page-hero__media">
-      <figure>
-        <img src="{{ '/assets/images/Home1.webp' | url }}" alt="Happy client after home project" loading="lazy">
-      </figure>
-    </div>
   </div>
 </section>
 
-<section class="page-section container container-large">
-  <header class="page-section__header">
-    <h2>Recent feedback</h2>
-    <p>Swap in full testimonials, video embeds, or screenshots from review platforms.</p>
-  </header>
-  <div class="page-card-grid">
-    <article class="testimonial-card">
-      <blockquote>&ldquo;Professional, punctual, and the results are flawless. Our living room looks brand new.&rdquo;</blockquote>
-      <footer>&mdash; Aurora homeowner</footer>
-    </article>
-    <article class="testimonial-card">
-      <blockquote>&ldquo;Clear estimate, fair price, and very tidy work. We&rsquo;d hire them again without hesitation.&rdquo;</blockquote>
-      <footer>&mdash; Denver homeowner</footer>
-    </article>
-    <article class="testimonial-card">
-      <blockquote>&ldquo;They handled repairs and painting in one go, which saved us time and hassle.&rdquo;</blockquote>
-      <footer>&mdash; Local business owner</footer>
-    </article>
-    <article class="testimonial-card">
-      <blockquote>&ldquo;Roof replacement and exterior paint were finished ahead of schedule. Communication was excellent.&rdquo;</blockquote>
-      <footer>&mdash; Centennial property manager</footer>
-    </article>
+<section class="google-reviews">
+  <div class="container container-small">
+    <h2 class="h3">Recent Google &amp; BBB feedback</h2>
+    {% include "ui/carousel-text.njk" %}
   </div>
 </section>
 
-<section class="page-section page-section--accent container container-large">
-  <header class="page-section__header">
-    <h2>Review highlights</h2>
-  </header>
-  <div class="page-card-grid">
-    <article class="page-card">
-      <h3>Google</h3>
-      <p>5.0 rating with dozens of verified reviews praising our responsiveness, clean job sites, and attention to detail.</p>
-      <a class="service-card__link" href="https://www.google.com/maps/place/Darlene+Kay+LLC" target="_blank" rel="noopener">View Google profile</a>
-    </article>
-    <article class="page-card">
-      <h3>Better Business Bureau</h3>
-      <p>A+ accredited business with responsive support. Clients appreciate our straightforward communication.</p>
-      <a class="service-card__link" href="https://www.bbb.org/us/co/aurora/profile/painting-contractors/darlene-kay-llc-1296-90246504" target="_blank" rel="noopener">See BBB rating</a>
-    </article>
-    <article class="page-card">
-      <h3>Word of mouth</h3>
-      <p>Referrals power our calendar. Ask us for references from homeowners, HOAs, and property managers.</p>
-      <a class="service-card__link" href="{{ '/contact/' | url }}">Request references</a>
-    </article>
+<section class="features container container-none">
+  <div class="card out-of-view-left animate-on-scroll">
+    <img class="card-image" src="{{ '/assets/images/Home2.webp' | url }}" alt="Happy homeowner">
+    <h3 class="card-header">"Professional and punctual"</h3>
+    <p class="card-text">“Professional, punctual, and the results are flawless. Our living room looks brand new.” — Aurora homeowner</p>
+  </div>
+  <div class="card out-of-view-left animate-on-scroll">
+    <img class="card-image" src="{{ '/assets/images/Home3.webp' | url }}" alt="Residential project">
+    <h3 class="card-header">"Clear estimate, fair price"</h3>
+    <p class="card-text">“Clear estimate, fair price, and very tidy work. We’d hire them again without hesitation.” — Denver homeowner</p>
+  </div>
+  <div class="card out-of-view-left animate-on-scroll">
+    <img class="card-image" src="{{ '/assets/images/exterior1_dark.jpg' | url }}" alt="Commercial roof and paint project">
+    <h3 class="card-header">"One team for roofing and paint"</h3>
+    <p class="card-text">“They handled repairs and painting in one go, which saved us time and hassle.” — Local business owner</p>
   </div>
 </section>
 
-<section class="page-section container container-large">
-  <header class="page-section__header">
+<section class="cta-banner container container-medium">
+  <h2 class="cta-header animate-on-scroll">Ready to join our list of happy clients?</h2>
+  <a class="btn btn-white h5" href="{{ '/contact/' | url }}">Schedule a walkthrough</a>
+</section>
+
+<section class="contact-split container container-large">
+  <div class="contact-split__left">
     <h2>Share your experience</h2>
-    <p>We love hearing from clients. Your feedback helps neighbors choose the right team for their project.</p>
-  </header>
-  <div class="page-hero__actions">
-    <a class="btn" href="mailto:roy@darlenekay.com">Email your review</a>
-    <a class="btn btn-alt" href="https://www.google.com/maps/place/Darlene+Kay+LLC" target="_blank" rel="noopener">Post on Google</a>
+    <p>We love hearing from clients. Send us your story or link directly to your Google review.</p>
+    <p><a href="mailto:roy@darlenekay.com">Email your review</a></p>
+  </div>
+  <div class="contact-split__right">
+    <h2>Request references</h2>
+    <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="input-field">
+        <label>Name<span> *</span></label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="input-field">
+        <label>Email<span> *</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="input-field">
+        <label>Project Type</label>
+        <input type="text" name="project" placeholder="Interior, exterior, roofing, etc.">
+      </div>
+      <div class="input-field">
+        <label>Message</label>
+        <textarea name="comments" rows="3" maxlength="500" placeholder="Tell us what information you need"></textarea>
+      </div>
+      <button class="btn" type="submit">Send request</button>
+    </form>
   </div>
 </section>

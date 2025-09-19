@@ -6,83 +6,88 @@ permalink: /contact/
 brand: "main"
 ---
 
-<section class="page-hero container container-large">
-  <div class="page-hero__grid">
-    <div class="page-hero__content">
-      <p class="page-hero__eyebrow">Let&rsquo;s get started</p>
-      <h1 class="page-hero__heading">Tell us about your painting or roofing project</h1>
-      <p class="page-hero__lede">Share a few details and the owners will follow up within one business day. We can schedule a site visit, review photos, or jump on a call to answer questions.</p>
-      <div class="page-hero__actions">
-        <a class="btn" href="tel:7209331762">Call (720) 933-1762</a>
-        <a class="btn btn-alt" href="mailto:roy@darlenekay.com">Email roy@darlenekay.com</a>
-      </div>
+<section class="hero" style="background-image:url('{{ '/assets/images/Home3.webp' | url }}');">
+  <div class="container container-small">
+    <div class="hero__inner">
+      <h1 class="hero__header">Let&#39;s plan your project</h1>
+      <br>
+      <p class="hero__text">Share a few details about your painting or roofing needs and we&#39;ll respond within one business day with next steps.</p>
+      <br>
+      <p class="hero__actions">
+        <a class="btn btn-white" href="tel:7209331762">Call (720) 933-1762</a>
+      </p>
     </div>
-    <div class="page-hero__media">
-      <figure>
-        <img src="{{ '/assets/images/Home1.webp' | url }}" alt="Home exterior painted by Darlene Kay" loading="lazy">
-      </figure>
+    <div class="hero__lower">
+      <div class="hero__hotline">
+        <p>Email us anytime:&nbsp;</p>
+        <p><a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a></p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="page-section container container-large">
-  <div class="page-columns">
-    <div class="page-card">
-      <h2>Send a message</h2>
-      <p>Include your project address, desired timeline, and any photos. We&rsquo;ll confirm receipt and outline next steps.</p>
-      <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="input-field">
-          <label>First Name<span> *</span></label>
-          <input type="text" name="firstName" required>
-        </div>
-        <div class="input-field">
-          <label>Last Name<span> *</span></label>
-          <input type="text" name="lastName" required>
-        </div>
-        <div class="input-field">
-          <label>Email<span> *</span></label>
-          <input type="email" name="email" required>
-        </div>
-        <div class="input-field">
-          <label>Phone</label>
-          <input type="text" name="phone">
-        </div>
-        <div class="input-field">
-          <label>Project Details</label>
-          <textarea name="comments" rows="4" maxlength="600" placeholder="Tell us about your property, requested services, and timing."></textarea>
-        </div>
-        <button class="btn" type="submit">Submit</button>
-      </form>
+<section class="intro">
+  <div class="container container-medium">
+    <div class="intro__text">
+      <div class="intro__header">
+        <h2>Tell us about your property, timing, and goals</h2>
+      </div>
+      <div class="intro__cols">
+        <p>
+          We can meet on-site, review photos virtually, or hop on a quick call. Upfront details help us prepare accurate pricing for painting, roofing, or combined projects.
+        </p>
+        <p>
+          Need to coordinate with an HOA or insurance adjuster? We&#39;ll outline documentation and scheduling so you know exactly what happens next.
+        </p>
+      </div>
     </div>
-    <aside class="page-card" aria-label="Contact information">
-      <div class="contact-card">
-        <span class="contact-card__label">Phone</span>
-        <a href="tel:7209331762">(720) 933-1762</a>
-      </div>
-      <div class="contact-card">
-        <span class="contact-card__label">Email</span>
-        <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a>
-      </div>
-      <div class="contact-card">
-        <span class="contact-card__label">Service hours</span>
-        <p>Monday &ndash; Saturday, 8:00 a.m. to 5:00 p.m.</p>
-      </div>
-      <div class="contact-card">
-        <span class="contact-card__label">Mailing address</span>
-        <p>Aurora, Colorado 80016</p>
-      </div>
-      <div class="map-placeholder">Map placeholder &mdash; drop in Google Map embed</div>
-    </aside>
   </div>
 </section>
 
-<section class="page-section page-section--accent container container-large">
-  <header class="page-section__header">
-    <h2>Need an in-person walkthrough?</h2>
-    <p>We&rsquo;ll visit your property, take measurements, and send a detailed proposal within 48 hours.</p>
-  </header>
-  <div class="page-hero__actions">
-    <a class="btn" href="{{ '/service-areas/' | url }}">Check our service areas</a>
-    <a class="btn btn-alt" href="{{ '/roofing/' | url }}">Schedule a roof inspection</a>
+<section class="contact-split container container-large">
+  <div class="contact-split__left">
+    <h2>Reach us directly</h2>
+    <p><strong>Phone:</strong> <a href="tel:7209331762">(720) 933-1762</a></p>
+    <p><strong>Email:</strong> <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a></p>
+    <p><strong>Hours:</strong> Monday&ndash;Saturday, 8:00 a.m. &ndash; 5:00 p.m.</p>
+    <p>Aurora-based, serving the Denver metro and front range.</p>
   </div>
+  <div class="contact-split__right">
+    <h2>Send a message</h2>
+    <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="input-field">
+        <label>First Name<span> *</span></label>
+        <input type="text" name="firstName" required>
+      </div>
+      <div class="input-field">
+        <label>Last Name<span> *</span></label>
+        <input type="text" name="lastName" required>
+      </div>
+      <div class="input-field">
+        <label>Email<span> *</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="input-field">
+        <label>Phone</label>
+        <input type="text" name="phone">
+      </div>
+      <div class="input-field">
+        <label>Project Details</label>
+        <textarea name="comments" rows="3" maxlength="500" placeholder="Interior repaint, roof repair, timeline, etc."></textarea>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<section class="google-reviews">
+  <div class="container container-small">
+    <h2 class="h3">Hear from Denver homeowners</h2>
+    {% include "ui/carousel-text.njk" %}
+  </div>
+</section>
+
+<section class="cta-banner container container-medium">
+  <h2 class="cta-header animate-on-scroll">Ready for a detailed estimate?</h2>
+  <a class="btn btn-white h5" href="{{ '/service-areas/' | url }}">View our service areas</a>
 </section>
