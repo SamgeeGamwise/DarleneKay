@@ -1,33 +1,43 @@
 <nav aria-label="Primary">
   <a id="brand" class="logo-text h3 bold" href="{{ '/' | url }}">
   {% if branding == "roofing" %}
-    <img src="{{ '/assets/images/logo-roofing.png' | url }}" alt="Roofing logo">
+    <img src="{{ '/assets/images/logo_roofing.png' | url }}" alt="Roofing logo">
+    {# <span class="site-name">{{ site.site_name_roofing }}</span> #}
   {% elseif branding == "painting" %}
     <img src="{{ '/assets/images/logo_painting.webp' | url }}" alt="Painting logo">
+    {# <span class="site-name painting">{{ site.site_name_painting }}</span> #}
   {% elseif branding == "main" %}
     <img src="{{ '/assets/images/logo_roofing.png' | url }}" alt="Roofing logo">
     <img src="{{ '/assets/images/logo_painting.webp' | url }}" alt="Painting logo">
   {% endif %}
-    <span class="site-name">{{ site.site_name }}</span>
   </a>
   <div class="nav-desktop">
+
+
+    {# Menu #}
     <ul class="nav-menu">
     {% for item in site.nav %}
       {% set isActive = (page.url == item.href) or (page.url == '/' and item.href == '/') %}
-      <li>
-        <a href="{{ item.href | url }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ item.text }}</a>
-          {% if item.children %}
-              <div class="nav-sub-menu">
-                <ul>
-            {% for child in item.children %}
-                  <li>
-                    <a href="{{ child.href | url }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ child.text }}</a>
-                  </li>
-            {% endfor %}
-                </ul>
-              </div>
+        {% if item.children %}
+          <li>
+            <a href="{{ item.href | url }}" {% if isActive %} aria-current="page" class="nav-item active-nav" {% else %} class="nav-item" {% endif %}>{{ item.text }}<i class="fa-solid fa-caret-down"></i></a>
+            {# Sub Menu #}
+                <div class="nav-sub-menu">
+                  <ul>
+              {% for child in item.children %}
+                    <li>
+                      <a href="{{ child.href | url }}" {% if isActive %} aria-current="page" class="sub-nav-item active-nav" {% else %} class="sub-nav-item" {% endif %}>{{ child.text }}</a>
+                    </li>
+              {% endfor %}
+                  </ul>
+                </div>
+          </li>
+
+          {% else %}
+            <li>
+              <a href="{{ item.href | url }}" {% if isActive %} aria-current="page" class="nav-item active-nav" {% else %} class="nav-item" {% endif %}>{{ item.text }}</a>
+            </li>
           {% endif %}
-      </li>
     {% endfor %}
     </ul>
 

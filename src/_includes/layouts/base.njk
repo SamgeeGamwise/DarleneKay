@@ -1,4 +1,3 @@
-{% set branding = brand or "main" %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,9 +11,10 @@
     <link rel="preload" href="{{ '/assets/fonts/Montserrat.ttf' | url }}" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="{{ '/assets/fontawesome/css/all.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
-    <script src="{{ '/script/ui/index.js' | url }}" type="module"></script>
+    <script src="{{ '/assets/js/ui/index.js' | url }}" type="module"></script>
   </head>
   <body>
+    {% set branding = brand or "main" %}
     <header id="header">
       {% include "components/navbar.njk" %}
     </header>

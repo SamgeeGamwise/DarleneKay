@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as mixins;
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Merriweather", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@include mixins.respond-max(md) {
+  html {
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,151 @@
+@use "sass:color";
+@use "../base" as base;
+
+.blocker {
+  height: base.$blocker-height;
+  width: 100%;
+  z-index: -10;
+}
+
+#header {
+  z-index: 100;
+  position: fixed;
+  background-color: base.$white;
+  width: 100%;
+  padding: 1rem;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Brand */
+    #brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-left: 1rem;
+
+      img {
+        width: base.$logo-size;
+        height: base.$logo-size;
+        max-width: base.$logo-size;
+        min-height: base.$logo-size;
+      }
+
+      .site-name {
+        font-family: 'Lora';
+
+        &.painting {
+          font-family: "Dancing Script", cursive;
+        }
+      }
+    }
+
+    /* Desktop Nav */
+    .nav-desktop {
+      position: relative;
+
+      .nav-menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          position: relative;
+
+          .nav-item {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+          }
+
+          /* Submenu */
+          .nav-sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: base.$white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            z-index: 1000;
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+
+            .sub-nav-item {
+              display: block;
+              padding: 0.5rem 1rem;
+              text-decoration: none;
+              color: #333;
+
+              &:hover {
+                background: #f3f3f3;
+              }
+            }
+          }
+
+          &:hover > .nav-sub-menu {
+            display: block;
+          }
+        }
+      }
+    }
+
+    /* Mobile Nav */
+    .nav-mobile {
+      display: none;
+
+      #menu-button {
+        color: base.$black;
+        background-color: base.$white;
+        font-size: 150%;
+      }
+
+      #menu {
+        z-index: 110;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        top: base.$logo-size;
+        left: 0;
+        right: 0;
+        margin-top: 2rem;
+        background-color: rgba(base.$white, 0.9);
+
+        li {
+          list-style: none;
+          padding: 1rem;
+        }
+
+        .active-nav {
+          color: base.$primary;
+        }
+      }
+    }
+  }
+
+  /* Responsive */
+  @include base.respond-max(lg) {
+    .nav-desktop {
+      display: none;
+    }
+    .nav-mobile {
+      display: block !important;
+    }
+  }
+
+  @include base.respond-max(md) {
+    .site-name {
+      display: none;
+    }
+  }
+}

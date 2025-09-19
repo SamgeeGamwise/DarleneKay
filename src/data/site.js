@@ -1,6 +1,7 @@
 // src/_data/site.js
 module.exports = {
-  site_name: "Darlene Kay Painting, Roofing, & Gutters",
+  site_name_painting: "Darlene Kay Painting",
+  site_name_roofing: "Darlene Kay Roofing and Gutters",
   tagline: "Interior & exterior painting in the greater Denver area",
   nav: [
     { href: "/about", text: "About Us"  },

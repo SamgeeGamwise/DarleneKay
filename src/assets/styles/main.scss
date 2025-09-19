@@ -1,0 +1,12 @@
+@use "./base" as base;
+
+@use "components";
+@use "layout";
+@use "pages/home";
+@use "pages/errors/not-found";
+@use "utilities";
+
+main a {
+  color: base.$primary;
+}
+

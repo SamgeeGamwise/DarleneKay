@@ -1,14 +1,24 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget("src/styles");
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  eleventyConfig.addWatchTarget("src/script"); // watch for changes
-  eleventyConfig.addPassthroughCopy({ "src/script": "script" }); // copy to _site/assets/js
-  eleventyConfig.addPassthroughCopy({ "src/assets/fontawesome": "assets/fontawesome" });
+  // Watch source assets for live reload
+  eleventyConfig.addWatchTarget("src/assets/styles");
+  eleventyConfig.addWatchTarget("src/assets/js");
 
+  // Static assets passthrough
+  eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/fontawesome": "assets/fontawesome" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "assets/favicon.ico" });
 
   return {
-    dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
+    dir: {
+      input: "src",
+      includes: "_includes",
+      data: "data",
+      output: "_site",
+    },
     templateFormats: ["njk", "md", "html"],
     pathPrefix: "/",
   };
 };
+
