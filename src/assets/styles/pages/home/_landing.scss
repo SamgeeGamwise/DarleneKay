@@ -1,0 +1,88 @@
+@use "sass:color";
+@use "../../base" as base;
+
+.home-landing {
+  padding-block: 6rem;
+
+  &__content {
+    max-width: 60rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__eyebrow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: color.scale(base.$primary, $lightness: 20%);
+  }
+
+  &__heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    color: base.$black;
+  }
+
+  &__lede {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: color.scale(base.$black, $lightness: 10%);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__points {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: color.scale(base.$black, $lightness: 15%);
+  }
+
+  &__points li {
+    position: relative;
+    padding-left: 1.75rem;
+  }
+
+  &__points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: base.$primary;
+    box-shadow: 0 0 0 4px color.scale(base.$primary, $lightness: 35%, $alpha: -55%);
+  }
+
+  @include base.respond-max(lg) {
+    padding-block: 4rem;
+  }
+
+  @include base.respond-max(md) {
+    text-align: center;
+
+    &__actions {
+      justify-content: center;
+    }
+
+    &__points li {
+      padding-left: 0;
+    }
+
+    &__points li::before {
+      position: static;
+      display: inline-block;
+      margin-right: 0.5rem;
+      transform: translateY(-0.1rem);
+    }
+  }
+}

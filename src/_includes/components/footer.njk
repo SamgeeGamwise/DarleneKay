@@ -2,60 +2,50 @@
   <div class="footer__container">
     <div class="footer__brand">
       <a class="logo" href="{{ '/' | url }}">
-        <img class="logo-image" src="{{ '/assets/images/logo_painting_white.png' | url }}" alt="Darlene Kay Painting">
-        <img class="logo-image" src="{{ '/assets/images/logo_roofing.png' | url }}" alt="Darlene Kay Roofing">
-        <p class="logo-text">Darlene Kay Painting & Roofing</p>
+        <img class="logo-image" src="{{ '/assets/images/logo_painting_white.png' | url }}" alt="Darlene Kay Painting logo">
+        <img class="logo-image" src="{{ '/assets/images/logo_roofing.png' | url }}" alt="Darlene Kay Roofing logo">
+        <p class="logo-text">Darlene Kay Painting &amp; Roofing</p>
       </a>
     </div>
+
     <div class="footer__details">
       <div class="footer__contact">
-          <a href="tel:7209331762"><i class="fa-solid fa-phone"></i> (720) 933-1762</a>
-          <br>
-          <a href="mailto:roy@darlenekay.com"><i class="fa-solid fa-envelope"></i> roy@darlenekay.com</a>
-          <br>
-          <br>
-          <p>Monday - Saturday</p>
-          <p>8am - 5pm</p>
+        <p class="h6"><i class="fa-solid fa-phone"></i> Talk with us</p>
+        <a href="tel:7209331762">(720) 933-1762</a>
+        <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a>
+        <p class="footer__hours">Mon &ndash; Sat, 8:00 a.m. &ndash; 5:00 p.m.</p>
       </div>
-      <div class="footer__info">     
-        <p class="h6"><i class="fa-solid fa-map"></i> Service Areas</p class="h6">
+
+      <div class="footer__info">
+        <p class="h6"><i class="fa-solid fa-location-dot"></i> Service areas</p>
         <ul>
-          <li>
-            Aurora
-          </li>
-          <li>
-            East Denver
-          </li>
-          <li>
-            Parker
-          </li>
-          <li>
-            Centennial
-          </li>
-          <li>
-            Castle Rock
-          </li>
+          <li>Aurora &amp; Denver</li>
+          <li>Parker &amp; Centennial</li>
+          <li>Castle Rock &amp; Highlands Ranch</li>
+          <li>Littleton &amp; Golden</li>
+          <li>Boulder &amp; surrounding</li>
         </ul>
       </div>
+
       <div class="footer__content">
-        <p class="h6"><i class="fa-solid fa-paint-roller"></i> Services</p class="h6">
+        <p class="h6"><i class="fa-solid fa-paint-roller"></i> Explore</p>
         <ul class="footer__links">
           {% for item in site.footer %}
-            <li>
-              <a href="{{ item.href | url }}">{{ item.text }}</a>
-            </li>
+            <li><a href="{{ item.href | url }}">{{ item.text }}</a></li>
           {% endfor %}
         </ul>
       </div>
     </div>
+
     <div class="footer__badges">
-      <img src="{{ '/assets/images/williams.png' | url }}" alt="Sherwin-Williams" width="85px">
-      <img src="{{ '/assets/images/homeadvisor.png' | url }}" alt="HomeAdvisor" width="85px">
-      <img src="{{ '/assets/images/bbb-a-plus.png' | url }}" alt="BBB A+ Rating" width="200px">
+      <img src="{{ '/assets/images/williams.png' | url }}" alt="Sherwin-Williams partner" width="85">
+      <img src="{{ '/assets/images/homeadvisor.png' | url }}" alt="HomeAdvisor" width="85">
+      <img src="{{ '/assets/images/bbb-a-plus.png' | url }}" alt="BBB A+ rating" width="200">
     </div>
+
     <div class="footer__legal">
       <hr>
-      <p>Copyright  © {{ site.year }} {{ site.site_name }}. All rights reserved.</p>
+      <p>&copy; {{ site.year }} {{ site.site_name }}. All rights reserved.</p>
     </div>
   </div>
 </footer>

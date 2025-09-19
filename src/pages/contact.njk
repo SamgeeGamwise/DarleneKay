@@ -1,36 +1,88 @@
 ---
-title: Contact
+title: "Contact Darlene Kay"
+description: "Request an estimate, schedule a roof inspection, or ask a question. Reach the Darlene Kay team by phone, email, or the quick form."
 layout: layouts/base.njk
 permalink: /contact/
 brand: "main"
 ---
-<!-- CONTACT SPLIT -->
-<section class="contact">
-  <div class="container container-small">
-    <h3>Send Us a Message</h3>
-    <!-- Replace action with your form endpoint (Formspree/HubSpot/etc.) -->
-    <form class="contact__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="input-field">
-        <label>First Name<span> *</span></label>
-        <input type="text" name="firstName" required>
+
+<section class="page-hero container container-large">
+  <div class="page-hero__grid">
+    <div class="page-hero__content">
+      <p class="page-hero__eyebrow">Let&rsquo;s get started</p>
+      <h1 class="page-hero__heading">Tell us about your painting or roofing project</h1>
+      <p class="page-hero__lede">Share a few details and the owners will follow up within one business day. We can schedule a site visit, review photos, or jump on a call to answer questions.</p>
+      <div class="page-hero__actions">
+        <a class="btn" href="tel:7209331762">Call (720) 933-1762</a>
+        <a class="btn btn-alt" href="mailto:roy@darlenekay.com">Email roy@darlenekay.com</a>
       </div>
-      <div class="input-field">
-        <label>Last Name<span> *</span></label>
-        <input type="text" name="lastName" required>
+    </div>
+    <div class="page-hero__media">
+      <figure>
+        <img src="{{ '/assets/images/Home1.webp' | url }}" alt="Home exterior painted by Darlene Kay" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="page-section container container-large">
+  <div class="page-columns">
+    <div class="page-card">
+      <h2>Send a message</h2>
+      <p>Include your project address, desired timeline, and any photos. We&rsquo;ll confirm receipt and outline next steps.</p>
+      <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="input-field">
+          <label>First Name<span> *</span></label>
+          <input type="text" name="firstName" required>
+        </div>
+        <div class="input-field">
+          <label>Last Name<span> *</span></label>
+          <input type="text" name="lastName" required>
+        </div>
+        <div class="input-field">
+          <label>Email<span> *</span></label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-field">
+          <label>Phone</label>
+          <input type="text" name="phone">
+        </div>
+        <div class="input-field">
+          <label>Project Details</label>
+          <textarea name="comments" rows="4" maxlength="600" placeholder="Tell us about your property, requested services, and timing."></textarea>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <aside class="page-card" aria-label="Contact information">
+      <div class="contact-card">
+        <span class="contact-card__label">Phone</span>
+        <a href="tel:7209331762">(720) 933-1762</a>
       </div>
-      <div class="input-field">
-        <label>Email<span> *</span></label>
-        <input type="email" name="email" required>
+      <div class="contact-card">
+        <span class="contact-card__label">Email</span>
+        <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a>
       </div>
-      <div class="input-field">
-        <label>Phone</label>
-        <input type="text" name="phone">
+      <div class="contact-card">
+        <span class="contact-card__label">Service hours</span>
+        <p>Monday &ndash; Saturday, 8:00 a.m. to 5:00 p.m.</p>
       </div>
-      <div class="input-field">
-        <label>Comments</label>
-        <textarea name="comments" rows="3" maxlength="500" ></textarea>
+      <div class="contact-card">
+        <span class="contact-card__label">Mailing address</span>
+        <p>Aurora, Colorado 80016</p>
       </div>
-      <button class="btn" type="submit">Submit</button>
-    </form>
+      <div class="map-placeholder">Map placeholder &mdash; drop in Google Map embed</div>
+    </aside>
+  </div>
+</section>
+
+<section class="page-section page-section--accent container container-large">
+  <header class="page-section__header">
+    <h2>Need an in-person walkthrough?</h2>
+    <p>We&rsquo;ll visit your property, take measurements, and send a detailed proposal within 48 hours.</p>
+  </header>
+  <div class="page-hero__actions">
+    <a class="btn" href="{{ '/service-areas/' | url }}">Check our service areas</a>
+    <a class="btn btn-alt" href="{{ '/roofing/' | url }}">Schedule a roof inspection</a>
   </div>
 </section>

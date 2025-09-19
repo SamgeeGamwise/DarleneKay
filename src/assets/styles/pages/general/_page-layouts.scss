@@ -1,0 +1,333 @@
+@use "sass:color";
+@use "../../abstracts" as tokens;
+
+.page-hero {
+  --page-hero-overlay: rgba(255, 255, 255, 0);
+  --page-hero-bg: none;
+
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(3rem, 8vw, 6rem);
+  background-color: tokens.$white;
+  background-image: var(--page-hero-overlay), var(--page-hero-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: tokens.$black;
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  &__grid {
+    display: grid;
+    gap: clamp(2rem, 4vw, 3.5rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  &__content {
+    display: grid;
+    gap: 1.25rem;
+    align-content: start;
+  }
+
+  &__eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: color.scale(tokens.$secondary, $lightness: -10%);
+  }
+
+  &__heading {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin: 0;
+    color: tokens.$black;
+  }
+
+  &__lede {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.7;
+    color: color.scale(tokens.$black, $lightness: 12%);
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__media figure {
+    width: min(100%, 520px);
+    aspect-ratio: 4 / 3;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: color.scale(tokens.$light, $lightness: -5%);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    display: grid;
+    place-items: center;
+    padding: 1.25rem;
+    text-align: center;
+    color: color.scale(tokens.$black, $lightness: 5%);
+  }
+
+  &__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &--accent {
+    --page-hero-overlay: linear-gradient(135deg, #{color.change(tokens.$primary, $alpha: 0.82)} 0%, #{color.change(tokens.$secondary, $alpha: 0.65)} 100%);
+  }
+
+  &--bg {
+    color: tokens.$white;
+
+    .page-hero__eyebrow {
+      color: color.change(tokens.$white, $alpha: 0.8);
+    }
+
+    .page-hero__lede {
+      color: color.change(tokens.$white, $alpha: 0.9);
+    }
+  }
+
+  @include tokens.respond-max(lg) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__actions {
+      justify-content: center;
+    }
+
+    &__media figure {
+      margin-inline: auto;
+    }
+
+    text-align: center;
+  }
+}\n\n.page-section {
+  padding-block: clamp(3rem, 7vw, 5rem);
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+
+  &__header {
+    max-width: 48rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  &__header h2,
+  &__header h3 {
+    margin: 0;
+  }
+
+  &__body {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &--accent {
+    background: color.scale(tokens.$light, $lightness: -2%);
+  }
+
+  &--band {
+    background: linear-gradient(135deg, color.scale(tokens.$secondary, $lightness: 40%) 0%, tokens.$white 100%);
+  }
+}
+
+.page-columns {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include tokens.respond-max(lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-card-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.page-card,
+.testimonial-card,
+.news-card {
+  border-radius: 1.1rem;
+  border: 1px solid color.scale(tokens.$black, $lightness: 85%);
+  background: tokens.$white;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+  display: grid;
+  gap: 1rem;
+}
+
+.news-card header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.news-card time {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: color.scale(tokens.$black, $lightness: 25%);
+}
+
+.stat-list {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.stat-item {
+  background: tokens.$white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.stat-item__value {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: tokens.$primary;
+}
+
+.process-steps {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.process-step {
+  border-left: 4px solid tokens.$primary;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.process-step__label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: color.scale(tokens.$black, $lightness: 20%);
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-list details {
+  border: 1px solid color.scale(tokens.$black, $lightness: 85%);
+  border-radius: 0.9rem;
+  padding: 1rem 1.25rem;
+  background: tokens.$white;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.faq-list details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-list p {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.testimonial-card footer {
+  font-weight: 600;
+  color: color.scale(tokens.$black, $lightness: 10%);
+}
+
+.contact-card {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contact-card__label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: color.scale(tokens.$black, $lightness: 10%);
+}
+
+.map-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: color.scale(tokens.$secondary, $lightness: 60%);
+  display: grid;
+  place-items: center;
+  color: color.scale(tokens.$black, $lightness: 5%);
+  font-weight: 600;
+}
+
+.gallery-strip {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.gallery-strip img,
+.gallery-strip figure {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.85rem;
+  object-fit: cover;
+  background: color.scale(tokens.$light, $lightness: -4%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero__media figure,
+  .page-card,
+  .testimonial-card,
+  .news-card,
+  .stat-item {
+    transition: none !important;
+  }
+}
+

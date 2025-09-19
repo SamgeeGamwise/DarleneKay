@@ -14,7 +14,10 @@ $container-block-sizes-lg: (
 );
 
 .container {
-  padding-inline: 20%;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 6vw, 6rem);
 
   @each $name, $value in $container-block-sizes {
     &.container-#{$name} {
@@ -23,13 +26,14 @@ $container-block-sizes-lg: (
   }
 
   &.container-none {
+    max-width: none;
     padding-inline: 0;
   }
 }
 
 @include mixins.respond-max(lg) {
   .container {
-    padding-inline: 10%;
+    padding-inline: clamp(1.25rem, 5vw, 3.5rem);
 
     @each $name, $value in $container-block-sizes-lg {
       &.container-#{$name} {
@@ -41,7 +45,7 @@ $container-block-sizes-lg: (
 
 @include mixins.respond-max(md) {
   .container {
-    padding-inline: 5%;
+    padding-inline: 1.25rem;
   }
 }
 

@@ -1,12 +1,149 @@
 ---
-title: "Darlene Kay Painting | Home"
-description: "This is the home page"
+title: "Denver Painting & Roofing | Darlene Kay"
+description: "Connect with Darlene Kay for residential and commercial painting, roofing, and gutter projects across the Denver metro area. Explore each division and request a tailored estimate today."
 layout: layouts/base.njk
 permalink: /
 brand: "main"
 ---
 
-<section class="container container-large">
-    <a href="{{ '/painting' | url }}">Painting</a>
-    <a href="{{ '/roofing' | url }}">Roofing</a>
+<section class="home-landing container container-large" aria-labelledby="home-landing-heading">
+  <div class="home-landing__content">
+    <p class="home-landing__eyebrow">Serving homeowners & businesses across the Denver Metro Area</p>
+    <h1 id="home-landing-heading" class="home-landing__heading">One responsive team for premium painting and protective roofing</h1>
+    <p class="home-landing__lede">Darlene Kay delivers attentive project management, transparent pricing, and skilled crews for both exterior envelopes and interior finishes. Choose the division that fits your next project and we will guide you from inspection to final walkthrough.</p>
+    <div class="home-landing__actions">
+      <a class="btn" href="{{ '/painting/' | url }}">Explore Painting Services</a>
+      <a class="btn btn-alt" href="{{ '/roofing/' | url }}">Explore Roofing & Gutters</a>
+    </div>
+    <ul class="home-landing__points" aria-label="Highlights">
+      <li>Local, licensed & insured crews dedicated to Denver&rsquo;s climate</li>
+      <li>Detailed prep, clean job sites, and proactive communication</li>
+      <li>Flexible scheduling for residential, commercial, and multi-family projects</li>
+    </ul>
+  </div>
 </section>
+
+<section class="brand-choice container container-large" aria-labelledby="brand-choice-heading">
+  <header class="brand-choice__header">
+    <h2 id="brand-choice-heading">Specialized teams, unified standards</h2>
+    <p>Whichever service line you choose, you receive the same responsive office staff, hands-on owners, and proven trade professionals who protect your property as if it were their own.</p>
+  </header>
+  <div class="brand-choice__grid">
+    <article class="service-card service-card--painting">
+      <h3>Painting & finishing</h3>
+      <p>Interior refresh, exterior repaint, or cabinet upgrade&mdash;our color consultations and surface prep deliver finishes that last.</p>
+      <ul>
+        <li>Interior & exterior painting</li>
+        <li>Cabinet refinishing & trim updates</li>
+        <li>Popcorn ceiling removal & texture repair</li>
+      </ul>
+      <div class="service-card__cta">
+        <a class="btn" href="{{ '/painting/' | url }}">View Painting Portfolio</a>
+        <a class="service-card__link" href="{{ '/gallery/' | url }}">See recent projects</a>
+      </div>
+    </article>
+    <article class="service-card service-card--roofing">
+      <h3>Roofing, gutters & storm repair</h3>
+      <p>Keep your property leak-free with thorough inspections, insurance documentation, and quality materials rated for Colorado weather.</p>
+      <ul>
+        <li>Roof replacement & repairs</li>
+        <li>Gutter installation & maintenance</li>
+        <li>Insurance claim support after hail & wind</li>
+      </ul>
+      <div class="service-card__cta">
+        <a class="btn btn-alt" href="{{ '/roofing/' | url }}">Schedule a Roof Inspection</a>
+        <a class="service-card__link" href="{{ '/service-areas/' | url }}">Check your service area</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="home-trust container container-medium" aria-labelledby="home-trust-heading">
+  <div class="home-trust__copy">
+    <h2 id="home-trust-heading">Why Denver trusts Darlene Kay</h2>
+    <p>From Aurora to Boulder, our family-led company blends craftsmanship with communication. The result: five-star feedback, repeat clients, and projects that close on time.</p>
+    <dl class="home-trust__list">
+      <div>
+        <dt>Clear timelines</dt>
+        <dd>Project managers keep you updated at every milestone so there are no surprises.</dd>
+      </div>
+      <div>
+        <dt>Skilled specialists</dt>
+        <dd>Dedicated crews for painting and roofing mean you get focused expertise, not generalists.</dd>
+      </div>
+      <div>
+        <dt>Colorado-tested materials</dt>
+        <dd>We specify coatings and shingles built for freeze-thaw cycles, altitude, and UV exposure.</dd>
+      </div>
+      <div>
+        <dt>Local service area</dt>
+        <dd>Denver, Aurora, Centennial, Parker, Highlands Ranch, Boulder, and nearby Colorado communities.</dd>
+      </div>
+    </dl>
+  </div>
+  <aside class="home-trust__sidebar" aria-label="Testimonials highlight">
+    <p class="home-trust__review">&ldquo;Professional, punctual, and the results are flawless. We&rsquo;d hire them again without hesitation.&rdquo;</p>
+    <p class="home-trust__reviewer">&mdash; Denver homeowner</p>
+    <a class="service-card__link" href="{{ '/testimonials/' | url }}">Read more testimonials</a>
+  </aside>
+</section>
+
+<section class="home-faq container container-medium" aria-labelledby="home-faq-heading">
+  <div class="home-faq__intro">
+    <h2 id="home-faq-heading">Not sure where to start?</h2>
+    <p>These quick answers help you decide whether to begin with painting or roofing. Our team is always happy to hop on a call for tailored guidance.</p>
+  </div>
+  <div class="home-faq__items">
+    <details>
+      <summary>Should I book painting or roofing first?</summary>
+      <p>If you have active leaks or storm damage, start with roofing so the envelope is watertight. Interior painting can follow once repairs are complete. For cosmetic updates only, our painting crew can begin right away.</p>
+    </details>
+    <details>
+      <summary>Do you help with color and material selections?</summary>
+      <p>Yes. Painting clients receive color consultation and sheen recommendations, while roofing projects include shingle, metal, or gutter material guidance matched to HOA and insurance requirements.</p>
+    </details>
+    <details>
+      <summary>Can one project cover both painting and roofing?</summary>
+      <p>Absolutely. We coordinate schedules so exterior painting follows shortly after roofing work, ensuring proper cure times and a cohesive finish.</p>
+    </details>
+  </div>
+</section>
+
+<section class="home-cta container container-medium" aria-labelledby="home-cta-heading">
+  <div class="home-cta__inner">
+    <h2 id="home-cta-heading">Let&rsquo;s plan your next upgrade</h2>
+    <p>Share a few project details and we&rsquo;ll prepare a no-pressure estimate for the painting or roofing work you need.</p>
+    <div class="home-cta__actions">
+      <a class="btn" href="{{ '/contact/' | url }}">Request an Estimate</a>
+      <a class="btn btn-alt" href="tel:7209331762">Call (720) 933-1762</a>
+    </div>
+    <p class="home-cta__note">Prefer email? Reach us at <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a>.</p>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "PaintingService",
+      "name": "Darlene Kay Painting",
+      "url": "https://www.darlenekay.com/painting/",
+      "serviceType": "Residential and commercial painting",
+      "areaServed": "Denver Metro, Colorado",
+      "telephone": "+1-720-933-1762",
+      "sameAs": [
+        "https://www.facebook.com/darlenekaypainting"
+      ]
+    },
+    {
+      "@type": "RoofingContractor",
+      "name": "Darlene Kay Roofing and Gutters",
+      "url": "https://www.darlenekay.com/roofing/",
+      "serviceType": "Roof replacement, repair, and gutter services",
+      "areaServed": "Denver Metro, Colorado",
+      "telephone": "+1-720-933-1762"
+    }
+  ]
+}
+</script>
