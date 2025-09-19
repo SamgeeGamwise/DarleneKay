@@ -40,7 +40,9 @@
         }
 
         .nav-desktop {
-            ul {
+            position: relative;
+
+            ul.nav-menu {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-evenly;
@@ -56,6 +58,13 @@
                         }
                     }
                 }
+            }
+
+            ul .nav-sub-menu {
+                display: flex;
+                flex-flow: column nowrap;
+                position: absolute;
+                top: base.$blocker-height;
             }
         }
 

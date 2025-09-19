@@ -1,17 +1,36 @@
 <nav aria-label="Primary">
   <a id="brand" class="logo-text h3 bold" href="{{ '/' | url }}">
-    <img class="logo" src="{{ navLogo | url }}" />
+  {% if branding == "roofing" %}
+    <img src="{{ '/assets/images/logo-roofing.png' | url }}" alt="Roofing logo">
+  {% elseif branding == "painting" %}
+    <img src="{{ '/assets/images/logo_painting.webp' | url }}" alt="Painting logo">
+  {% elseif branding == "main" %}
+    <img src="{{ '/assets/images/logo_roofing.png' | url }}" alt="Roofing logo">
+    <img src="{{ '/assets/images/logo_painting.webp' | url }}" alt="Painting logo">
+  {% endif %}
     <span class="site-name">{{ site.site_name }}</span>
   </a>
   <div class="nav-desktop">
-    <ul>
+    <ul class="nav-menu">
     {% for item in site.nav %}
       {% set isActive = (page.url == item.href) or (page.url == '/' and item.href == '/') %}
       <li>
         <a href="{{ item.href | url }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ item.text }}</a>
+          {% if item.children %}
+              <div class="nav-sub-menu">
+                <ul>
+            {% for child in item.children %}
+                  <li>
+                    <a href="{{ child.href | url }}" {% if isActive %} aria-current="page" class="active-nav" {% endif %}>{{ child.text }}</a>
+                  </li>
+            {% endfor %}
+                </ul>
+              </div>
+          {% endif %}
       </li>
     {% endfor %}
     </ul>
+
   </div>
   <div class="nav-mobile">
     <button id="menu-button"><i id="menu-button-icon" class="fa-solid fa-bars"></i></button>

@@ -1,3 +1,4 @@
+{% set branding = brand or "main" %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,7 +16,6 @@
   </head>
   <body>
     <header id="header">
-      {% set navLogo = logo or "/assets/images/logo.webp" %}
       {% include "components/navbar.njk" %}
     </header>
     <div class="blocker"></div>

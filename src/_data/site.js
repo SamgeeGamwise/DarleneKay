@@ -1,19 +1,25 @@
 // src/_data/site.js
 module.exports = {
-  site_name: "Darlene Kay Painting",
+  site_name: "Darlene Kay Painting, Roofing, & Gutters",
   tagline: "Interior & exterior painting in the greater Denver area",
   nav: [
-    { href: "/residential-services/", text: "Residential" },
+    { href: "/about", text: "About Us"  },
+    { href: "/services", text: "Services", children: [
+      { href: "/residential-services/", text: "Residential" },
+      { href: "/commercial-services/", text: "Commercial" },
+    ]},
     { href: "/gallery/", text: "Gallery" },
     { href: "/news/", text: "News" },
     { href: "/testimonials/", text: "Testimonials" },
     { href: "/contact/", text: "Contact" }
   ],
   footer: [
-    { href: "/interior-services-overview", text: "Interior Services" },
-    { href: "/exterior-services-overview", text: "Exterior Services" },
+    { href: "/about", text: "About Us"  },
     { href: "/commercial-services", text: "Commercial Services" },
     { href: "/residential-services", text: "Residential Services" },
+    { href: "/gallery/", text: "Gallery" },
+    { href: "/news/", text: "News" },
+    { href: "/testimonials/", text: "Testimonials" },
     { href: "/contact", text: "Contact Us" },
     { href: "/careers", text: "Careers" }
   ],
