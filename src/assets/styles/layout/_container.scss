@@ -25,6 +25,10 @@ $container-block-sizes-lg: (
   &.container-none {
     padding-inline: 0;
   }
+
+  &.container-wide {
+    padding-inline: 12%;
+  }
 }
 
 @include mixins.respond-max(lg) {

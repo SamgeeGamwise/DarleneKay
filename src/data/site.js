@@ -4,28 +4,31 @@ module.exports = {
   site_name_roofing: "Darlene Kay Roofing and Gutters",
   tagline: "Interior & exterior painting in the greater Denver area",
   nav: [
-    { href: "/painting", text: "Painting", children: [
-      { href: "/painting/residential/interior", text: "Interior Home" },
-      { href: "/painting/residential/exterior", text: "Exterior Home" },
-      { href: "/painting/commercial/", text: "Commercial" },
-      { href: "/painting/gallery/", text: "Gallery" },
-    ]},
+    { href: "/painting", text: "Painting", 
+    //   children: [
+    //   { href: "/painting/residential/interior", text: "Interior Home" },
+    //   { href: "/painting/residential/exterior", text: "Exterior Home" },
+    //   { href: "/painting/commercial/", text: "Commercial" },
+    //   { href: "/painting/gallery/", text: "Gallery" },
+    // ]
+  },
     { href: "/roofing", text: "Roofing"},
-    { href: "/additional-services", text: "Additional Services", children: [
-      { href: "/additional-services/gutters", text: "Gutters" },
-      { href: "/additional-services/popcorn-removal", text: "Popcorn Removal" },
+    { text: "Additional Services", children: [
+      { href: "/gutters", text: "Gutters" },
+      { href: "/popcorn-removal", text: "Popcorn Removal" },
     ]},
     { href: "/contact/", text: "Contact" },
     { href: "/about", text: "About Us"  },
     { href: "/testimonials/", text: "Testimonials" },
-    { href: "/news/", text: "News" },
+    // { href: "/news/", text: "News" },
   ],
   footer: [
+    { href: "/", text: "Home"  },
     { href: "/about", text: "About Us"  },
-    { href: "/commercial-services", text: "Commercial Services" },
-    { href: "/residential-services", text: "Residential Services" },
-    { href: "/gallery/", text: "Gallery" },
-    { href: "/news/", text: "News" },
+    { href: "/roofing", text: "Roofing Services" },
+    { href: "/painting", text: "Painting Service" },
+    // { href: "/gallery/", text: "Gallery" },
+    // { href: "/news/", text: "News" },
     { href: "/testimonials/", text: "Testimonials" },
     { href: "/contact", text: "Contact Us" },
     { href: "/careers", text: "Careers" }

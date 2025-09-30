@@ -1,161 +1,112 @@
 ---
-title: "Darlene Kay Painting | Roofing"
-description: "This is the home page"
+title: "Darlene Kay Roofing | Home"
+description: "Roofing services in Aurora and across the Denver Metro area"
 layout: layouts/base.njk
 permalink: /roofing/
 brand: "roofing"
 ---
 
 <!-- HERO -->
-<section class="hero" style="background-image:url('{{ '/assets/images/exterior1_dark.jpg' | url }}');">
+<section class="hero hero--video">
+  <video class="hero__video" autoplay muted loop playsinline>
+    <source src="{{ '/assets/videos/roofers.mp4' | url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero__overlay"></div>
+
   <div class="container container-small">
     <div class="hero__inner">
-      <h2 class="hero__header">Ready to refresh your space?</h2>
+      <h1 class="hero__header">Reliable roofing for Colorado homes and businesses</h1>
       <br>
-      <p class="hero__text">Whether it’s a single room or a full transformation, we bring lasting finishes and stress-free service <i>every</i>&nbsp;&nbsp;time.</p>    
+      <h2 class="hero__text">Protect your property with roof repairs, replacements, and storm restoration handled by local professionals.</h2>    
       <br>
       <p class="hero__actions">
-        <a class="btn btn-transparant" href="{{ '/contact' | url }}">Request an Estimate</a>
+        <a class="btn btn-transparant btn-roofing" href="{{ '/contact' | url }}">Request an Estimate</a>
       </p>
     </div>
-    <div class="hero__lower">
-      <div class="hero__hotline">
-        <p>Email or give us a call:&nbsp;</p>
-        <p>
-          <a href="tel:7209331762">(720) 933-1762</a>
-          or
-          <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a>
-        </p>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- INTRO / BBB -->
-<section class="intro">
+<!-- OVERVIEW -->
+<section class="overview container container-medium container-wide">
+  <div class="overview__text">
+    <h2>Roofing Services Built for Colorado</h2>
+    <p>
+      Your roof is your home’s first defense against hail, wind, and snow. 
+      At Darlene Kay Roofing, we provide straightforward inspections, honest recommendations, 
+      and lasting repairs or replacements — all handled by local professionals.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICE GRID -->
+<section class="service-grid container container-medium">
+  <div class="service-card">
+    <img src="{{ '/assets/images/roof-repair-graphic.png' | url }}" alt="Roof replacement">
+    <h3>Roof Replacement</h3>
+    <p>Durable new roofs installed with asphalt, metal, or tile systems to fit your needs.</p>
+  </div>
+  <div class="service-card">
+    <img src="{{ '/assets/images/roof-insurance-graphic2.png' | url }}" alt="Storm restoration">
+    <h3>Storm Restoration</h3>
+    <p>Fast response after hail and wind with guidance for your insurance claim.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="roofing-cta-banner container container-medium">
+  <h3 class="cta-header">Need a roof you can trust?</h3>
+  <a class="btn btn-white h5" href="{{ '/contact' | url }}">Schedule a Free Inspection</a>
+</section>
+
+<!-- PROCESS STEPS -->
+<section class="process alt-bg">
   <div class="container container-medium">
-    <div class="intro__text">
-      <h3 class="intro__header" >Great paint work, clear communication</h3>
-      <div class="intro__cols">
-        <p>
-          At Darlene Kay Painting, we believe a fresh coat of paint can transform how your space looks and feels.
-          Serving homeowners and businesses throughout the Denver area, our crew focuses on careful prep,
-          clean job sites, and finishes that last—so the process stays simple and stress-free.
-        </p>
-        <br>
-        <p>
-          From detailed interior work to durable exterior coatings built for Colorado’s climate,
-          we bring friendly service, fair pricing, and efficient scheduling to every project.
-          We also offer popcorn ceiling removal to modernize rooms with a clean, updated look.
-        </p>
+    <h2>Our Simple Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h4>Free Inspection</h4>
+        <p>We check your roof and provide photos plus a clear report of what we find.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <h4>Clear Estimate</h4>
+        <p>Get a detailed breakdown of costs with no hidden fees or surprises.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h4>Expert Work</h4>
+        <p>Licensed crews repair or replace your roof using proven techniques.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">4</span>
+        <h4>Lasting Protection</h4>
+        <p>Enjoy a roof designed to stand up to Colorado’s hail, snow, and sun.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- FEATURE CARDS (3-up) -->
-<section class="features container container-none">
-  <div class="card out-of-view-left animate-on-scroll">
-      <img class="card-image" src="{{ '/assets/images/Home1.webp' | url }}" alt="Color swatches">
-      <h4 class="card-header">Color help when you want it</h4>
-      <p class="card-text">Choosing shades can be tough. We offer simple guidance to help you land on colors that fit your space.</p>
-  </div>
-  <div class="card out-of-view-left animate-on-scroll">
-    <img class="card-image" src="{{ '/assets/images/Home3.webp' | url }}" alt="Exterior painting">
-    <h4 class="card-header">Everything you need, inside and out</h4>
-    <p class="card-text">From trim to whole homes, our workmanship and clean job sites make the process painless.</p>
-  </div>
-  <div class="card out-of-view-left animate-on-scroll">
-    <img class="card-image" src="{{ '/assets/images/Home2.webp' | url }}" alt="High‑quality paint">
-    <h4 class="card-header">Top coatings, lasting results</h4>
-    <p class="card-text">We work with leading paint brands to pair great products with careful application.</p>
-  </div>
-</section>
-
-<section class="google-reviews">
-    <div class="container container-small">
-      {% include "ui/carousel-text.njk" %}
+<!-- MATERIALS -->
+<section class="materials container container-medium">
+  <h2>Quality Materials, Trusted Brands</h2>
+  <div class="materials__grid">
+    <div class="material">
+      <img src="{{ '/assets/images/asphalt-roof.jpg' | url }}" alt="Asphalt shingles">
+      <h4>Asphalt Shingles</h4>
+      <p>Cost-effective and durable, perfect for Colorado’s climate.</p>
     </div>
-</section>
-
-
-<!-- CTA BANNER -->
-<section class="cta-banner container container-medium">
-    <h3 class="cta-header animate-on-scroll">Professional painting for homes and businesses — inside and out</h3>
-    <a class="btn btn-white h5" href="{{ '/contact' | url }}">Call today!</a>
-</section>
-
-
-<!-- SERVICES TILES (3-up) -->
-<section class="services-tiles">
-  <div class="container container-medium">
-    <div class="tiles">
-      <div class="tile out-of-view-left animate-on-scroll">
-        <img src="{{ '/assets/images/graphic_person3.jpg' | url }}" alt="Interior palette" width="100px">
-        <h4>Interior Painting</h4>
-        <p>Need a refresh or full repaint? We handle walls, ceilings, trim, cabinets, and more.</p>
-        <p><a class="btn btn-alt" href="{{ '/interior-services-overview' | url }}">Learn More</a></p>
-      </div>
-      <div class="tile out-of-view-left animate-on-scroll">
-        <img src="{{ '/assets/images/graphic_person2.png' | url }}" alt="Brush icon" width="100px">
-        <h4>Exterior Painting</h4>
-        <p>Protect and upgrade your exterior with prep that sticks and finishes that last.</p>
-        <p><a class="btn btn-alt" href="{{ '/exterior-services-overview' | url }}">Learn More</a></p>
-      </div>
-      <div class="tile out-of-view-left animate-on-scroll">
-        <img src="{{ '/assets/images/graphic_paint1.jpg' | url }}" alt="Paint bucket" width="100px">
-        <h4>Premium Materials</h4>
-        <p>Quality products paired with skilled application for a finish you’ll feel good about.</p>
-        <p><a class="btn btn-alt" href="{{ '/about' | url }}">About Our Process</a></p>
-      </div>
+    <div class="material">
+      <img src="{{ '/assets/images/metal-roof.jpg' | url }}" alt="Metal roofing">
+      <h4>Metal Roofing</h4>
+      <p>Long lifespan and energy efficient with modern curb appeal.</p>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT SPLIT -->
-<section class="contact-split container container-large">
-  <div class="contact-split__left">
-    <h3>Get in touch</h3>
-    <p>Use the form to reach us, or call/text and we’ll follow up quickly by your preferred method. We’re here to help with any painting questions.</p>
-    <p><a href="tel:7209331762">Call or text: (720) 933‑1762</a></p>
-  </div>
-  <div class="contact-split__right">
-    <h3>Send Us a Message</h3>
-    <!-- Replace action with your form endpoint (Formspree/HubSpot/etc.) -->
-    <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="input-field">
-        <label>First Name<span> *</span></label>
-        <input type="text" name="firstName" required>
-      </div>
-      <div class="input-field">
-        <label>Last Name<span> *</span></label>
-        <input type="text" name="lastName" required>
-      </div>
-      <div class="input-field">
-        <label>Email<span> *</span></label>
-        <input type="email" name="email" required>
-      </div>
-      <div class="input-field">
-        <label>Phone</label>
-        <input type="text" name="phone">
-      </div>
-      <div class="input-field">
-        <label>Comments</label>
-        <textarea name="comments" rows="3" maxlength="500" ></textarea>
-      </div>
-      <button class="btn" type="submit">Submit</button>
-    </form>
-  </div>
-</section>
-
-<!-- ART / MURALS PROMO -->
-<section class="art-promo"  style="background-image:url('{{ '/assets/images/mural1.png' | url }}');">
-  <div class="container container-xl">
-    <div class="art-promo-text">
-      <h4>Interested in custom art or murals?</h4>
-      <p>Darlene also creates interior and exterior murals, with work shown across Colorado and in private collections nationwide.</p>
-      <a class="btn" target="_blank" href="https://darlenekthomas.wordpress.com/">See Darlene’s Art <i class="fa-solid fa-arrow-right-long"></i></a>
+    <div class="material">
+      <img src="{{ '/assets/images/tile-roof.jpg' | url }}" alt="Tile roofing">
+      <h4>Tile Roofing</h4>
+      <p>Classic look with exceptional durability against hail and snow.</p>
     </div>
   </div>
 </section>

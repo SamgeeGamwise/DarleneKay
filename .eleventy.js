@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 
   // Static assets passthrough
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/videos": "assets/videos" });
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
   eleventyConfig.addPassthroughCopy({ "src/assets/fontawesome": "assets/fontawesome" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });

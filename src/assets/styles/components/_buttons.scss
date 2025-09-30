@@ -29,6 +29,10 @@
     }
   }
 
+  &.btn-roofing {
+    background-color: tokens.$roofing;
+  }
+
   &:hover {
     filter: brightness(115%);
   }

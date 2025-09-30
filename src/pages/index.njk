@@ -7,59 +7,97 @@ brand: "main"
 ---
 
 
-<section class="about container container-small">
-  <h2>About Us</h2>
-  <p>Darlene Kay Painting, Roofing & Gutters is a locally owned and operated company serving Aurora, Denver, and the surrounding Colorado communities. With years of experience, our licensed and insured team provides dependable home and business improvement services you can trust.</p>
-  <p>We specialize in professional exterior and interior painting, roof repair and replacement, and seamless gutter solutions. Our commitment to craftsmanship, high-quality materials, and customer-first service ensures long-lasting results and peace of mind for every homeowner and business we serve.</p>
+<section class="hero" style="background-image:url('{{ '/assets/images/Home1_dark.png' | url }}');">
+  <div class="container container-small">
+    <div class="hero__inner">
+      <h1 class="hero__header text-medium">Darlene Kay Painting, Roofing, & Gutters</h1>
+      <h2 class="hero__text ">From roof to paint, we keep your home covered</h2>    
+    </div>
+    <div class="hero__lower">
+      <div class="hero__hotline stacked">
+        <p>We would love to hear from you!</p>
+        <p>
+          <a href="tel:7209331762">Call</a>
+          or
+          <a href="mailto:roy@darlenekay.com">Email</a>
+          today!
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="services container container-small">
+<section class="services container container-small container-wide">
   <h2>Our Services</h2>
-  <div class="service-item">
-    <h3>Roofing</h3>
-    <ul>
-      <li>Complete roof replacement for homes and businesses in Aurora and Denver</li>
-      <li>Roof repair for leaks, missing shingles, and storm damage</li>
-      <li>Asphalt shingles, metal roofing, tile, and flat roof systems</li>
-      <li>Storm and hail damage restoration with insurance claim support</li>
-      <li>Durable roofing solutions built to withstand Colorado’s weather</li>
-    </ul>
+  <div class="services-grid">
+    <div class="service-item background-medium">
+      <h3>Painting</h3>
+      <ul>
+        <li>Exterior house painting that boosts curb appeal and protects siding</li>
+        <li>Interior painting for walls, ceilings, trim, and cabinets</li>
+        <li>Full prep work including power washing, scraping, sanding, and priming</li>
+        <li>Professional color consultation to bring your vision to life</li>
+      </ul>
+    </div>
+    <div class="service-item background-medium">
+      <h3>Roofing</h3>
+      <ul>
+        <li>Complete roof replacement for homes and businesses in Aurora and Denver</li>
+        <li>Roof repair for leaks, missing shingles, and storm damage</li>
+        <li>Asphalt shingles, metal roofing, tile, and flat roof systems</li>
+        <li>Storm and hail damage restoration with insurance claim support</li>
+        <li>Durable roofing solutions built to withstand Colorado’s weather</li>
+      </ul>
+    </div>
+    <div class="service-item background-medium">
+      <h3>Gutters</h3>
+      <ul>
+        <li>Seamless gutter installation to protect your home’s foundation</li>
+        <li>Gutter repair and replacement for damaged or leaking systems</li>
+        <li>Custom-fit downspouts for effective drainage</li>
+        <li>Leaf guard installation and seasonal gutter cleaning</li>
+      </ul>
+    </div>
   </div>
-  <div class="service-item">
-    <h3>Gutters</h3>
-    <ul>
-      <li>Seamless gutter installation to protect your home’s foundation</li>
-      <li>Gutter repair and replacement for damaged or leaking systems</li>
-      <li>Custom-fit downspouts for effective drainage</li>
-      <li>Leaf guard installation and seasonal gutter cleaning</li>
-    </ul>
-  </div>
-  <div class="service-item">
-    <h3>Painting</h3>
-    <ul>
-      <li>Exterior house painting that boosts curb appeal and protects siding</li>
-      <li>Interior painting for walls, ceilings, trim, and cabinets</li>
-      <li>Full prep work including power washing, scraping, sanding, and priming</li>
-      <li>Professional color consultation to bring your vision to life</li>
-    </ul>
-  </div>
-</section>
-
-<section class="why-choose-us container container-small">
-  <h2>Why Choose Darlene Kay?</h2>
-  <ul>
-    <div class="why-item"><i class="fa-solid fa-check"></i><li>Locally owned in Aurora, CO with strong ties to the Denver metro area</li></div>
-    <div class="why-item"><i class="fa-solid fa-check"></i><li>Licensed, insured, and experienced roofing and painting crews</li></div>
-    <div class="why-item"><i class="fa-solid fa-check"></i><li>High-quality paints, shingles, and gutter materials for lasting results</li></div>
-    <div class="why-item"><i class="fa-solid fa-check"></i><li>Transparent estimates, no hidden costs, and honest communication</li></div>
-    <div class="why-item"><i class="fa-solid fa-check"></i><li>Hundreds of satisfied customers across Aurora, Centennial, and Denver</li></div>
-  </ul>
 </section>
 
 <section class="projects container container-small">
   <h2>Our Work</h2>
   <p class="section-intro">From exterior house painting in Aurora neighborhoods to full roof replacements in Denver, our portfolio highlights the quality and attention to detail we bring to every project. Explore a selection of our completed roofing, gutter, and painting work below.</p>
   {% include "ui/carousel-image.njk" %}
+</section>
+
+<section class="cta-bar">
+  <p>Ready to start your next project? Let’s make your home stand out.</p>
+  <a class="btn" href="/contact">Get a Free Quote</a>
+</section>
+
+<section class="service-area container container-large">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="{{ '/assets/videos/flyover.mp4' | url }}" type="video/mp4">
+    {# <source src="{{ '/assets/videos/home-bg.webm' | url }}" type="video/webm"> #}
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="service-area-content">
+    <div class="service-area-box">
+      <h2>Service Areas</h2>
+      <p>
+        We provide painting, roofing, and gutter services throughout the Denver Metro and Front Range. 
+        Our team is committed to delivering reliable workmanship for homeowners and businesses across Colorado communities.
+      </p>
+      <ul class="service-cities">
+        <li>Aurora</li>
+        <li>Denver</li>
+        <li>Centennial</li>
+        <li>Englewood</li>
+        <li>Highlands Ranch</li>
+        <li>Littleton</li>
+        <li>Lone Tree</li>
+        <li>Parker</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section class="faq container container-small">
@@ -82,9 +120,4 @@ brand: "main"
   <h2>Customer Reviews</h2>
   <p class="section-intro">See why homeowners and businesses across Aurora, Denver, and surrounding suburbs trust Darlene Kay Painting, Roofing & Gutters. Our customers consistently praise our attention to detail, professionalism, and long-lasting results.</p>
   {% include "ui/carousel-text.njk" %}
-</section>
-
-<section class="service-area container container-small">
-  <h2>Service Areas</h2>
-  <p>We proudly serve Aurora, Denver, Centennial, Englewood, Highlands Ranch, Littleton, Parker, and the greater Front Range. Whether you need interior house painting, a new roof, or gutter installation, our team delivers expert service across Colorado’s metro communities.</p>
 </section>

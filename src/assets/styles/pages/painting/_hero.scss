@@ -34,15 +34,15 @@
         color: base.$white;
         text-shadow: 2px 2px 1px #000000;
 
-        a {
-            color: base.$white;
-        }
-
         .hero__hotline {
             font-size: 90%;
             display: flex;
             flex-flow: row wrap;
             padding: 0 5%;
+
+            &.stacked {
+                flex-flow: column wrap;
+            }
         }
     }
 
