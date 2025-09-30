@@ -54,6 +54,7 @@ brand: "roofing"
   </div>
 </section>
 
+
 <!-- CTA -->
 <section class="roofing-cta-banner container container-medium">
   <h3 class="cta-header">Need a roof you can trust?</h3>
@@ -108,5 +109,41 @@ brand: "roofing"
       <h4>Tile Roofing</h4>
       <p>Classic look with exceptional durability against hail and snow.</p>
     </div>
+  </div>
+</section>
+
+<!-- CONTACT SPLIT -->
+<section class="contact-split container container-large roofing">
+  <div class="contact-split__left">
+    <h3>Get in touch</h3>
+    <p>Use the form to reach us, or call/text and we’ll follow up quickly by your preferred method. We’re here to help with any painting questions.</p>
+    <p><a href="tel:7209331762">Call or text: (720) 933‑1762</a></p>
+  </div>
+  <div class="contact-split__right">
+    <h3>Send Us a Message</h3>
+    <!-- Replace action with your form endpoint (Formspree/HubSpot/etc.) -->
+    <form class="contact-split__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="input-field">
+        <label>First Name<span> *</span></label>
+        <input type="text" name="firstName" required>
+      </div>
+      <div class="input-field">
+        <label>Last Name<span> *</span></label>
+        <input type="text" name="lastName" required>
+      </div>
+      <div class="input-field">
+        <label>Email<span> *</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="input-field">
+        <label>Phone</label>
+        <input type="text" name="phone">
+      </div>
+      <div class="input-field">
+        <label>Comments</label>
+        <textarea name="comments" rows="3" maxlength="500" ></textarea>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
   </div>
 </section>

@@ -27,6 +27,16 @@
         }
     }
     
+    &.roofing {
+        a {
+            color: base.$roofing;
+        }
+
+        button {
+            background-color: base.$roofing-secondary;
+            color: base.$white;
+        }
+    }
 
     
     @include base.respond-max(lg) {
