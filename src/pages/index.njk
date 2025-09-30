@@ -27,7 +27,7 @@ brand: "main"
   </div>
 </section>
 
-<section class="services container container-small container-wide">
+<section class="services container container-medium container-wide">
   <h2>Our Services</h2>
   <div class="services-grid">
     <div class="service-item background-medium">
@@ -73,7 +73,7 @@ brand: "main"
 </section>
 
 <section class="service-area container container-large">
-  <video class="bg-video" autoplay muted loop playsinline>
+  <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="{{ '/assets/videos/flyover-poster.jpg' | url }}">
     <source src="{{ '/assets/videos/flyover.mp4' | url }}" type="video/mp4">
     {# <source src="{{ '/assets/videos/home-bg.webm' | url }}" type="video/webm"> #}
     Your browser does not support the video tag.
