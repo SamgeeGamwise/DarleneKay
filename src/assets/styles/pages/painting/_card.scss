@@ -1,0 +1,32 @@
+@use "../../base" as base;
+
+$border-radius: 8px;
+
+.card {
+    width: 450px;
+    margin: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px 1px;
+    border-radius: $border-radius;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    .card-image {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        height: 300px;
+    }
+    
+    .card-header,
+    .card-text {
+        padding: .5rem 1rem;
+    }
+
+    .card-header {
+        text-align: center;
+    }
+
+    @include base.respond-max(lg) {
+        width: 350px;
+    }
+}

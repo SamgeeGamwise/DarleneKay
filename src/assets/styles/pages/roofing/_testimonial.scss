@@ -1,0 +1,67 @@
+@use "../../base" as base;
+@use "../../abstracts/mixins" as mixins;
+
+.testimonial-service {
+  padding: 4rem 1rem;
+  background: base.$light;
+
+  .testimonial-service__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+    @include mixins.respond-max(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonial {
+    h2 {
+      margin-bottom: 1rem;
+      color: base.$roofing;
+    }
+
+    blockquote {
+      background: base.$white;
+      border-left: 4px solid base.$roofing-secondary;
+      padding: 2rem;
+      border-radius: 6px;
+      font-style: italic;
+      box-shadow: 0 4px 8px rgba(base.$black, 0.05);
+
+      span {
+        display: block;
+        margin-top: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        color: base.$dark;
+      }
+    }
+  }
+
+  .service-area {
+    h2 {
+      margin-bottom: 1rem;
+      color: base.$roofing;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+
+      li {
+        background: base.$white;
+        border: 1px solid base.$medium;
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: 600;
+        color: base.$roofing-secondary;
+        box-shadow: 0 2px 6px rgba(base.$black, 0.05);
+      }
+    }
+  }
+}

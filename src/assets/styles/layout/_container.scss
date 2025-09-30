@@ -1,0 +1,51 @@
+@use "../abstracts/mixins" as mixins;
+
+$container-block-sizes: (
+  xl: 20rem,
+  large: 8rem,
+  medium: 5rem,
+  small: 2rem
+);
+
+$container-block-sizes-lg: (
+  xl: 10rem,
+  large: 5rem,
+  medium: 3rem
+);
+
+.container {
+  padding-inline: 20%;
+
+  @each $name, $value in $container-block-sizes {
+    &.container-#{$name} {
+      padding-block: $value;
+    }
+  }
+
+  &.container-none {
+    padding-inline: 0;
+  }
+
+  &.container-wide {
+    padding-inline: 12%;
+  }
+}
+
+@include mixins.respond-max(lg) {
+  .container {
+    padding-inline: 10%;
+
+    @each $name, $value in $container-block-sizes-lg {
+      &.container-#{$name} {
+        padding-block: $value;
+      }
+    }
+  }
+}
+
+@include mixins.respond-max(md) {
+  .container {
+    padding-inline: 5%;
+  }
+}
+

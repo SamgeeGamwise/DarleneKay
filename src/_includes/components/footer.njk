@@ -2,16 +2,14 @@
   <div class="footer__container">
     <div class="footer__brand">
       <a class="logo" href="{{ '/' | url }}">
-        <img class="logo-image" src="{{ '/assets/images/logo_white.png' | url }}" alt="Darlene Kay Painting">
-        <p class="logo-text">Darlene Kay Painting</p>
+        <img class="logo-image" src="{{ '/assets/images/logo_painting_white.png' | url }}" alt="Darlene Kay Painting">
+        <img class="logo-image" src="{{ '/assets/images/logo_roofing.png' | url }}" alt="Darlene Kay Roofing">
+        <p class="logo-text">Darlene Kay Painting & Roofing</p>
       </a>
     </div>
     <div class="footer__details">
       <div class="footer__contact">
-        {#         <a href="tel:7209331762">(720) 933-1762</a>
-        or
-        <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a>
- #}
+          <p class="footer__title">Contact Info</p class="h6">
           <a href="tel:7209331762"><i class="fa-solid fa-phone"></i> (720) 933-1762</a>
           <br>
           <a href="mailto:roy@darlenekay.com"><i class="fa-solid fa-envelope"></i> roy@darlenekay.com</a>
@@ -21,7 +19,7 @@
           <p>8am - 5pm</p>
       </div>
       <div class="footer__info">     
-        <p class="h6"><i class="fa-solid fa-map"></i> Service Areas</p class="h6">
+        <p class="footer__title">Service Areas</p class="h6">
         <ul>
           <li>
             Aurora
@@ -41,7 +39,7 @@
         </ul>
       </div>
       <div class="footer__content">
-        <p class="h6"><i class="fa-solid fa-paint-roller"></i> Services</p class="h6">
+        <p class="footer__title">Quick Links</p class="h6">
         <ul class="footer__links">
           {% for item in site.footer %}
             <li>

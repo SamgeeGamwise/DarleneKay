@@ -1,0 +1,53 @@
+@use "../../base" as base;
+
+.hero {
+    position: relative;
+    padding: 10% 5% 0 5%;
+    color: white;
+    text-shadow: 2px 2px 1px #000000;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(95lvh - base.$blocker-height);
+    width: 100%;
+
+    .hero__header {
+        font-size: 225%;
+    }
+
+    .hero__text {
+        font-size: 175%;
+    }
+
+    .hero__actions {
+        font-size: 125%;
+    }
+
+    .hero__lower {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 125%;
+        width: 100%;
+        padding: 1rem 0;
+        background-color: rgba(base.$black, 0.85);
+        color: base.$white;
+        text-shadow: 2px 2px 1px #000000;
+
+        .hero__hotline {
+            font-size: 90%;
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0 5%;
+
+            &.stacked {
+                flex-flow: column wrap;
+            }
+        }
+    }
+
+        
+    @include base.respond-max(lg) {
+        font-size: 85%;
+    }
+}

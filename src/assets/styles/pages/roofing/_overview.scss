@@ -1,0 +1,18 @@
+@use "../../base" as base;
+
+.overview {
+  // padding: 4rem 1rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: base.$roofing;
+  }
+
+  p {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: base.$dark;
+    font-size: 1.1rem;
+  }
+}

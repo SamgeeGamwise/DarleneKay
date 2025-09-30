@@ -1,0 +1,43 @@
+@use "../base" as base;
+@use "../abstracts/variables" as tokens;
+
+.hidden {
+  display: none !important;
+}
+
+.fullsize {
+  width: 100%;
+}
+
+.icon {
+  width: tokens.$logo-size * 1.5;
+}
+
+.mini-icon {
+  width: tokens.$logo-size;
+}
+
+.out-of-view-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.out-of-view-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.in-view {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.text-medium {
+  color: base.$medium !important;
+}
+
+.background-medium {
+  background-color: base.$medium !important;
+}

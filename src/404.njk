@@ -4,15 +4,16 @@ title: "Page Not Found"
 description: "Oops! The page you were looking for doesn’t exist."
 layout: "layouts/base.njk"
 eleventyExcludeFromCollections: true
+brand: "main"
 ---
 
 <section class="not-found">
-  <div class="container">
+  <div class="container container-none">
     <h1 class="not-found__title">404</h1>
     <p class="not-found__subtitle">Oops! Page not found.</p>
     <p class="not-found__text">
       The page you’re looking for might have been removed, had its name changed, or is temporarily unavailable.
     </p>
-    <a href="{{ '/' | url }}" class="btn">Back to Home</a>
+    <a href="{{ '/' | url }}" class="btn btn-alt">Back to Home</a>
   </div>
 </section>

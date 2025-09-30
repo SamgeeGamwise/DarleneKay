@@ -1,0 +1,24 @@
+@use "../../base" as base;
+
+.roofing-cta-banner {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: base.$roofing-secondary;
+
+  .cta-header {
+    margin-bottom: 1rem;
+    color: base.$white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+
+  .btn {
+    background: base.$roofing;
+    color: base.$white;
+
+    &:hover {
+      background: lighten(base.$roofing, 10%);
+    }
+  }
+}

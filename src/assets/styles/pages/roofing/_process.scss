@@ -1,0 +1,59 @@
+@use "../../base" as base;
+@use "../../abstracts/mixins" as mixins;
+
+.process {
+  padding: 4rem 1rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: base.$roofing;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // always 4 tracks
+    gap: 2rem;
+    max-width: 1000px; // keeps 4 from stretching too far
+    margin: 0 auto;
+
+
+    @include mixins.respond-max(xl) {
+      grid-template-columns: repeat(2, 1fr); // 2x2
+    }
+
+    @include mixins.respond-max(sm) {
+      grid-template-columns: 1fr; // stacked
+    }
+
+    .step {
+      background: base.$white;
+      border: 1px solid base.$medium;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      // keep your existing styling here
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background: base.$roofing-secondary;
+      color: base.$white;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      margin-bottom: 0.5rem;
+      color: base.$black;
+    }
+
+    p {
+      color: base.$dark;
+    }
+  }
+}

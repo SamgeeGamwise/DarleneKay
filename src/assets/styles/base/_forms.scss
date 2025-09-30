@@ -1,0 +1,30 @@
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+  }
+
+  &::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+

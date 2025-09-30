@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as tokens;
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: tokens.$white;
+  background-color: tokens.$primary;
+  text-decoration: none;
+
+  &.btn-alt {
+    background-color: tokens.$secondary;
+  }
+
+  &.btn-transparant {
+    background-color: rgba(tokens.$primary, 0.75);
+  }
+
+  &.btn-alt-transparant {
+    background-color: rgba(tokens.$secondary, 0.75);
+  }
+
+  &.btn-white {
+    color: tokens.$black;
+    background-color: tokens.$white;
+
+    &:hover {
+      filter: brightness(85%);
+    }
+  }
+
+  &.btn-roofing {
+    background-color: tokens.$roofing;
+  }
+
+  &:hover {
+    filter: brightness(115%);
+  }
+}
+
