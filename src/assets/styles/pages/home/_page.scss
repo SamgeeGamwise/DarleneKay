@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../base" as base;
 
 #home {
@@ -225,7 +226,7 @@
       transition: background 0.2s ease, color 0.2s ease;
       
       &:hover {
-        background: lighten(base.$roofing, 10%);
+        background: color.scale(base.$roofing, $lightness: 10%);
         color: base.$white;
       }
     }
