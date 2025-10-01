@@ -3,7 +3,7 @@
 .hero--video {
   position: relative;
   overflow: hidden;
-  min-height: 70vh;
+  height: calc(95lvh - base.$blocker-height);
   display: flex;
   align-items: center;
   justify-content: center;

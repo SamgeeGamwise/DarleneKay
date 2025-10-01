@@ -4,6 +4,7 @@ module.exports = {
   site_name_roofing: "Darlene Kay Roofing and Gutters",
   tagline: "Interior & exterior painting in the greater Denver area",
   nav: [
+    { href: "/about", text: "About Us"  },
     { href: "/painting", text: "Painting", 
     //   children: [
     //   { href: "/painting/residential/interior", text: "Interior Home" },
@@ -18,8 +19,7 @@ module.exports = {
       { href: "/popcorn-removal", text: "Popcorn Removal" },
     ]},
     { href: "/contact/", text: "Contact" },
-    { href: "/about", text: "About Us"  },
-    { href: "/testimonials/", text: "Testimonials" },
+    // { href: "/testimonials/", text: "Testimonials" },
     // { href: "/news/", text: "News" },
   ],
   footer: [

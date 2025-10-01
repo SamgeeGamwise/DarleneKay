@@ -1,11 +1,11 @@
-@use "../base" as base;
+@use "../../base" as base;
 
 
 // HERO
 .contact-hero {
   position: relative;
   width: 100%;
-  min-height: 60vh;
+  height: calc(95lvh - base.$blocker-height);
   background: url('{{ "/assets/images/contact-hero.jpg" | url }}') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -118,15 +118,15 @@
         transition: border 0.2s ease, box-shadow 0.2s ease;
 
         &:focus {
-          border-color: base.$secondary;
-          box-shadow: 0 0 0 4px rgba(base.$secondary, 0.25);
+          border-color: base.$roofing;
+          box-shadow: 0 0 0 4px rgba(base.$roofing, 0.25);
           outline: none;
         }
       }
     }
 
     .btn {
-      background: base.$secondary;
+      background: base.$roofing;
       color: base.$white;
       padding: 0.9rem 1.5rem;
       border-radius: 6px;

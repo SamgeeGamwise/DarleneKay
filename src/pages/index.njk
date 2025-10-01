@@ -4,28 +4,55 @@ description: "This is the home page"
 layout: layouts/base.njk
 permalink: /
 brand: "main"
+identifier: "home"
 ---
 
 
-<section class="hero" style="background-image:url('{{ '/assets/images/Home1_dark.png' | url }}');">
+<section class="hero" style="background-image:url('{{ '/assets/images/Home1.webp' | url }}');">
   <div class="container container-small">
     <div class="hero__inner">
       <h1 class="hero__header text-medium">Darlene Kay Painting, Roofing, & Gutters</h1>
       <h2 class="hero__text ">From roof to paint, we keep your home covered</h2>    
     </div>
-    <div class="hero__lower">
-      <div class="hero__hotline stacked">
-        <p>We would love to hear from you!</p>
-        <p>
-          <a href="tel:7209331762">Call</a>
-          or
-          <a href="mailto:roy@darlenekay.com">Email</a>
-          today!
-        </p>
-      </div>
+  </div>
+  <div class="hero__lower">
+    <div class="hero__hotline stacked">
+      <p>We would love to hear from you!</p>
+      <p>
+        <a href="tel:7209331762">Call</a>
+        or
+        <a href="mailto:roy@darlenekay.com">Email</a>
+        today!
+      </p>
     </div>
   </div>
 </section>
+
+
+{# <section class="hero" style="background-image:url('{{ '/assets/images/exterior1.jpg' | url }}');">
+  <div class="container container-small">
+    <div class="hero__inner">
+      <h1 class="hero__header">Your local house and business painting experts</h1>
+      <h2 class="hero__text">Colorado’s trusted painters delivering quality results for residential and commercial projects across the Denver metro area.</h2>
+    </div>
+    <div class="hero__lower">
+      <p class="hero__actions">
+        <a class="btn btn-transparant" href="{{ '/contact' | url }}">Request an Estimate</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="hero__lower">
+    <div class="hero__hotline">
+      <p>Email or give us a call:</p>
+      <p>
+        <a href="tel:7209331762">(720) 933-1762</a>
+        or
+        <a href="mailto:roy@darlenekay.com">roy@darlenekay.com</a>
+      </p>
+    </div>
+  </div>
+</section> #}
 
 <section class="services container container-medium container-wide">
   <h2>Our Services</h2>
