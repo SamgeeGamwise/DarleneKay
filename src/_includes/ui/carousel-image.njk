@@ -4,7 +4,7 @@
   <div class="carousel-images__track">
     {% for image in site.galleryImages %}
       <div class="carousel-images__item">
-        <img src="{{ image.src | url }}" alt="{{ image.alt }}">
+        <img src="{{ image.src | fingerprint | url }}" alt="{{ image.alt }}" loading="lazy">
       </div>
     {% endfor %}
   </div>

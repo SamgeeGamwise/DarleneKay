@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../base" as base;
 
 .roofing-cta-banner {
@@ -18,7 +19,7 @@
     color: base.$white;
 
     &:hover {
-      background: lighten(base.$roofing, 10%);
+      background: color.scale(base.$roofing, $lightness: 10%);
     }
   }
 }

@@ -6,7 +6,8 @@
   position: relative;
   width: 100%;
   height: calc(95lvh - base.$blocker-height);
-  background: url('{{ "/assets/images/contact-hero.jpg" | url }}') center/cover no-repeat;
+  // TODO
+  background: url('{{ "/assets/images/contact-hero.jpg" | fingerprint | url }}') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
