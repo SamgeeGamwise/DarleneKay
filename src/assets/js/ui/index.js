@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
   const menu = document.getElementById("menu");
   const menuButton = document.getElementById("menu-button");
   const menuIcon = document.getElementById("menu-button-icon");
@@ -120,6 +122,35 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 
+  
+
+
+  /*
+  **********************************************
+  Contact Form
+  **********************************************
+  */
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.textContent = "Thanks! Your message has been sent.";
+        status.className = "success";
+      } else {
+        status.textContent = "Oops! Something went wrong. Please try again or reach us at Roy@DarleneKay.com";
+        status.className = "error";
+      }
+    } catch (error) {
+      status.textContent = "Network error. Try again later.";
+    }
+  });
+
   /*
   **********************************************
   Carousel Logic
@@ -202,5 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   carousel_func("carousel-text");
   carousel_func("carousel-images", 5000);
+
+
 });
 
