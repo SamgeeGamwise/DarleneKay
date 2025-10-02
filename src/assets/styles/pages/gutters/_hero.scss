@@ -1,12 +1,13 @@
 @use "../../base" as base;
 
 #gutters {
-  .hero--video {
+  .hero {
     position: relative;
-    overflow: hidden;
-    height: calc(95lvh - base.$blocker-height);
+    padding: 10% 5% 0; // match painting hero
     color: base.$white;
     text-shadow: 2px 2px 1px base.$black;
+    height: calc(95lvh - base.$blocker-height);
+    overflow: hidden;
 
     // video background
     .hero__video {
@@ -27,19 +28,24 @@
       z-index: 1;
     }
 
-    // content on top
+    // keep content above overlay
     .container {
       position: relative;
       z-index: 2;
     }
 
+    &__inner {
+      position: relative;
+      z-index: 2;
+    }
+
     &__header {
-      font-size: clamp(1.5rem, 2.25vw, 2.25rem);
+      font-size: clamp(1.5rem, 2.25vw, 2.25rem); // matches painting
       margin: 0 0 1rem;
     }
 
     &__text {
-      font-size: clamp(1.125rem, 1.75vw, 1.75rem);
+      font-size: clamp(1.125rem, 1.75vw, 1.75rem); // matches painting
       margin: 0 0 1.25rem;
     }
 
@@ -80,7 +86,7 @@
     }
 
     @include base.respond-max(lg) {
-      font-size: 85%;
+      font-size: 85%; // shrink slightly on smaller screens
     }
   }
 }

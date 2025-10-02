@@ -68,7 +68,7 @@
     @include base.respond-max(md) {
       &__track {
         max-width: 350px;
-        min-height: 275px;
+        min-height: 400px;
       }
     }
 }
