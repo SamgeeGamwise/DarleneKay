@@ -2,8 +2,8 @@
   <div class="footer__container">
     <div class="footer__brand">
       <a class="logo" href="{{ '/' | url }}">
-        <img class="logo-image" src="{{ '/assets/images/logo_painting_white.png' | fingerprint | url }}" alt="Darlene Kay Painting">
-        <img class="logo-image" src="{{ '/assets/images/logo_roofing.png' | fingerprint | url }}" alt="Darlene Kay Roofing">
+        {% image "/assets/images/logo_painting_white.png", "Darlene Kay Painting", { class: "logo-image" } %}
+        {% image "/assets/images/logo_roofing.png", "Darlene Kay Roofing", { class: "logo-image" } %}
         <p class="logo-text">Darlene Kay Painting & Roofing</p>
       </a>
     </div>
@@ -50,9 +50,9 @@
       </div>
     </div>
     <div class="footer__badges">
-      <img src="{{ '/assets/images/williams.png' | fingerprint | url }}" alt="Sherwin-Williams" width="85px">
-      <img src="{{ '/assets/images/homeadvisor.png' | fingerprint | url }}" alt="HomeAdvisor" width="85px">
-      <img src="{{ '/assets/images/bbb-a-plus.png' | fingerprint | url }}" alt="BBB A+ Rating" width="200px">
+      {% image "/assets/images/williams.png", "Sherwin-Williams", { width: "85px" } %}
+      {% image "/assets/images/homeadvisor.png", "HomeAdvisor", { width: "85px" } %}
+      {% image "/assets/images/bbb-a-plus.png", "BBB A+ Rating", { width: "200px" } %}
     </div>
     <div class="footer__legal">
       <hr>

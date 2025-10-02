@@ -2,9 +2,9 @@
 <div class="carousel-images" id="carousel-images">
   <button class="carousel-images__btn carousel-images__btn--prev">&#10094;</button>
   <div class="carousel-images__track">
-    {% for image in site.galleryImages %}
+    {% for galleryImage in site.galleryImages %}
       <div class="carousel-images__item">
-        <img src="{{ image.src | fingerprint | url }}" alt="{{ image.alt }}" loading="lazy">
+        {% image galleryImage.src, galleryImage.alt %}
       </div>
     {% endfor %}
   </div>

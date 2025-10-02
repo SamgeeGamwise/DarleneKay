@@ -11,31 +11,37 @@ function hashFile(filePath) {
 
 module.exports = function (eleventyConfig) {
   // Responsive Images
-eleventyConfig.addNunjucksAsyncShortcode("image",
-    async function (src, alt, sizes = "100vw") {
+  eleventyConfig.addNunjucksAsyncShortcode("image",
+
+    async function (src, alt, sizes = "100vw", attrs = {}) {
       if (!alt) throw new Error(`Missing alt text on image: ${src}`);
 
-      // Normalize path (strip leading slash)
-      const cleanSrc = src.replace(/^\/+/, "");
-      const srcPath = path.join("src", cleanSrc);
+      let cleanSrc = src.replace(/^\/+/, "");
+      let srcPath = path.join("src", cleanSrc);
 
-      const metadata = await Image(srcPath, {
+      let metadata = await Image(srcPath, {
         widths: [160, 300, 600, 1200, null],
         formats: ["webp", "png"],
         urlPath: "/assets/images/",
         outputDir: "_site/assets/images/",
       });
 
-      const imageAttributes = {
+      let imageAttributes = {
         alt,
         sizes,
-        loading: "lazy",
+        loading: attrs.loading || "lazy",
         decoding: "async",
+        ...attrs,
       };
 
-      return Image.generateHTML(metadata, imageAttributes);
+      return Image.generateHTML(metadata, imageAttributes, {
+        urlFormat: (urlPath) => this.ctx.url(urlPath),
+      });
     }
   );
+
+
+
   // Watch source assets for live reload
   eleventyConfig.addWatchTarget("src/assets/styles");
   eleventyConfig.addWatchTarget("src/assets/js");

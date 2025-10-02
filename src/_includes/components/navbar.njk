@@ -3,12 +3,11 @@
   {% if branding == "roofing" %}
 
     {% image "/assets/images/logo_roofing.png", "Roofing logo" %}
-    <img src="{{ '/assets/images/logo_roofing.png' | fingerprint | url }}" alt="Roofing logo">
   {% elseif branding == "painting" %}
-    <img src="{{ '/assets/images/logo_painting.webp' | fingerprint | url }}" alt="Painting logo">
+    {% image "/assets/images/logo_painting.webp", "Painting logo" %}
   {% elseif branding == "main" %}
-    <img src="{{ '/assets/images/logo_painting.webp' | fingerprint | url }}" alt="Painting logo">
-    <img src="{{ '/assets/images/logo_roofing.png' | fingerprint | url }}" alt="Roofing logo">
+    {% image "/assets/images/logo_painting.webp", "Painting logo" %}
+    {% image "/assets/images/logo_roofing.png", "Roofing logo" %}
   {% endif %}
   </a>
   <div class="nav-desktop">
