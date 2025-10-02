@@ -21,6 +21,11 @@
     animation: fadeIn 1s ease forwards;
     max-width: 900px;
 
+    @include base.respond-max(md) {
+      margin: 0 1.5rem;
+      padding: 2.5rem 1.5rem;
+    }
+
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;

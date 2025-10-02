@@ -8,7 +8,7 @@
     overflow: hidden;
     height: calc(95lvh - base.$blocker-height);
     color: base.$white;
-    text-shadow: 2px 2px 1px base.$black;
+    text-shadow: 3px 3px 2px base.$black;
     
     // background video
     .hero__video {
@@ -25,7 +25,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(base.$black, 0), rgba(base.$black, 0.4));
+      background: linear-gradient(to top, rgba(base.$black, 0.2), rgba(base.$black, 0.5));
       z-index: 1;
     }
     
@@ -39,12 +39,12 @@
       margin: 0 auto;
       
       .hero__header {
-        font-size: clamp(1.5rem, 2.25vw, 2.25rem);
+        font-size: clamp(1.5rem, 3.2vw, 3.25rem);
         margin: 0 0 1rem;
       }
       
       .hero__text {
-        font-size: clamp(1.125rem, 1.75vw, 1.75rem);
+        font-size: clamp(1.125rem, 2.3vw, 2.25rem);
         margin: 0 0 1.25rem;
       }
       
