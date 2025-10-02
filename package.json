@@ -19,6 +19,7 @@
         "sass": "^1.92.1"
     },
     "dependencies": {
+        "@11ty/eleventy-img": "^6.0.4",
         "@fullhuman/postcss-purgecss": "^4.1.3"
     }
 }
