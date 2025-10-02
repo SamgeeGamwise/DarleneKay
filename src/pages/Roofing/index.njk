@@ -9,25 +9,37 @@ identifier: "roofing"
 
 <!-- HERO -->
 <section class="hero hero--video">
-  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="{{ '/assets/videos/roofers-poster.jpg' | fingerprint | url }}">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" 
+    poster="{{ '/assets/videos/roofers-poster.jpg' | fingerprint | url }}">
     <source src="{{ '/assets/videos/roofers.mp4' | fingerprint | url }}" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <div class="hero__overlay"></div>
-
-  <div class="container container-small">
+  <div class="container container-large">
     <div class="hero__inner">
       <h1 class="hero__header">Reliable roofing for Colorado homes and businesses</h1>
-      <br>
-      <h2 class="hero__text">Protect your property with roof repairs, replacements, and storm restoration handled by local professionals.</h2>    
-      <br>
+      <h2 class="hero__text">
+        Protect your property with roof repairs, replacements, and storm restoration handled by local professionals.
+      </h2>
       <p class="hero__actions">
         <a class="btn btn-transparant btn-roofing" href="{{ '/contact' | url }}">Request an Estimate</a>
       </p>
     </div>
   </div>
+
+  <div class="hero__lower">
+    <div class="hero__hotline stacked">
+      <p>Need roofing service today?</p>
+      <p>
+        <a href="tel:7209331762">Call</a>
+        or
+        <a href="mailto:roy@darlenekay.com">Email</a>
+        us for a free estimate.
+      </p>
+    </div>
+  </div>
 </section>
+
 
 <!-- OVERVIEW -->
 <section class="overview container container-medium container-wide">
@@ -44,12 +56,12 @@ identifier: "roofing"
 <!-- SERVICE GRID -->
 <section class="service-grid container container-medium">
   <div class="service-card">
-    <img src="{{ '/assets/images/roof-repair-graphic.png' | fingerprint | url }}" alt="Roof replacement">
+    {% image "/assets/images/roof-repair-graphic.png", "Roof replacement" %}
     <h3>Roof Replacement</h3>
     <p>Durable new roofs installed with asphalt, metal, or tile systems to fit your needs.</p>
   </div>
   <div class="service-card">
-    <img src="{{ '/assets/images/roof-insurance-graphic2.png' | fingerprint | url }}" alt="Storm restoration">
+    {% image "/assets/images/roof-insurance-graphic2.png", "Storm restoration" %}
     <h3>Storm Restoration</h3>
     <p>Fast response after hail and wind with guidance for your insurance claim.</p>
   </div>
@@ -96,17 +108,17 @@ identifier: "roofing"
   <h2>Quality Materials, Trusted Brands</h2>
   <div class="materials__grid">
     <div class="material">
-      <img src="{{ '/assets/images/asphalt-roof.jpg' | fingerprint | url }}" alt="Asphalt shingles">
+      {% image "/assets/images/asphalt-roof.jpg", "Asphalt shingles" %}
       <h4>Asphalt Shingles</h4>
       <p>Cost-effective and durable, perfect for Colorado’s climate.</p>
     </div>
     <div class="material">
-      <img src="{{ '/assets/images/metal-roof.jpg' | fingerprint | url }}" alt="Metal roofing">
+      {% image "/assets/images/metal-roof.jpg", "Metal roofing" %}
       <h4>Metal Roofing</h4>
       <p>Long lifespan and energy efficient with modern curb appeal.</p>
     </div>
     <div class="material">
-      <img src="{{ '/assets/images/tile-roof.jpg' | fingerprint | url }}" alt="Tile roofing">
+      {% image "/assets/images/tile-roof.jpg", "Tile roofing" %}
       <h4>Tile Roofing</h4>
       <p>Classic look with exceptional durability against hail and snow.</p>
     </div>

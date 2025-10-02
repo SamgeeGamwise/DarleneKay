@@ -8,11 +8,15 @@ identifier: "painting"
 ---
 
 <!-- HERO -->
-<section class="hero" style="background-image:url('{{ '/assets/images/exterior1.jpg' | fingerprint | url }}');">
+<section class="hero">
+  {% image "/assets/images/exterior1.jpg", "Painting hero background", "100vw", { class: "hero__bg", loading: "eager", decoding: "async" } %}
+
   <div class="container container-small">
     <div class="hero__inner">
       <h1 class="hero__header">Your local house and business painting experts</h1>
-      <h2 class="hero__text">Colorado’s trusted painters delivering quality results for residential and commercial projects across the Denver metro area.</h2>
+      <h2 class="hero__text">
+        Colorado’s trusted painters delivering quality results for residential and commercial projects across the Denver metro area.
+      </h2>
       <p class="hero__actions">
         <a class="btn btn-transparant" href="{{ '/contact' | url }}">Request an Estimate</a>
       </p>
@@ -59,17 +63,17 @@ identifier: "painting"
 <!-- FEATURE CARDS (3-up) -->
 <section class="features container container-none">
   <div class="card out-of-view-left animate-on-scroll">
-      <img class="card-image" src="{{ '/assets/images/Home1.webp' | fingerprint | url }}" alt="Color swatches">
+      {% image "/assets/images/Home1.webp", "Color swatches", { class: "card-image" } %}
       <h4 class="card-header">Color help when you want it</h4>
       <p class="card-text">Choosing shades can be tough. We offer simple guidance to help you land on colors that fit your space.</p>
   </div>
   <div class="card out-of-view-left animate-on-scroll">
-    <img class="card-image" src="{{ '/assets/images/Home3.webp' | fingerprint | url }}" alt="Exterior painting">
+    {% image "/assets/images/Home3.webp", "Exterior painting", { class: "card-image" } %}
     <h4 class="card-header">Everything you need, inside and out</h4>
     <p class="card-text">From trim to whole homes, our workmanship and clean job sites make the process painless.</p>
   </div>
   <div class="card out-of-view-left animate-on-scroll">
-    <img class="card-image" src="{{ '/assets/images/Home2.webp' | fingerprint | url }}" alt="High‑quality paint">
+    {% image "/assets/images/Home2.webp", "High‑quality paint", { class: "card-image" } %}
     <h4 class="card-header">Top coatings, lasting results</h4>
     <p class="card-text">We work with leading paint brands to pair great products with careful application.</p>
   </div>
@@ -94,19 +98,19 @@ identifier: "painting"
   <div class="container container-medium">
     <div class="tiles">
       <div class="tile out-of-view-left animate-on-scroll">
-        <img src="{{ '/assets/images/graphic_person3.jpg' | fingerprint | url }}" alt="Interior palette" width="100px">
+        {% image "/assets/images/graphic_person3.jpg", "Interior palette", { width: "100px" } %}        
         <h4>Interior Painting</h4>
         <p>Need a refresh or full repaint? We handle walls, ceilings, trim, cabinets, and more.</p>
         <p><a class="btn btn-alt" href="{{ '/interior-services-overview' | url }}">Learn More</a></p>
       </div>
       <div class="tile out-of-view-left animate-on-scroll">
-        <img src="{{ '/assets/images/graphic_person2.png' | fingerprint | url }}" alt="Brush icon" width="100px">
+        {% image "/assets/images/graphic_person2.png", "Brush icon", { width: "100px" } %}
         <h4>Exterior Painting</h4>
         <p>Protect and upgrade your exterior with prep that sticks and finishes that last.</p>
         <p><a class="btn btn-alt" href="{{ '/exterior-services-overview' | url }}">Learn More</a></p>
       </div>
       <div class="tile out-of-view-left animate-on-scroll">
-        <img src="{{ '/assets/images/graphic_paint1.jpg' | fingerprint | url }}" alt="Paint bucket" width="100px">
+        {% image "/assets/images/graphic_paint1.jpg", "Paint bucket", { width: "100px" } %}
         <h4>Premium Materials</h4>
         <p>Quality products paired with skilled application for a finish you’ll feel good about.</p>
         <p><a class="btn btn-alt" href="{{ '/about' | url }}">About Our Process</a></p>
@@ -152,12 +156,19 @@ identifier: "painting"
 </section>
 
 <!-- ART / MURALS PROMO -->
-<section class="art-promo"  style="background-image:url('{{ '/assets/images/mural1.png' | fingerprint | url }}');">
+<section class="art-promo">
+  {% image "/assets/images/mural1.png", "Custom mural artwork", "100vw", { class: "art-promo__bg", loading: "eager", decoding: "async" } %}
+
   <div class="container container-xl">
     <div class="art-promo-text">
       <h4>Interested in custom art or murals?</h4>
-      <p>Darlene also creates interior and exterior murals, with work shown across Colorado and in private collections nationwide.</p>
-      <a class="btn" target="_blank" href="https://darlenekthomas.wordpress.com/">See Darlene’s Art <i class="fa-solid fa-arrow-right-long"></i></a>
+      <p>
+        Darlene also creates interior and exterior murals, with work shown across
+        Colorado and in private collections nationwide.
+      </p>
+      <a class="btn" target="_blank" href="https://darlenekthomas.wordpress.com/">
+        See Darlene’s Art <i class="fa-solid fa-arrow-right-long"></i>
+      </a>
     </div>
   </div>
 </section>

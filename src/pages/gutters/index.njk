@@ -8,13 +8,19 @@ identifier: "gutters"
 ---
 
 
-<section class="hero" style="background-image:url('/assets/images/gutters-hero.webp');">
-  <div class="container container-small">
+<section class="hero hero--video">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="{{ '/assets/videos/gutters-poster.jpg' | fingerprint | url }}">
+    <source src="{{ '/assets/videos/gutters.mp4' | fingerprint | url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container container-large">
     <div class="hero__inner">
       <h1 class="hero__header text-medium">Gutter Installation & Repair</h1>
       <h2 class="hero__text">Protect your home from water damage with seamless gutter solutions</h2>    
     </div>
   </div>
+  
   <div class="hero__lower">
     <div class="hero__hotline stacked">
       <p>Need gutter service today?</p>
@@ -27,6 +33,8 @@ identifier: "gutters"
     </div>
   </div>
 </section>
+
+
 
 <section class="services container container-medium container-wide">
   <h2>Our Gutter Services</h2>

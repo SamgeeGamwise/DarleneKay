@@ -8,13 +8,16 @@ identifier: "home"
 ---
 
 
-<section class="hero" style="background-image:url('{{ '/assets/images/Home1.webp' | fingerprint | url }}');">
+<section class="hero">
+  {% image "/assets/images/Home1.webp", "Hero background", "100vw", { class: "hero__bg", loading: "eager", decoding: "async" } %}
+
   <div class="container container-small">
     <div class="hero__inner">
       <h1 class="hero__header text-medium">Darlene Kay Painting, Roofing, & Gutters</h1>
-      <h2 class="hero__text ">From roof to paint, we keep your home covered</h2>    
+      <h2 class="hero__text">From roof to paint, we keep your home covered</h2>    
     </div>
   </div>
+
   <div class="hero__lower">
     <div class="hero__hotline stacked">
       <p>We would love to hear from you!</p>

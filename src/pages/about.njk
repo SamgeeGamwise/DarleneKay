@@ -27,7 +27,7 @@ identifier: "about"
     </p>
   </div>
   <div class="image">
-    <img src="{{ '/assets/images/roofing1.jpg' | fingerprint | url }}" alt="Our crew at work">
+    {% image "/assets/images/roofing1.jpg", "Our crew at work" %}
   </div>
 </section>
 
@@ -51,12 +51,12 @@ identifier: "about"
   <h2>Our Team</h2>
   <div class="team-grid">
     <div class="team-member">
-      <img src="{{ '/assets/images/roy.jpg' | fingerprint | url }}" alt="Roy Thomas">
+      {% image "/assets/images/roy.jpg", "Roy Thomas" %}
       <h3>Roy Thomas</h3>
       <p>General Manager/Owner</p>
     </div>
     <div class="team-member">
-      <img src="{{ '/assets/images/darlene.jpg' | fingerprint | url }}" alt="Darlene Thomas">
+      {% image "/assets/images/darlene.jpg", "Darlene Thomas" %}
       <h3>Darlene Thomas</h3>
       <p>Lead Painter & Designer/Owner</p>
     </div>
