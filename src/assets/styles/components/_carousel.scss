@@ -62,6 +62,7 @@
     
     .stars {
       color: gold;
+      font-size: 1.25rem;
     }
     
     @include base.respond-max(md) {
