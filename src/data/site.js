@@ -1,5 +1,8 @@
+const { DateTime } = require("luxon");
+
 // src/_data/site.js
 module.exports = {
+  url: "https://darlenekay.com",
   site_name_painting: "Darlene Kay Painting",
   site_name_roofing: "Darlene Kay Roofing and Gutters",
   tagline: "Interior & exterior painting in the greater Denver area",
@@ -61,5 +64,6 @@ module.exports = {
     { src: "/assets/images/Home28.webp", alt: "Darlene Kay Painting Project"},
     { src: "/assets/images/Home29.webp", alt: "Darlene Kay Painting Project"},
   ],
-  year: new Date().getFullYear()
+  year: new Date().getFullYear(),
+  buildDate: DateTime.now().toISODate()
 };
