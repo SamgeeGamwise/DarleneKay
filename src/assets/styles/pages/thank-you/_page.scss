@@ -1,0 +1,79 @@
+@use "../../base" as base;
+
+#thank-you {
+  .contact-hero {
+    position: relative;
+    background: center / cover no-repeat;
+    color: base.$white;
+    text-shadow: 2px 2px 1px base.$black;
+    height: calc(75lvh - base.$blocker-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .overlay {
+      background: rgba(base.$black, 0.5);
+      padding: 2rem;
+      border-radius: 8px;
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+      }
+    }
+  }
+
+  .contact {
+    padding: 4rem 1.5rem;
+
+    .contact__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .contact__info,
+    .contact__form-wrap {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .info-card {
+      background: base.$white;
+      color: base.$black;
+      padding: 2rem;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(base.$black, 0.15);
+
+      i {
+        font-size: 2.5rem;
+        color: base.$primary;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .thank-you-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+
+      .btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+  }
+}

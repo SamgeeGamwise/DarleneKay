@@ -1,94 +1,132 @@
 ---
-title: "Darlene Kay, LLC | Gutters"
-description: "Roofing services in Aurora and across the Denver Metro area"
+title: "Darlene Kay Gutters | Seamless Gutter Installation & Repair"
+description: "Seamless gutter installation, repair, and protection services across Aurora and the Denver Metro area."
 layout: layouts/base.njk
 permalink: /gutters/
 brand: "roofing"
 identifier: "gutters"
 ---
 
-
+<!-- HERO -->
 <section class="hero hero--video">
-  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="{{ '/assets/videos/gutters-poster.jpg' | fingerprint | url }}">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" 
+    poster="{{ '/assets/videos/gutters-poster.jpg' | fingerprint | url }}">
     <source src="{{ '/assets/videos/gutters.mp4' | fingerprint | url }}" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="container container-large">
     <div class="hero__inner">
-      <h1 class="hero__header text-medium">Gutter Installation & Repair</h1>
-      <h2 class="hero__text">Protect your home from water damage with seamless gutter solutions</h2>    
+      <h1 class="hero__header text-medium">Seamless Gutter Installation & Repair</h1>
+      <h2 class="hero__text">
+        Protect your home from costly water damage with gutters designed for Colorado’s heavy rain and snow.
+      </h2>
+      <p class="hero__actions">
+        <a class="btn btn-transparant btn-roofing" href="{{ '/contact' | url }}">Request a Free Estimate</a>
+      </p>
     </div>
   </div>
-  
+
   <div class="hero__lower">
     <div class="hero__hotline stacked">
       <p>Need gutter service today?</p>
       <p>
-        <a href="tel:7209331762">Call</a>
-        or
-        <a href="mailto:roy@darlenekay.com">Email</a>
-        us for a free estimate.
+        <a href="tel:7209331762">Call</a> or 
+        <a href="mailto:roy@darlenekay.com">Email</a> us now.
       </p>
     </div>
   </div>
 </section>
 
 
-
-<section class="services container container-medium container-wide">
-  <h2>Our Gutter Services</h2>
-  <div class="services-grid">
-    <div class="service-item background-medium">
-      <h3>Seamless Gutter Installation</h3>
-      <p>Custom-fit seamless gutters designed to protect your foundation and siding from Colorado’s heavy rains and snowmelt.</p>
-    </div>
-    <div class="service-item background-medium">
-      <h3>Gutter Repair & Replacement</h3>
-      <p>Fix leaks, sagging, or damaged gutters with professional repair—or replace old systems with durable new ones.</p>
-    </div>
-    <div class="service-item background-medium">
-      <h3>Downspouts & Drainage</h3>
-      <p>Ensure proper water flow away from your home with correctly sized and placed downspouts.</p>
-    </div>
-    <div class="service-item background-medium">
-      <h3>Leaf Guards & Cleaning</h3>
-      <p>Protect against clogs with leaf guards and seasonal cleaning for optimal performance year-round.</p>
-    </div>
+<!-- WHY GUTTERS MATTER -->
+<section class="overview container container-medium">
+  <div class="overview__text">
+    <h2>Why Your Gutters Matter</h2>
+    <p>
+      Gutters aren’t just trim pieces — they protect your siding, landscaping, and foundation. 
+      Without proper drainage, Colorado’s downpours and snowmelt can cause erosion, cracked foundations, 
+      and water intrusion into basements and crawl spaces.
+    </p>
+    <p>
+      At Darlene Kay, we install seamless gutters that move water efficiently, 
+      reduce leaks, and add lasting value to your home.
+    </p>
   </div>
 </section>
 
-<section class="projects container container-small">
-  <h2>Recent Gutter Projects</h2>
-  <p class="section-intro">From seamless installations in Aurora to full replacements across Denver, our gutter work keeps homes dry and foundations safe.</p>
-  <div class="carousel-images" id="carousel-images">
-    <button class="carousel-images__btn carousel-images__btn--prev">❮</button>
-    <div class="carousel-images__track">
-      <div class="carousel-images__item"><img src="/assets/images/gutters1.webp" alt="Seamless gutter installation"></div>
-      <div class="carousel-images__item"><img src="/assets/images/gutters2.webp" alt="Downspout installation"></div>
-      <div class="carousel-images__item"><img src="/assets/images/gutters3.webp" alt="Gutter replacement"></div>
-    </div>
-    <button class="carousel-images__btn carousel-images__btn--next">❯</button>
+
+<!-- SERVICE GRID W/ IMAGES -->
+<section class="service-grid container container-medium">
+  <div class="service-card">
+    {% image "/assets/images/gutters1.jpg", "Technician installing seamless gutters" %}
+    <h3>Seamless Installation</h3>
+    <p>Custom-fit gutters cut on-site for a perfect match to your home’s roofline — fewer seams, fewer leaks.</p>
+  </div>
+  <div class="service-card">
+    {% image "/assets/images/gutters2.jpg", "Securing gutter system to fascia" %}
+    <h3>Repair & Replacement</h3>
+    <p>We fix sagging, rusted, or cracked gutters, and replace old systems with durable new protection.</p>
+  </div>
+  <div class="service-card">
+    {% image "/assets/images/gutters3.jpg", "Heavy rain draining through a gutter system" %}
+    <h3>Storm-Ready Protection</h3>
+    <p>Our systems are designed for sudden Colorado downpours, so water flows away quickly instead of pooling at your foundation.</p>
   </div>
 </section>
 
-<section class="cta-bar">
-  <p>Ready for reliable gutter protection?</p>
-  <a class="btn" href="/contact">Request Your Free Estimate</a>
+
+<!-- SIGNS YOU NEED NEW GUTTERS -->
+<section class="signs container container-small">
+  <h2>Signs Your Gutters Need Attention</h2>
+  <ul>
+    <li>Water spilling over the sides during rainstorms</li>
+    <li>Peeling paint, wood rot, or stains on siding</li>
+    <li>Sagging or detached gutter sections</li>
+    <li>Pooling water around your home’s foundation</li>
+    <li>Rust spots, cracks, or visible holes</li>
+  </ul>
+  <p>
+    If you notice any of these, it’s time to have your gutters inspected before the damage gets worse.
+  </p>
 </section>
 
+
+<!-- CTA -->
+<section class="roofing-cta-banner container container-medium">
+  <h3 class="cta-header">Ready for reliable gutter protection?</h3>
+  <a class="btn btn-white h5" href="{{ '/contact' | url }}">Get Your Free Estimate</a>
+</section>
+
+
+<!-- FAQ -->
 <section class="faq container container-small">
   <h2>Gutter FAQs</h2>
   <div class="faq-item">
-    <h3>Do you install seamless gutters?</h3>
-    <p>Yes, we custom-cut seamless gutters on-site for a perfect fit and fewer leak points.</p>
+    <h3>Why is gutter repair important?</h3>
+    <p>
+      Damaged gutters let water back up onto your roof or down to your foundation, leading to leaks, 
+      rot, and even basement flooding. Small repairs now prevent expensive fixes later.
+    </p>
   </div>
   <div class="faq-item">
-    <h3>How often should gutters be cleaned?</h3>
-    <p>We recommend at least twice a year in Colorado—spring and fall—to prevent clogs and overflow.</p>
+    <h3>How often should gutters be cleaned in Colorado?</h3>
+    <p>
+      Twice a year is best — once in spring and once in fall. 
+      Homes with trees close by may need more frequent cleaning.
+    </p>
   </div>
   <div class="faq-item">
-    <h3>Can you add leaf guards?</h3>
-    <p>Absolutely. Leaf guards reduce maintenance and extend the lifespan of your gutter system.</p>
+    <h3>What are seamless gutters?</h3>
+    <p>
+      Seamless gutters are cut from a single piece of metal, meaning no seams along the run. 
+      Fewer seams mean fewer leaks and a more polished look for your home.
+    </p>
+  </div>
+  <div class="faq-item">
+    <h3>Do you offer gutter guards?</h3>
+    <p>
+      Yes, we can install guards to keep out leaves and debris, reducing maintenance and preventing clogs.
+    </p>
   </div>
 </section>

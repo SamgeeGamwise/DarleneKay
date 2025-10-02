@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contact-form");
   const menu = document.getElementById("menu");
   const menuButton = document.getElementById("menu-button");
   const menuIcon = document.getElementById("menu-button-icon");
@@ -119,6 +120,27 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".animate-on-scroll").forEach((el) => {
     observer.observe(el);
   });
+
+    /*
+  **********************************************
+  Contact Form
+  **********************************************
+  */
+  // Only run if user came back from Formspree
+  // Detect Formspree referrer
+  // Before sending form
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", () => {
+      sessionStorage.setItem("formSubmitted", "1");
+    });
+  }
+
+  // On load
+  if (sessionStorage.getItem("formSubmitted") === "1") {
+    sessionStorage.removeItem("formSubmitted");
+    window.location.replace("/thank-you/");
+  }
 
   /*
   **********************************************

@@ -1,0 +1,39 @@
+---
+title: Thank You
+layout: layouts/base.njk
+permalink: /thank-you/
+brand: "main"
+identifier: "thank-you"
+---
+
+<section class="contact-hero" style="background-image: url({{ '/assets/images/Home29.webp' | fingerprint | url }});">
+  <div class="overlay">
+    <h1>Thank You!</h1>
+    <p>Your message has been received</p>
+  </div>
+</section>
+
+<section class="contact container">
+  <div class="contact__grid">
+    <!-- Success Message -->
+    <div class="contact__info">
+      <div class="info-card">
+        <i class="fas fa-check-circle"></i>
+        <h3>We’ll Be in Touch</h3>
+        <p>Thank you for contacting us. We’ll review your message and respond as soon as possible.</p>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="contact__form-wrap">
+      <h2>What’s Next?</h2>
+      <p>You can continue exploring our services or head back to the home page.</p>
+      <p class="thank-you-actions">
+        <a class="btn" href="{{ '/' | url }}"><i class="fas fa-home"></i> Home</a>
+        <a class="btn" href="{{ '/roofing/' | url }}"> Roofing</a>
+        <a class="btn" href="{{ '/painting/' | url }}"> Painting</a>
+        <a class="btn" href="{{ '/gutters/' | url }}"> Gutters</a>
+      </p>
+    </div>
+  </div>
+</section>

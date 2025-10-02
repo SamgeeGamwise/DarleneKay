@@ -5,7 +5,7 @@
 .contact-hero {
   position: relative;
   width: 100%;
-  height: calc(95lvh - base.$blocker-height);
+  height: calc(75lvh - base.$blocker-height);
   // TODO
   background: url('{{ "/assets/images/contact-hero.jpg" | fingerprint | url }}') center/cover no-repeat;
   display: flex;
@@ -100,6 +100,26 @@
       margin-bottom: 2rem;
       color: base.$black;
       text-align: center;
+    }
+
+
+    #form-status {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+
+      &.success {
+        color: green;
+        opacity: 1;
+      }
+
+      &.error {
+        color: red;
+        opacity: 1;
+      }
     }
   }
 
