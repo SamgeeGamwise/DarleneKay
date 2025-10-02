@@ -11,34 +11,31 @@ function hashFile(filePath) {
 
 module.exports = function (eleventyConfig) {
   // Responsive Images
-  eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt, sizes = "100vw") {
-    if (!alt) throw new Error(`Missing alt text on image: ${src}`);
+eleventyConfig.addNunjucksAsyncShortcode("image",
+    async function (src, alt, sizes = "100vw") {
+      if (!alt) throw new Error(`Missing alt text on image: ${src}`);
 
-    // normalize filesystem path
-    let cleanSrc = src.replace(/^\/+/, ""); 
-    let srcPath = path.join("src", cleanSrc); 
+      // Normalize path (strip leading slash)
+      const cleanSrc = src.replace(/^\/+/, "");
+      const srcPath = path.join("src", cleanSrc);
 
-    let metadata = await Image(srcPath, {
-      widths: [160, 300, 600, 1200, null],
-      formats: ["webp", "png"],
-      urlPath: "/assets/images/",           // public URL
-      outputDir: "_site/assets/images/",    // build output
-    });
+      const metadata = await Image(srcPath, {
+        widths: [160, 300, 600, 1200, null],
+        formats: ["webp", "png"],
+        urlPath: "/assets/images/",
+        outputDir: "_site/assets/images/",
+      });
 
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading: "lazy",
-      decoding: "async",
-    };
+      const imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+      };
 
-    return Image.generateHTML(metadata, imageAttributes, {
-      urlFormat: (urlPath) => this.ctx.url(urlPath), 
-      // 👆 ensures /DarleneKay/ prefix is applied automatically
-    });
-  });
-
-
+      return Image.generateHTML(metadata, imageAttributes);
+    }
+  );
   // Watch source assets for live reload
   eleventyConfig.addWatchTarget("src/assets/styles");
   eleventyConfig.addWatchTarget("src/assets/js");
