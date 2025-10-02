@@ -11,34 +11,32 @@ function hashFile(filePath) {
 
 module.exports = function (eleventyConfig) {
   // Responsive Images
-  eleventyConfig.addNunjucksAsyncShortcode("image",
+  eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt, sizes = "100vw", options = {}) {
+    if (!alt) throw new Error(`Missing alt text on image: ${src}`);
 
-    async function (src, alt, sizes = "100vw", attrs = {}) {
-      if (!alt) throw new Error(`Missing alt text on image: ${src}`);
+    let cleanSrc = src.replace(/^\/+/, "");
+    let srcPath = path.join("src", cleanSrc);
 
-      let cleanSrc = src.replace(/^\/+/, "");
-      let srcPath = path.join("src", cleanSrc);
+    let metadata = await Image(srcPath, {
+      widths: [160, 300, 600, 1200, null],
+      formats: ["webp", "png"],
+      urlPath: "/assets/images/",
+      outputDir: "_site/assets/images/",
+    });
 
-      let metadata = await Image(srcPath, {
-        widths: [160, 300, 600, 1200, null],
-        formats: ["webp", "png"],
-        urlPath: "/assets/images/",
-        outputDir: "_site/assets/images/",
-      });
+    let imageAttributes = {
+      alt,
+      sizes: typeof sizes === "string" ? sizes : "100vw",
+      loading: "lazy",
+      decoding: "async",
+      ...options // merge in class, style, etc.
+    };
 
-      let imageAttributes = {
-        alt,
-        sizes,
-        loading: attrs.loading || "lazy",
-        decoding: "async",
-        ...attrs,
-      };
+    return Image.generateHTML(metadata, imageAttributes, {
+      urlFormat: (urlPath) => this.ctx.url(urlPath),
+    });
+  });
 
-      return Image.generateHTML(metadata, imageAttributes, {
-        urlFormat: (urlPath) => this.ctx.url(urlPath),
-      });
-    }
-  );
 
 
 

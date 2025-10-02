@@ -41,6 +41,16 @@
             flex-flow: row wrap;
             align-items: center;
             justify-content: center;
+
+            .logo-icon {
+                width: 85px;
+                height: auto; // keeps aspect ratio
+            }
+
+            .logo-icon-large {
+                width: 200px;
+                height: auto; // keeps aspect ratio
+            }
         }
         
         .footer__legal {
