@@ -1,11 +1,11 @@
 <nav aria-label="Primary">
   <a id="brand" class="logo-text h3 bold" href="{{ '/' | url }}">
   {% if branding == "roofing" %}
+
+    {% image "/assets/images/logo_roofing.png", "Roofing logo" %}
     <img src="{{ '/assets/images/logo_roofing.png' | fingerprint | url }}" alt="Roofing logo">
-    {# <span class="site-name">{{ site.site_name_roofing }}</span> #}
   {% elseif branding == "painting" %}
     <img src="{{ '/assets/images/logo_painting.webp' | fingerprint | url }}" alt="Painting logo">
-    {# <span class="site-name painting">{{ site.site_name_painting }}</span> #}
   {% elseif branding == "main" %}
     <img src="{{ '/assets/images/logo_painting.webp' | fingerprint | url }}" alt="Painting logo">
     <img src="{{ '/assets/images/logo_roofing.png' | fingerprint | url }}" alt="Roofing logo">

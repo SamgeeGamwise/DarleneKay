@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const Image = require("@11ty/eleventy-img");
 
 // Simple file hasher
 function hashFile(filePath) {
@@ -9,6 +10,28 @@ function hashFile(filePath) {
 }
 
 module.exports = function (eleventyConfig) {
+  // Responsive Images
+  eleventyConfig.addNunjucksAsyncShortcode("image", async function(src, alt, sizes) {
+    // Ensure src resolves from your project’s source folder
+    let imageSrc = path.join("src/", src);
+
+    let metadata = await Image(imageSrc, {
+      widths: [300, 600, 1200, null],
+      formats: ["webp", "jpeg"],
+      urlPath: "/assets/images/",
+      outputDir: "_site/assets/images/"
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
   // Watch source assets for live reload
   eleventyConfig.addWatchTarget("src/assets/styles");
   eleventyConfig.addWatchTarget("src/assets/js");
