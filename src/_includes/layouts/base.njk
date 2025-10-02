@@ -22,6 +22,8 @@
     <meta name="twitter:description" content="{{ description or site.tagline }}">
     <meta name="twitter:image" content="{{ '/assets/images/Home1.webp' | url }}">
 
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">  
+
 
     <!-- Preload fonts -->
     <link rel="preload" href="{{ '/assets/fonts/DancingScript.woff2' | fingerprint | url }}" as="font" type="font/woff2" crossorigin>
@@ -40,6 +42,48 @@
     
     <!-- Defer JS -->
     <script src="{{ '/assets/js/ui/index.js' | fingerprint | url }}" type="module" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HomeAndConstructionBusiness",
+        "name": "Darlene Kay, LLC",
+        "url": "https://darlenekay.com",
+        "logo": "https://darlenekay.com/assets/favicon.ico",
+        "image": "https://darlenekay.com/assets/images/Home1.webp",
+        "telephone": "+17209331762",
+        "email": "roy@darlenekay.com",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Denver Metro Area, Colorado"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "RoofingContractor",
+              "name": "Roofing Services",
+              "description": "Roof inspections, repairs, replacements, and storm restoration."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "PaintingContractor",
+              "name": "Painting Services",
+              "description": "Residential and commercial painting services."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "GutterService",
+              "name": "Gutter Installation & Repair",
+              "description": "Seamless gutter installation, repair, and leaf guards."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     {% set branding = brand or "main" %}
