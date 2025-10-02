@@ -12,6 +12,14 @@ a {
   text-decoration: none;
 }
 
+svg {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: -0.125em; /* matches FA baseline tweak */
+}
+
 @include mixins.respond-max(md) {
   html {
     font-size: 16px;
