@@ -11,15 +11,18 @@ function hashFile(filePath) {
 
 module.exports = function (eleventyConfig) {
   // Responsive Images
-  eleventyConfig.addNunjucksAsyncShortcode("image", async function(src, alt, sizes) {
-    // Ensure src resolves from your project’s source folder
-    let imageSrc = path.join("src/", src);
+  eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt, sizes = "100vw") {
+    if (!alt) throw new Error(`Missing alt text on image: ${src}`);
 
-    let metadata = await Image(imageSrc, {
-      widths: [300, 600, 1200, null],
-      formats: ["webp", "jpeg"],
-      urlPath: "/assets/images/",
-      outputDir: "_site/assets/images/"
+    // normalize filesystem path
+    let cleanSrc = src.replace(/^\/+/, ""); 
+    let srcPath = path.join("src", cleanSrc); 
+
+    let metadata = await Image(srcPath, {
+      widths: [160, 300, 600, 1200, null],
+      formats: ["webp", "png"],
+      urlPath: "/assets/images/",           // public URL
+      outputDir: "_site/assets/images/",    // build output
     });
 
     let imageAttributes = {
@@ -29,8 +32,12 @@ module.exports = function (eleventyConfig) {
       decoding: "async",
     };
 
-    return Image.generateHTML(metadata, imageAttributes);
+    return Image.generateHTML(metadata, imageAttributes, {
+      urlFormat: (urlPath) => this.ctx.url(urlPath), 
+      // 👆 ensures /DarleneKay/ prefix is applied automatically
+    });
   });
+
 
   // Watch source assets for live reload
   eleventyConfig.addWatchTarget("src/assets/styles");
