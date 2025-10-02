@@ -1,88 +1,93 @@
 @use "../../base" as base;
 
-.hero--video {
-  position: relative;
-  overflow: hidden;
-  height: calc(95lvh - base.$blocker-height);
-  color: base.$white;
-  text-shadow: 2px 2px 1px base.$black;
+#roofing {
 
-  // background video
-  .hero__video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
-
-  // overlay like painting hero
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(base.$black, 0), rgba(base.$black, 0.4));
-    z-index: 1;
-  }
-
-  .container {
+  
+  .hero--video {
     position: relative;
-    z-index: 2;
-  }
-
-  .hero__inner {
-    max-width: 800px;
-    margin: 0 auto;
-
-    .hero__header {
-      font-size: clamp(1.5rem, 2.25vw, 2.25rem);
-      margin: 0 0 1rem;
-    }
-
-    .hero__text {
-      font-size: clamp(1.125rem, 1.75vw, 1.75rem);
-      margin: 0 0 1.25rem;
-    }
-
-    .hero__actions {
-      font-size: 125%;
-      margin: 0 0 1rem;
-    }
-  }
-
-  .hero__lower {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-    background-color: rgba(base.$black, 0.85);
+    overflow: hidden;
+    height: calc(95lvh - base.$blocker-height);
     color: base.$white;
     text-shadow: 2px 2px 1px base.$black;
-    z-index: 3;
-
-    .hero__hotline {
-      font-size: 90%;
-      display: flex;
-      flex-flow: row wrap;
-      gap: 0.5rem 1rem;
-      align-items: center;
-      padding: 0 5%;
-
-      a {
-        color: base.$white;
-        text-decoration: underline;
+    
+    // background video
+    .hero__video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    
+    // overlay like painting hero
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(base.$black, 0), rgba(base.$black, 0.4));
+      z-index: 1;
+    }
+    
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero__inner {
+      max-width: 800px;
+      margin: 0 auto;
+      
+      .hero__header {
+        font-size: clamp(1.5rem, 2.25vw, 2.25rem);
+        margin: 0 0 1rem;
       }
-
-      &.stacked {
-        flex-direction: column;
-        align-items: flex-start;
+      
+      .hero__text {
+        font-size: clamp(1.125rem, 1.75vw, 1.75rem);
+        margin: 0 0 1.25rem;
+      }
+      
+      .hero__actions {
+        font-size: 125%;
+        margin: 0 0 1rem;
       }
     }
-  }
-
-  @include base.respond-max(lg) {
-    font-size: 85%;
+    
+    .hero__lower {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+      background-color: rgba(base.$black, 0.85);
+      color: base.$white;
+      text-shadow: 2px 2px 1px base.$black;
+      z-index: 3;
+      
+      .hero__hotline {
+        font-size: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5rem 1rem;
+        align-items: center;
+        padding: 0 5%;
+        
+        a {
+          color: base.$white;
+          text-decoration: underline;
+        }
+        
+        &.stacked {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+    
+    @include base.respond-max(lg) {
+      font-size: 85%;
+    }
   }
 }
+  

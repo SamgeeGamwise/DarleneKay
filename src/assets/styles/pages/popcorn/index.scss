@@ -1,0 +1,282 @@
+@use "../../base" as base;
+
+#popcorn {
+  color: base.$black;
+
+  // HERO
+  .hero {
+    position: relative;
+    padding: 10% 5% 0;
+    color: base.$white;
+    text-shadow: 2px 2px 1px base.$black;
+    height: calc(95lvh - base.$blocker-height);
+    overflow: hidden;
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(base.$black, 0.6), rgba(base.$black, 0.2));
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__header {
+      font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+      margin: 0 0 1rem;
+    }
+
+    &__text {
+      font-size: clamp(1.125rem, 1.75vw, 1.75rem);
+      margin: 0 0 1.25rem;
+      max-width: 700px;
+    }
+
+    &__actions {
+      margin-top: 1rem;
+    }
+
+    &__lower {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+      background-color: rgba(base.$black, 0.85);
+      color: base.$white;
+      z-index: 3;
+
+      .hero__hotline {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5rem 1rem;
+        padding: 0 5%;
+        font-size: 90%;
+
+        a {
+          color: base.$white;
+          text-decoration: underline;
+        }
+
+        &.stacked {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  // OVERVIEW
+  .overview {
+    text-align: center;
+
+    h2 {
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 750px;
+      margin: 0.5rem auto;
+      line-height: 1.6;
+    }
+  }
+
+  // SIGNS
+  .signs {
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      max-width: 750px;
+      margin: 0 auto 1.5rem;
+
+      li {
+        margin: 0.5rem 0;
+        line-height: 1.5;
+      }
+    }
+
+    p {
+      text-align: center;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+  }
+
+  .highlights {
+  .highlight-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    text-align: center;
+  }
+
+  .highlight {
+    padding: 1.5rem;
+    background: base.$light;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(base.$black, 0.1);
+
+    i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: base.$primary;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+
+  // PROCESS
+  .process {
+    background: base.$medium;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .step {
+      background: base.$white;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(base.$black, 0.15);
+      text-align: center;
+
+      .step-number {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 1.25rem;
+        background: base.$primary;
+        color: base.$white;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // BENEFITS
+  .benefits {
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    &__grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .benefit {
+      background: base.$light;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(base.$black, 0.1);
+
+      h4 {
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // FAQ
+  .faq {
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: base.$primary;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // CTA BANNER
+  .cta-banner {
+    text-align: center;
+    background: base.$primary;
+    color: base.$white;
+    padding: 3rem 1rem;
+
+    .cta-header {
+      margin-bottom: 1rem;
+      font-size: clamp(1.25rem, 1.75vw, 1.75rem);
+    }
+
+    .btn {
+      background: base.$white;
+      color: base.$primary;
+      font-weight: bold;
+    }
+  }
+
+  @include base.respond-max(lg) {
+    .hero {
+      font-size: 85%;
+    }
+  }
+}

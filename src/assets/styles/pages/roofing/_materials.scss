@@ -1,50 +1,54 @@
 @use "../../base" as base;
 
-.materials {
-  padding: 4rem 1rem;
-  text-align: center;
+#roofing {
 
-  h2 {
-    margin-bottom: 2.5rem;
-    color: base.$roofing;
-  }
-
-  .materials__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-
-    .material {
-      background: base.$white;
-      border: 1px solid base.$medium;
-      border-radius: 8px;
-      padding: 2rem 1.5rem;
-      box-shadow: 0 4px 10px rgba(base.$black, 0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 14px rgba(base.$black, 0.1);
-      }
-
-      img {
-        height: 250px;
-        object-fit: none;
-        margin-bottom: 1rem;
-        padding: 0.75rem;
-        background: base.$light;
-        aspect-ratio: 16 / 9;   // or 4 / 3, whatever landscape ratio you want
-      }
-
-      h4 {
-        margin-bottom: 0.5rem;
-        color: base.$roofing-secondary;
-      }
-
-      p {
-        color: base.$dark;
-        font-size: 0.95rem;
-        line-height: 1.5;
+  
+  .materials {
+    padding: 4rem 1rem;
+    text-align: center;
+    
+    h2 {
+      margin-bottom: 2.5rem;
+      color: base.$roofing;
+    }
+    
+    .materials__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      
+      .material {
+        background: base.$white;
+        border: 1px solid base.$medium;
+        border-radius: 8px;
+        padding: 2rem 1.5rem;
+        box-shadow: 0 4px 10px rgba(base.$black, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 6px 14px rgba(base.$black, 0.1);
+        }
+        
+        img {
+          height: 250px;
+          object-fit: none;
+          margin-bottom: 1rem;
+          padding: 0.75rem;
+          background: base.$light;
+          aspect-ratio: 16 / 9;   // or 4 / 3, whatever landscape ratio you want
+        }
+        
+        h4 {
+          margin-bottom: 0.5rem;
+          color: base.$roofing-secondary;
+        }
+        
+        p {
+          color: base.$dark;
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
       }
     }
   }
